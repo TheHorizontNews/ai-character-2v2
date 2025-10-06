@@ -10,14 +10,17 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  margin: 0 0 32px 0;
+  margin: 0 auto 32px auto;
   color: #fff;
+  max-width: 1400px;
 }
 
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .category-card {
