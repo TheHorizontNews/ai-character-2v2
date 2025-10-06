@@ -90,12 +90,30 @@
     padding: 40px 20px;
   }
   
+  .category-title {
+    font-size: 24px;
+  }
+  
   .category-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
   
   .category-card {
-    padding: 24px 16px;
+    padding: 20px 16px;
+  }
+  
+  .category-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .category-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .category-name {
+    font-size: 14px;
   }
 }
