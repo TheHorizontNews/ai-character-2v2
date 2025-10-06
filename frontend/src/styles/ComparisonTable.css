@@ -1,10 +1,15 @@
 .comparison-section {
   padding: 60px 40px;
   background: #0a0a0a;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .comparison-header {
   margin-bottom: 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .comparison-title {
