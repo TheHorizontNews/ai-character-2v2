@@ -242,6 +242,33 @@
   flex-shrink: 0;
 }
 
+.star-rating {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.limited-badge,
+.optional-badge {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.limited-badge {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+}
+
+.optional-badge {
+  background: rgba(99, 126, 234, 0.15);
+  color: #667eea;
+}
+
 .compare-cta {
   width: 100%;
   padding: 12px 24px;
