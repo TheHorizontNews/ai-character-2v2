@@ -1,0 +1,146 @@
+.platform-card {
+  background: #141414;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #1a1a1a;
+  min-width: 280px;
+}
+
+.platform-card:hover {
+  transform: translateY(-4px);
+  border-color: #1dd1a1;
+  box-shadow: 0 8px 24px rgba(29, 209, 161, 0.15);
+}
+
+.platform-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.platform-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.platform-card:hover .platform-image img {
+  transform: scale(1.05);
+}
+
+.platform-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.platform-card:hover .platform-overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background: #1dd1a1;
+  color: #0a0a0a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.view-btn:hover {
+  background: #1bc598;
+  transform: translateY(-2px);
+}
+
+.platform-content {
+  padding: 20px;
+}
+
+.platform-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.platform-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.platform-category {
+  font-size: 11px;
+  padding: 4px 10px;
+  background: rgba(29, 209, 161, 0.1);
+  color: #1dd1a1;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.platform-tagline {
+  font-size: 14px;
+  color: #999;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.platform-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #999;
+  font-size: 14px;
+}
+
+.stat span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.platform-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-label {
+  font-size: 13px;
+  color: #666;
+}
+
+.pricing-value {
+  font-size: 13px;
+  color: #1dd1a1;
+  font-weight: 600;
+}
