@@ -98,11 +98,29 @@
     padding: 40px 20px;
   }
   
+  .faq-title {
+    font-size: 24px;
+  }
+  
+  .faq-subtitle {
+    font-size: 14px;
+  }
+  
   .faq-question {
-    padding: 20px;
+    padding: 18px 20px;
+  }
+  
+  .faq-question h3 {
+    font-size: 14px;
   }
   
   .faq-answer p {
     padding: 0 20px 20px 20px;
+    font-size: 14px;
+  }
+  
+  .faq-icon {
+    width: 18px;
+    height: 18px;
   }
 }
