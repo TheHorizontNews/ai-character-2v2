@@ -6,6 +6,29 @@
   transition: all 0.3s ease;
   border: 1px solid #1a1a1a;
   min-width: 280px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .platform-card {
+    min-width: 260px;
+  }
+  
+  .platform-image {
+    height: 150px;
+  }
+  
+  .platform-content {
+    padding: 16px;
+  }
+  
+  .platform-name {
+    font-size: 18px;
+  }
+  
+  .platform-tagline {
+    font-size: 13px;
+  }
 }
 
 .platform-card:hover {
