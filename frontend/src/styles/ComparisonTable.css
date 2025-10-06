@@ -1,0 +1,132 @@
+.comparison-section {
+  padding: 60px 40px;
+  background: #0a0a0a;
+}
+
+.comparison-header {
+  margin-bottom: 40px;
+}
+
+.comparison-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+
+.comparison-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  background: #141414;
+  border-radius: 16px;
+  border: 1px solid #1a1a1a;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table thead {
+  background: #1a1a1a;
+}
+
+.comparison-table th {
+  padding: 20px 24px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #2a2a2a;
+}
+
+.feature-header {
+  position: sticky;
+  left: 0;
+  background: #1a1a1a;
+  z-index: 1;
+  min-width: 200px;
+}
+
+.platform-header {
+  text-align: center;
+  min-width: 140px;
+}
+
+.comparison-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.comparison-table tbody tr:hover {
+  background: #161616;
+}
+
+.comparison-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.feature-name {
+  position: sticky;
+  left: 0;
+  background: #141414;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 1;
+}
+
+.comparison-table tbody tr:hover .feature-name {
+  background: #161616;
+}
+
+.feature-value {
+  text-align: center;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(29, 209, 161, 0.1);
+  border-radius: 50%;
+  color: #1dd1a1;
+}
+
+.x-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 75, 75, 0.1);
+  border-radius: 50%;
+  color: #ff4b4b;
+}
+
+@media (max-width: 768px) {
+  .comparison-section {
+    padding: 40px 20px;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 16px;
+    font-size: 13px;
+  }
+  
+  .platform-header {
+    min-width: 100px;
+  }
+}

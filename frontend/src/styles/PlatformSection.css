@@ -1,0 +1,93 @@
+.platform-section {
+  padding: 40px 40px 60px 40px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.section-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.scroll-btn {
+  width: 44px;
+  height: 44px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 50%;
+  color: #999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background: #2a2a2a;
+  color: #1dd1a1;
+  border-color: #1dd1a1;
+}
+
+.platforms-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #1a1a1a;
+}
+
+.platforms-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.platforms-scroll::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.platforms-scroll::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.platforms-scroll::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+@media (max-width: 768px) {
+  .platform-section {
+    padding: 30px 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .section-controls {
+    display: none;
+  }
+}
