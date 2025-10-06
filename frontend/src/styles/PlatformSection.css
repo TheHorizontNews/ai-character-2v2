@@ -60,8 +60,6 @@
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #333 #1a1a1a;
-  max-width: 1600px;
-  margin: 0 auto;
 }
 
 .platforms-scroll::-webkit-scrollbar {
