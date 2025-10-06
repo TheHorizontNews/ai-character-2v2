@@ -8,6 +8,8 @@
   flex: 1;
   margin-left: 60px;
   min-height: 100vh;
+  width: calc(100vw - 60px);
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
