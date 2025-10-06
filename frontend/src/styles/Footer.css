@@ -117,11 +117,32 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px 80px 20px;
   }
   
   .footer-content {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+  
+  .footer-logo {
+    font-size: 18px;
+  }
+  
+  .footer-description {
+    font-size: 13px;
+  }
+  
+  .footer-heading {
+    font-size: 13px;
+  }
+  
+  .footer-links a {
+    font-size: 13px;
+  }
+  
+  .footer-bottom {
+    font-size: 12px;
+    padding-bottom: 20px;
   }
 }
