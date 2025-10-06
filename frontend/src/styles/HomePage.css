@@ -1,0 +1,17 @@
+.home-page {
+  display: flex;
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 60px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
