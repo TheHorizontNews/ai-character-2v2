@@ -2,10 +2,12 @@
   padding: 80px 40px;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .seo-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
