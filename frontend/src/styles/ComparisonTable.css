@@ -6,7 +6,7 @@
 }
 
 .comparison-header {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -23,6 +23,80 @@
   font-size: 16px;
   color: #666;
   margin: 0;
+}
+
+.comparison-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #1a1a1a;
+}
+
+.comparison-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.comparison-tabs::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.comparison-tabs::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #141414;
+  border: 2px solid #1a1a1a;
+  border-radius: 12px;
+  color: #999;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tab-button:hover {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+  color: #fff;
+}
+
+.tab-button.active {
+  background: rgba(29, 209, 161, 0.1);
+  border-color: #1dd1a1;
+  color: #1dd1a1;
+}
+
+.tab-button svg {
+  flex-shrink: 0;
+}
+
+.tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tab-button.active .tab-count {
+  background: #1dd1a1;
+  color: #0a0a0a;
 }
 
 .comparison-grid {
