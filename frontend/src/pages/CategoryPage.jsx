@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Star, Users, Crown, Heart, TrendingUp, Sparkles } from 'lucide-react';
+import { ArrowLeft, Star, Users, Crown, Heart, TrendingUp, Sparkles, ChevronDown } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import PlatformCard from '../components/PlatformCard';
 import Footer from '../components/Footer';
@@ -10,6 +10,7 @@ import '../styles/CategoryPage.css';
 const CategoryPage = () => {
   const { category } = useParams();
   const navigate = useNavigate();
+  const [openFaq, setOpenFaq] = useState(null);
 
   const categoryConfig = {
     premium: {
