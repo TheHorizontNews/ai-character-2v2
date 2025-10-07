@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Star, Users, ExternalLink, Check, X } from 'lucide-react';
+import { ArrowLeft, Star, Users, ExternalLink, Check, X, TrendingUp, DollarSign, Shield, Zap, MessageCircle, Image as ImageIcon } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { aiPlatforms } from '../data/mockData';
