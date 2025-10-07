@@ -502,16 +502,41 @@
   }
   
   .seo-content-section {
-    padding: 24px;
+    padding: 32px 24px;
     margin-bottom: 40px;
   }
   
-  .seo-content-section h2 {
-    font-size: 22px;
+  .content-section-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
   
-  .seo-content-section p {
+  .content-text h2 {
+    font-size: 24px;
+  }
+  
+  .content-highlight p {
+    font-size: 16px;
+  }
+  
+  .content-text p {
     font-size: 14px;
+  }
+  
+  .content-features {
+    margin-top: 24px;
+  }
+  
+  .feature-item {
+    padding: 10px 14px;
+  }
+  
+  .feature-item span {
+    font-size: 13px;
+  }
+  
+  .content-image img {
+    height: 250px;
   }
   
   .recommended-platforms {
