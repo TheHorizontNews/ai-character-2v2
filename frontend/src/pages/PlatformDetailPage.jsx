@@ -125,6 +125,113 @@ const PlatformDetailPage = () => {
               <p className="best-for">{platform.bestFor}</p>
             </section>
             
+            {/* Data Visualization Block */}
+            <section className="detail-section data-visualization">
+              <h2>Platform Stats & Insights</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <div className="stat-icon" style={{ background: 'rgba(29, 209, 161, 0.1)' }}>
+                    <TrendingUp size={24} color="#1dd1a1" />
+                  </div>
+                  <div className="stat-info">
+                    <div className="stat-value">{platform.rating}</div>
+                    <div className="stat-label">User Rating</div>
+                  </div>
+                </div>
+                
+                <div className="stat-card">
+                  <div className="stat-icon" style={{ background: 'rgba(102, 126, 234, 0.1)' }}>
+                    <Users size={24} color="#667eea" />
+                  </div>
+                  <div className="stat-info">
+                    <div className="stat-value">{platform.users}</div>
+                    <div className="stat-label">Active Users</div>
+                  </div>
+                </div>
+                
+                <div className="stat-card">
+                  <div className="stat-icon" style={{ background: 'rgba(240, 147, 251, 0.1)' }}>
+                    <DollarSign size={24} color="#f093fb" />
+                  </div>
+                  <div className="stat-info">
+                    <div className="stat-value">{platform.pricing}</div>
+                    <div className="stat-label">Pricing Model</div>
+                  </div>
+                </div>
+                
+                <div className="stat-card">
+                  <div className="stat-icon" style={{ background: 'rgba(255, 107, 157, 0.1)' }}>
+                    <Shield size={24} color="#ff6b9d" />
+                  </div>
+                  <div className="stat-info">
+                    <div className="stat-value">{platform.category}</div>
+                    <div className="stat-label">Category</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="features-progress">
+                <h3>Feature Availability</h3>
+                <div className="progress-bars">
+                  {platform.features.map((feature, idx) => (
+                    <div key={idx} className="progress-item">
+                      <div className="progress-header">
+                        <span>{feature}</span>
+                        <span className="progress-percentage">100%</span>
+                      </div>
+                      <div className="progress-bar">
+                        <div className="progress-fill" style={{ width: '100%' }}></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+            
+            {/* SEO Content Block */}
+            <section className="detail-section seo-content">
+              <div className="seo-content-layout">
+                <div className="seo-text">
+                  <h2>Why Choose {platform.name}?</h2>
+                  <p>{platform.description}</p>
+                  <p>
+                    {platform.name} stands out in the AI character platform space with its {platform.rating} rating 
+                    and growing community of {platform.users} users. The platform offers a {platform.pricing.toLowerCase()} 
+                    pricing model, making it accessible to a wide range of users.
+                  </p>
+                  <p>
+                    Whether you're looking for {platform.category.toLowerCase()} AI interactions or exploring AI companionship, 
+                    {platform.name} provides the tools and features you need. Users particularly appreciate the platform's 
+                    focus on {platform.bestFor.toLowerCase()}.
+                  </p>
+                  <div className="seo-highlights">
+                    <h3>Key Highlights:</h3>
+                    <ul>
+                      {platform.pros.map((pro, idx) => (
+                        <li key={idx}>
+                          <Check size={18} />
+                          <span>{pro}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="seo-image">
+                  <img src={platform.image} alt={`${platform.name} platform`} />
+                  <div className="seo-image-overlay">
+                    <div className="overlay-stat">
+                      <Star size={20} fill="#ffd700" color="#ffd700" />
+                      <span>{platform.rating} Rating</span>
+                    </div>
+                    <div className="overlay-stat">
+                      <Users size={20} />
+                      <span>{platform.users} Users</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
             <section className="detail-cta">
               <h2>Ready to try {platform.name}?</h2>
               <p>Join millions of users experiencing AI companionship</p>
