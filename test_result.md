@@ -201,15 +201,18 @@
   
   - task: "Cross-linking Implementation"
     implemented: true
-    working: true
+    working: false
     file: "src/pages/SEOPage.jsx"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: true
         - agent: "main"
         - comment: "Related pages section with navigation to cross-linked SEO topics"
+        - working: false
+        - agent: "testing"
+        - comment: "❌ ISSUE FOUND: Cross-linking partially works but has problems with nested URL paths. Pages like 'spicy-ai-chat/uncensored' and 'spicy-ai-chat/flirty' fail to load because the routing expects simple slugs, not nested paths. Some cross-links work (ai-boyfriend-app, ai-girlfriend-chat) but others fail. Related pages section displays correctly with 3-4 related cards per page."
 
 ## metadata:
   created_by: "main_agent"
