@@ -63,13 +63,39 @@ const SEOPage = () => {
           </div>
           
           <div className="seo-content-section">
-            <h2>What is {pageData.title}?</h2>
-            <p>{pageData.description}</p>
-            <p>
-              Modern AI technology has revolutionized virtual companionship. {pageData.title} represents 
-              cutting-edge innovation in AI interaction, providing users with meaningful experiences through 
-              {pageData.keywords.join(', ')} and more.
-            </p>
+            <div className="content-section-grid">
+              <div className="content-text">
+                <h2>What is {pageData.title}?</h2>
+                <div className="content-highlight">
+                  <p>{pageData.description}</p>
+                </div>
+                <p>
+                  Modern AI technology has revolutionized virtual companionship. {pageData.title} represents 
+                  cutting-edge innovation in AI interaction, providing users with meaningful experiences through 
+                  <span className="keywords-inline"> {pageData.keywords.join(', ')}</span> and more.
+                </p>
+                <div className="content-features">
+                  <div className="feature-item">
+                    <div className="feature-icon">🚀</div>
+                    <span>Advanced AI Technology</span>
+                  </div>
+                  <div className="feature-item">
+                    <div className="feature-icon">💬</div>
+                    <span>Natural Conversations</span>
+                  </div>
+                  <div className="feature-item">
+                    <div className="feature-icon">🎯</div>
+                    <span>Personalized Experience</span>
+                  </div>
+                </div>
+              </div>
+              <div className="content-image">
+                <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHxibHVlfDE3NTk4NzQ1MjN8MA&ixlib=rb-4.1.0&q=85" alt="AI Technology" />
+                <div className="image-overlay">
+                  <div className="overlay-text">AI Technology</div>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="recommended-platforms">
