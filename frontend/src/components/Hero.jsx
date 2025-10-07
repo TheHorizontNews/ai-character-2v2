@@ -4,13 +4,15 @@ import { Sparkles } from 'lucide-react';
 import '../styles/Hero.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="hero">
       <div className="hero-content">
-        <div className="hero-badge">
+        <button className="hero-badge" onClick={() => navigate('/explore')}>
           <Sparkles size={16} />
           <span>Discover AI Companions</span>
-        </div>
+        </button>
         
         <h1 className="hero-title">
           AI CHARACTER PLATFORMS
