@@ -574,4 +574,69 @@
   .detail-cta p {
     font-size: 14px;
   }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stat-card {
+    padding: 16px;
+  }
+  
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .stat-value {
+    font-size: 20px;
+  }
+  
+  .stat-label {
+    font-size: 11px;
+  }
+  
+  .features-progress h3 {
+    font-size: 16px;
+  }
+  
+  .progress-header {
+    font-size: 12px;
+  }
+  
+  .seo-text h2 {
+    font-size: 22px;
+  }
+  
+  .seo-text p {
+    font-size: 14px;
+  }
+  
+  .seo-highlights {
+    padding: 20px;
+    margin-top: 24px;
+  }
+  
+  .seo-highlights h3 {
+    font-size: 16px;
+  }
+  
+  .seo-highlights li {
+    font-size: 13px;
+  }
+  
+  .seo-image img {
+    height: 300px;
+  }
+  
+  .seo-image-overlay {
+    padding: 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .overlay-stat {
+    font-size: 13px;
+  }
 }
