@@ -214,6 +214,51 @@ const CategoryPage = () => {
               </div>
             )}
           </div>
+          
+          {/* SEO Content Blocks */}
+          {config.seo && (
+            <div className="seo-blocks">
+              {config.seo.map((block, index) => (
+                <div key={index} className="seo-block">
+                  <div className={`seo-block-content ${index % 2 === 1 ? 'reverse' : ''}`}>
+                    <div className="seo-block-text">
+                      <h2>{block.title}</h2>
+                      <p>{block.content}</p>
+                    </div>
+                    <div className="seo-block-image">
+                      <img src={block.image} alt={block.title} />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          
+          {/* FAQ Section */}
+          {config.faqs && (
+            <div className="category-faq">
+              <h2 className="faq-title">Frequently Asked Questions</h2>
+              <div className="faq-list">
+                {config.faqs.map((faq, index) => (
+                  <div
+                    key={index}
+                    className={`faq-item ${openFaq === index ? 'open' : ''}`}
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  >
+                    <div className="faq-question">
+                      <h3>{faq.q}</h3>
+                      <ChevronDown className={`faq-icon ${openFaq === index ? 'rotated' : ''}`} />
+                    </div>
+                    {openFaq === index && (
+                      <div className="faq-answer">
+                        <p>{faq.a}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
         
         <Footer />
