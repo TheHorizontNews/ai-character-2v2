@@ -231,13 +231,13 @@
 
 ## test_plan:
   current_focus:
-    - "App.js Routing Configuration"
-    - "SEOPage Component Implementation"
-    - "ExplorePage Component Implementation"
     - "Cross-linking Implementation"
-  stuck_tasks: []
-  test_all: true
-  test_priority: "high_first"
+    - "SEO Pages Data Structure"
+  stuck_tasks: 
+    - "Cross-linking Implementation"
+    - "SEO Pages Data Structure"
+  test_all: false
+  test_priority: "stuck_first"
 
 ## agent_communication:
     - agent: "main"
