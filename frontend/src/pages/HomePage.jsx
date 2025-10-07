@@ -32,7 +32,7 @@ const HomePage = () => {
           platforms={aiPlatforms.slice(0, 10)}
         />
         
-        <CategorySection onCategorySelect={(cat) => console.log(cat)} />
+        <CategorySection />
         
         <PlatformSection
           title="Premium Platforms"
