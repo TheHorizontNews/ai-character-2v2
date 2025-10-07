@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, TrendingUp, Heart, Users, Crown, Sparkles, Menu, X, ChevronRight } from 'lucide-react';
+import { Home, TrendingUp, Heart, Users, Crown, Sparkles, Menu, X, ChevronRight, Compass } from 'lucide-react';
 import '../styles/Sidebar.css';
 
 const Sidebar = ({ activeSection, onSectionChange }) => {
