@@ -10,6 +10,7 @@ const Sidebar = ({ activeSection, onSectionChange }) => {
 
   const menuItems = [
     { id: 'home', icon: Home, label: 'Home', path: '/' },
+    { id: 'explore', icon: Compass, label: 'Explore Topics', path: '/explore' },
     { id: 'featured', icon: Sparkles, label: 'Featured', path: '/category/featured' },
     { id: 'trending', icon: TrendingUp, label: 'Trending', path: '/category/trending' },
     { id: 'premium', icon: Crown, label: 'Premium', path: '/category/premium' },
