@@ -50,7 +50,7 @@ export const seoPages = [
     description: 'Engage in immersive roleplay experiences with AI girlfriends. From romantic dates to fantasy scenarios, create your perfect story.',
     keywords: ['roleplay', 'scenarios', 'romantic', 'ai girlfriend'],
     platforms: ['candy-ai', 'dreamgf', 'kupid-ai'],
-    relatedPages: ['ai-girlfriend-chat', 'ai-roleplay-chat', 'spicy-ai-chat/roleplay']
+    relatedPages: ['ai-girlfriend-chat', 'ai-roleplay-chat', 'spicy-ai-chat-roleplay']
   },
   
   // AI Character Category (6 pages)
