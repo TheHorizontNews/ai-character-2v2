@@ -483,6 +483,15 @@
   .detail-grid {
     grid-template-columns: 1fr;
   }
+  
+  .seo-content-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .seo-image img {
+    height: 350px;
+  }
 }
 
 @media (max-width: 768px) {
