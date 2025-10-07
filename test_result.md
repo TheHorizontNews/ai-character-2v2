@@ -120,15 +120,18 @@
 ## frontend:
   - task: "SEO Pages Data Structure"
     implemented: true
-    working: true
+    working: false
     file: "src/data/seoPages.js"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
     needs_retesting: false
     status_history:
         - working: true
         - agent: "main"
         - comment: "All 67 SEO pages data structure complete with categories, cross-linking, and platform mappings"
+        - working: false
+        - agent: "testing"
+        - comment: "❌ ISSUE FOUND: Data structure only contains 60 pages instead of expected 67 pages. Missing 7 pages from the data structure. Also, some slugs use nested paths (e.g., 'spicy-ai-chat/uncensored') which don't work with current routing setup that expects simple slugs. Data structure is well-organized with proper categories, keywords, platforms, and related pages mapping."
   
   - task: "App.js Routing Configuration" 
     implemented: true
