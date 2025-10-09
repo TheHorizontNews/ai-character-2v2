@@ -367,7 +367,7 @@ def generate_comparison_page(platform1_key, platform2_key):
                         <div class="cons">
                             <h4>❌ Weaknesses</h4>
                             <ul>
-                                {"".join([f'<li>{weakness}</li>' for weakness in platform2['weaknesses']])}
+                                {"".join([f"<li>{weakness}</li>" for weakness in platform2["weaknesses"]])}
                             </ul>
                         </div>
                     </div>
