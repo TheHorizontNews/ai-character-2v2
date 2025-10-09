@@ -208,9 +208,9 @@ const ComparePage = () => {
                 onClick={() => handleComparisonClick(comparison.url)}
               >
                 <div className="comparison-platforms">
-                  <img src={comparison.platform1.image} alt={comparison.platform1.name} />
+                  <h3 className="platform-name">{comparison.platform1.name}</h3>
                   <span className="vs">vs</span>
-                  <img src={comparison.platform2.image} alt={comparison.platform2.name} />
+                  <h3 className="platform-name">{comparison.platform2.name}</h3>
                 </div>
                 
                 <h3>{comparison.title}</h3>
