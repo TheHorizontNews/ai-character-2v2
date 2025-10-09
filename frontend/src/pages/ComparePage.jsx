@@ -178,11 +178,6 @@ const ComparePage = () => {
     }
   ];
 
-  const handleComparisonClick = (url) => {
-    // For now, we'll just show an alert since we haven't implemented individual comparison pages yet
-    alert(`Individual comparison page "${url}" will be implemented next!`);
-  };
-
   return (
     <div className="page-container">
       <Sidebar />
