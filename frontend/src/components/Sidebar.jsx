@@ -60,7 +60,7 @@ const Sidebar = ({ activeSection, onSectionChange }) => {
         <div className="mobile-header-content">
           <div className="mobile-logo" onClick={() => handleNavClick('/')}>
             <div className="logo-icon">AI</div>
-            <span>AI Character Review</span>
+            <span>ai-characters.org</span>
           </div>
           
           <button 
