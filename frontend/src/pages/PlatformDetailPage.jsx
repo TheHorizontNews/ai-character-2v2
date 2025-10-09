@@ -29,67 +29,6 @@ const PlatformDetailPage = () => {
     );
   }
 
-  // Debug logging
-  console.log('PlatformDetailPage render - platform:', platform);
-  console.log('PlatformDetailPage render - platform slug:', platform?.slug);
-
-  // Special handling for Lovescape platform
-  if (platform && platform.slug === 'lovescape') {
-    console.log('Rendering Lovescape conditional content');
-    return (
-      <div className="home-page">
-        <Sidebar />
-        <main className="main-content">
-          <div className="detail-page lovescape-detail">
-            <button className="back-btn" onClick={() => navigate('/')}>
-              <ArrowLeft size={20} />
-              <span>Back to all platforms</span>
-            </button>
-            
-            <div className="detail-hero">
-              <div className="detail-hero-image">
-                <img src="https://customer-assets.emergentagent.com/job_aipals-compare/artifacts/fezbpzru_fbc08f26-febe-420b-912c-0ce88cfce6da_rw_1200.jpg" alt="Lovescape" />
-              </div>
-              
-              <div className="detail-hero-content">
-                <div className="detail-badge">Premium</div>
-                <h1 className="detail-title">🖤 Lovescape</h1>
-                <p className="detail-tagline">Build your perfect AI companion</p>
-                
-                <div className="detail-stats">
-                  <div className="detail-stat">
-                    <Star size={20} fill="#ffd700" color="#ffd700" />
-                    <span>4.8 Rating</span>
-                  </div>
-                  <div className="detail-stat">
-                    <Users size={20} />
-                    <span>2M+ Users</span>
-                  </div>
-                </div>
-                
-                <button className="cta-button">
-                  👉 GET STARTED WITH LOVESCAPE
-                  <ExternalLink size={18} />
-                </button>
-              </div>
-            </div>
-            
-            <div className="detail-content">
-              <section className="detail-section">
-                <h2>About Lovescape</h2>
-                <p>
-                  Lovescape represents the next generation of AI communication.
-                  It's not just a chat app — it's an emotional experience powered by adaptive intelligence.
-                </p>
-              </section>
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
   return (
     <div className="home-page">
       <Sidebar />
