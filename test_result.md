@@ -342,14 +342,10 @@
 
 ## test_plan:
   current_focus:
-    - "Branding Consistency Testing"
-    - "Authentic Logo Implementation Testing"
-    - "Logo Display Quality Testing"
-    - "Cross-Platform Verification Testing"
-    - "Professional Appearance Testing"
+    - "Character.AI Logo Sizing Optimization"
   stuck_tasks: []
   test_all: false
-  test_priority: "branding_and_logo_verification"
+  test_priority: "logo_optimization_verification"
 
 ## agent_communication:
     - agent: "main"
