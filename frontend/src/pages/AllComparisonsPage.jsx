@@ -200,45 +200,7 @@ const AllComparisonsPage = () => {
           </div>
         </section>
 
-        {/* Coming Soon */}
-        <section className="section">
-          <h2 className="section-title">🔜 Coming Soon</h2>
-          <p className="coming-soon-description">
-            We're actively expanding our comparison database. Here's a preview of upcoming comparisons 
-            organized by category. Each will feature the same detailed analysis, interactive charts, 
-            and expert recommendations.
-          </p>
-          
-          <div className="coming-soon-tabs">
-            {Object.keys(comingSoonComparisons).map(category => (
-              <button
-                key={category}
-                className={`tab-btn ${activeTab === category ? 'active' : ''}`}
-                onClick={() => setActiveTab(category)}
-              >
-                {category.charAt(0).toUpperCase() + category.slice(1)} Platforms
-              </button>
-            ))}
-          </div>
-          
-          <div className="coming-soon-grid">
-            {comingSoonComparisons[activeTab]?.map((title, index) => (
-              <div key={index} className="coming-soon-card">
-                <div className="coming-soon-header">
-                  <h4>{title}</h4>
-                  <div className="status-badge coming-soon">Coming Soon</div>
-                </div>
-                <p>Detailed comparison with interactive charts, pricing analysis, and expert recommendations.</p>
-                <div className="coming-soon-features">
-                  <span className="feature-tag">📊 Charts</span>
-                  <span className="feature-tag">💰 Pricing</span>
-                  <span className="feature-tag">🎯 Analysis</span>
-                </div>
-                <button className="notify-btn">Notify When Ready</button>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* All comparisons are now live - no coming soon section needed */}
 
         {/* Request a Comparison */}
         <section className="section">
