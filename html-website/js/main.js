@@ -298,6 +298,7 @@ class AICharactersApp {
 
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+  initSidebarNavigation();
   window.app = new AICharactersApp();
 });
 
