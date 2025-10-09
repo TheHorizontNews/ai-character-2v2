@@ -102,8 +102,30 @@
         
         <section style="padding: 40px;">
             <h2 style="font-size: 32px; font-weight: 900; text-align: center; margin-bottom: 40px; color: #fff;">Premium Platforms</h2>
-            <div class="platform-grid">
-                <!-- Platform cards filtered by category would be inserted here -->
+            <div id="category-platforms" class="platform-grid">
+                <!-- Platform cards filtered by category will be inserted here by JavaScript -->
+            </div>
+        </section>
+        
+        <section style="padding: 40px;">
+            <h2 style="font-size: 32px; font-weight: 900; text-align: center; margin-bottom: 40px; color: #fff;">Why Choose Premium Platforms?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Specialized Features</h3>
+                    <p>Platforms in this category offer specialized features tailored for specific use cases and user preferences.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Quality Assurance</h3>
+                    <p>All platforms are carefully reviewed and selected based on user feedback and feature completeness.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Regular Updates</h3>
+                    <p>These platforms are actively maintained with regular updates and new feature additions.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Community Support</h3>
+                    <p>Strong community backing and support resources available for users.</p>
+                </div>
             </div>
         </section>
         
@@ -144,6 +166,45 @@
         </div>
     </footer>
     </div>
+    
+    <script>
+        // Filter and display platforms for this category
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryId = 'premium';
+            const platformsContainer = document.getElementById('category-platforms');
+            
+            // This will be populated by the main JavaScript
+            if (window.aiPlatforms) {
+                const filteredPlatforms = window.aiPlatforms.filter(platform => {
+                    const categoryMap = {
+                        'featured': ['Premium', 'Popular'],
+                        'premium': ['Premium'],
+                        'romantic': ['Romance'],
+                        'trending': ['Popular', 'Social'],
+                        'community': ['Community', 'Social']
+                    };
+                    
+                    return categoryMap[categoryId] && categoryMap[categoryId].includes(platform.category);
+                });
+                
+                platformsContainer.innerHTML = filteredPlatforms.map(platform => `
+                    <div class="platform-card" onclick="window.location.href='/platform/${platform.slug}.html'">
+                        <div class="platform-image">
+                            <img src="${platform.image}" alt="${platform.name}" />
+                        </div>
+                        <div class="platform-content">
+                            <h3>${platform.name}</h3>
+                            <p>${platform.tagline}</p>
+                            <div class="platform-rating">
+                                <span>★ ${platform.rating}</span>
+                                <span>${platform.users} users</span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
         </main>
     </div>
     
