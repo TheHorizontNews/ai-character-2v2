@@ -14,7 +14,10 @@ const PlatformDetailPage = () => {
   const [platform, setPlatform] = useState(null);
 
   useEffect(() => {
+    console.log('PlatformDetailPage useEffect - slug:', slug);
+    console.log('PlatformDetailPage useEffect - aiPlatforms:', aiPlatforms);
     const found = aiPlatforms.find(p => p.slug === slug);
+    console.log('PlatformDetailPage useEffect - found platform:', found);
     setPlatform(found);
     
     if (found) {
