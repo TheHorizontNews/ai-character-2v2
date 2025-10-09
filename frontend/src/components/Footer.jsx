@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <div className="footer-logo">AI Character Review</div>
+          <div className="footer-logo">ai-characters.org</div>
           <p className="footer-description">
-            Your comprehensive guide to AI character platforms. Compare features, read reviews, 
+            Your comprehensive guide to AI character platforms on ai-characters.org. Compare features, read reviews, 
             and find the perfect AI companion for your needs.
           </p>
           <div className="footer-social">
