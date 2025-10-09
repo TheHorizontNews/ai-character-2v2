@@ -282,17 +282,13 @@
 }
 
 .pros-summary li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
+  content: "✓ ";
   color: #667eea;
   font-weight: bold;
 }
 
 .cons-summary li:before {
-  content: "✗";
-  position: absolute;
-  left: 0;
+  content: "✗ ";
   color: #ff6b6b;
   font-weight: bold;
 }
