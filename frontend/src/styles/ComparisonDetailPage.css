@@ -1,5 +1,32 @@
 /* Comparison Detail Page Styles */
 
+/* Global Text Centering for Comparison Pages */
+.comparison-section h1,
+.comparison-section h2, 
+.comparison-section h3,
+.comparison-section h4,
+.comparison-section p,
+.comparison-section .section-description,
+.seo-content-block h1,
+.seo-content-block h2,
+.seo-content-block h3,
+.seo-content-block h4 {
+  text-align: center;
+}
+
+/* Exception for sidebar content that should remain left-aligned */
+.seo-sidebar h4,
+.seo-sidebar p,
+.seo-sidebar li,
+.seo-main-content p {
+  text-align: left;
+}
+
+/* Center all section content */
+.comparison-section {
+  text-align: center;
+}
+
 .back-btn {
   display: flex;
   align-items: center;
