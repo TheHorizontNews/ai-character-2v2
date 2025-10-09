@@ -703,20 +703,19 @@
   list-style: none;
   padding: 0;
   margin-bottom: 24px;
-  text-align: left;
+  text-align: center;
 }
 
 .decision-card li {
   color: #ddd;
   margin-bottom: 8px;
-  padding-left: 20px;
-  position: relative;
+  padding-left: 0;
+  position: static;
+  text-align: center;
 }
 
 .decision-card li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
+  content: "→ ";
   color: #667eea;
   font-weight: bold;
 }
