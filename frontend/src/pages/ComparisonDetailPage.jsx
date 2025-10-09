@@ -346,6 +346,11 @@ const ComparisonDetailPage = () => {
     };
   }, [platform1Data, platform2Data]);
 
+  // Scroll to top when component mounts or comparison changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [comparisonId]);
+
   if (!platform1Data || !platform2Data) {
     return (
       <div className="page-container">
