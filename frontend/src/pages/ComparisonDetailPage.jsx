@@ -482,28 +482,68 @@ const ComparisonDetailPage = () => {
         </button>
         
         {/* Hero Section */}
-        <div className="comparison-hero">
-          <div className="comparison-platforms">
-            <div className="platform-hero">
-              <div className="platform-name-hero">{platform1Data.name}</div>
-              <p className="platform-tagline">{platform1Data.tagline}</p>
-              <div className="platform-rating">
-                <Star size={18} fill="currentColor" />
-                <span>{platform1Data.rating}</span>
-                <span className="user-count">({platform1Data.users})</span>
+        <div className="comparison-hero-v2">
+          <div className="hero-content">
+            <h1 className="comparison-title">
+              {platform1Data.name} vs {platform2Data.name} - Detailed Comparison
+            </h1>
+            
+            <div className="platforms-info">
+              <div className="platform-info-left">
+                <div className="platform-name">{platform1Data.name}</div>
+                <div className="platform-features">
+                  {platform1Data.strengths.slice(0, 3).map((strength, index) => (
+                    <span key={index} className="feature-tag">{strength}</span>
+                  ))}
+                </div>
+                <div className="platform-rating-info">
+                  <Star size={20} fill="currentColor" />
+                  <span className="rating-number">{platform1Data.rating}</span>
+                </div>
+              </div>
+
+              <div className="platform-info-right">
+                <div className="platform-name">{platform2Data.name}</div>
+                <div className="platform-features">
+                  {platform2Data.strengths.slice(0, 3).map((strength, index) => (
+                    <span key={index} className="feature-tag">{strength}</span>
+                  ))}
+                </div>
+                <div className="platform-rating-info">
+                  <Star size={20} fill="currentColor" />
+                  <span className="rating-number">{platform2Data.rating}</span>
+                </div>
               </div>
             </div>
-            
-            <div className="vs-divider-hero">VS</div>
-            
-            <div className="platform-hero">
-              <div className="platform-name-hero">{platform2Data.name}</div>
-              <p className="platform-tagline">{platform2Data.tagline}</p>
-              <div className="platform-rating">
-                <Star size={18} fill="currentColor" />
-                <span>{platform2Data.rating}</span>
-                <span className="user-count">({platform2Data.users})</span>
-              </div>
+
+            <div className="hero-actions">
+              <button 
+                className="hero-btn primary"
+                onClick={() => {
+                  const element = document.querySelector('.feature-comparison');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Read review
+              </button>
+              <button 
+                className="hero-btn secondary"
+                onClick={() => {
+                  const element = document.querySelector('.chart-container');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                See differences
+              </button>
+              <button 
+                className="hero-btn tertiary"
+                onClick={() => {
+                  const element = document.querySelector('.comparison-verdict');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Jump to verdict
+              </button>
             </div>
           </div>
         </div>
