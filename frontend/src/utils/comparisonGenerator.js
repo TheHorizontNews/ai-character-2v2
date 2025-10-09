@@ -102,7 +102,7 @@ export const generateAllComparisons = () => {
         platform1: platform1.slug,
         platform2: platform2.slug,
         title: `${platform1.name} vs ${platform2.name}`,
-        description: `${platform1.tagline} vs ${platform2.tagline}`,
+        description: generateSEODescription(platform1, platform2),
         rating1: platform1.rating,
         rating2: platform2.rating,
         pricing1: platform1.pricing,
