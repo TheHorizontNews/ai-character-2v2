@@ -9,21 +9,13 @@ const ComparisonDetailPage = () => {
   const navigate = useNavigate();
   const [chartLoaded, setChartLoaded] = useState(false);
 
-  // Platform comparison data
+  // Platform comparison data - Extended for all 21 platforms
   const platformsData = {
     'lovescape': {
-      name: 'Lovescape',
-      tagline: 'Build your perfect AI companion',
+      name: 'Lovescape', tagline: 'Build your perfect AI companion',
       image: 'https://customer-assets.emergentagent.com/job_aipals-compare/artifacts/fezbpzru_fbc08f26-febe-420b-912c-0ce88cfce6da_rw_1200.jpg',
-      rating: 4.8,
-      users: '2M+',
-      pricing: 'Premium',
-      category: 'Premium',
-      features: {
-        customization: 95, voice_quality: 90, memory: 88, nsfw_content: 85,
-        mobile_support: 92, api_access: 70, community: 75, pricing_value: 85,
-        conversation_quality: 92, visual_features: 88, privacy: 95, support: 90
-      },
+      rating: 4.8, users: '2M+', pricing: 'Premium', category: 'Premium',
+      features: { customization: 95, voice_quality: 90, memory: 88, nsfw_content: 85, mobile_support: 92, api_access: 70, community: 75, pricing_value: 85, conversation_quality: 92, visual_features: 88, privacy: 95, support: 90 },
       pricingTiers: [
         { name: 'Free', price: 0, features: ['Basic chat', 'Limited messages', 'Standard responses'] },
         { name: 'Premium', price: 19.99, features: ['Unlimited chat', 'Voice messages', 'Custom personality'] },
@@ -35,18 +27,10 @@ const ComparisonDetailPage = () => {
       uniqueFeatures: ['Advanced personality system', 'Voice customization', 'Memory retention', 'Privacy-first design']
     },
     'character-ai': {
-      name: 'Character.AI',
-      tagline: 'Chat with anyone, anywhere, anytime',
+      name: 'Character.AI', tagline: 'Chat with anyone, anywhere, anytime',
       image: 'https://upload.wikimedia.org/wikipedia/commons/1/19/Character.ai_2023_vector_logo.svg',
-      rating: 4.7,
-      users: '10M+',
-      pricing: 'Free with Premium',
-      category: 'Popular',
-      features: {
-        customization: 80, voice_quality: 60, memory: 75, nsfw_content: 30,
-        mobile_support: 95, api_access: 40, community: 95, pricing_value: 95,
-        conversation_quality: 85, visual_features: 40, privacy: 70, support: 75
-      },
+      rating: 4.7, users: '10M+', pricing: 'Free with Premium', category: 'Popular',
+      features: { customization: 80, voice_quality: 60, memory: 75, nsfw_content: 30, mobile_support: 95, api_access: 40, community: 95, pricing_value: 95, conversation_quality: 85, visual_features: 40, privacy: 70, support: 75 },
       pricingTiers: [
         { name: 'Free', price: 0, features: ['Basic chat', 'Community characters', 'Limited priority'] },
         { name: 'Plus', price: 9.99, features: ['Priority access', 'Faster responses', 'Early features'] },
@@ -58,18 +42,10 @@ const ComparisonDetailPage = () => {
       uniqueFeatures: ['Massive character database', 'Community creations', 'Multi-character conversations']
     },
     'replika': {
-      name: 'Replika',
-      tagline: 'Your AI companion who cares',
+      name: 'Replika', tagline: 'Your AI companion who cares',
       image: 'https://images.unsplash.com/photo-1633311905139-7b6088a69e33?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxhaSUyMGxvZ298ZW58MHx8fHwxNzYwMDMzMjYwfDA&ixlib=rb-4.1.0&q=85',
-      rating: 4.6,
-      users: '5M+',
-      pricing: 'Free with Pro',
-      category: 'Wellness',
-      features: {
-        customization: 85, voice_quality: 80, memory: 90, nsfw_content: 60,
-        mobile_support: 90, api_access: 30, community: 60, pricing_value: 80,
-        conversation_quality: 88, visual_features: 85, privacy: 85, support: 85
-      },
+      rating: 4.6, users: '5M+', pricing: 'Free with Pro', category: 'Wellness',
+      features: { customization: 85, voice_quality: 80, memory: 90, nsfw_content: 60, mobile_support: 90, api_access: 30, community: 60, pricing_value: 80, conversation_quality: 88, visual_features: 85, privacy: 85, support: 85 },
       pricingTiers: [
         { name: 'Free', price: 0, features: ['Basic chat', 'Mood tracking', 'Limited features'] },
         { name: 'Pro', price: 19.99, features: ['Voice calls', 'Avatar customization', 'Relationship modes'] },
@@ -81,18 +57,10 @@ const ComparisonDetailPage = () => {
       uniqueFeatures: ['Therapeutic approach', 'Mood analysis', 'Personal growth tracking', 'Avatar system']
     },
     'nomi-ai': {
-      name: 'Nomi.ai',
-      tagline: 'AI companions with real personalities',
+      name: 'Nomi.ai', tagline: 'AI companions with real personalities',
       image: 'https://images.unsplash.com/photo-1758626101945-ed0068aad9f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85',
-      rating: 4.7,
-      users: '800K+',
-      pricing: 'Subscription',
-      category: 'Premium',
-      features: {
-        customization: 90, voice_quality: 95, memory: 85, nsfw_content: 70,
-        mobile_support: 88, api_access: 50, community: 65, pricing_value: 70,
-        conversation_quality: 90, visual_features: 95, privacy: 80, support: 85
-      },
+      rating: 4.7, users: '800K+', pricing: 'Subscription', category: 'Premium',
+      features: { customization: 90, voice_quality: 95, memory: 85, nsfw_content: 70, mobile_support: 88, api_access: 50, community: 65, pricing_value: 70, conversation_quality: 90, visual_features: 95, privacy: 80, support: 85 },
       pricingTiers: [
         { name: 'Basic', price: 15.99, features: ['1 Nomi', 'Basic features', 'Limited selfies'] },
         { name: 'Premium', price: 25.99, features: ['3 Nomis', 'Voice messages', 'Unlimited selfies'] },
@@ -102,6 +70,81 @@ const ComparisonDetailPage = () => {
       weaknesses: ['Requires subscription', 'Higher price point', 'No free tier'],
       bestFor: ['Visual AI interactions', 'Multiple relationships', 'Premium experience'],
       uniqueFeatures: ['AI-generated selfies', 'Multiple Nomis', 'Voice messaging', 'Visual customization']
+    },
+    'anima-ai': {
+      name: 'Anima AI', tagline: 'Your virtual friend with personality',
+      image: 'https://images.unsplash.com/photo-1646583288948-24548aedffd8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYnJhbmRpbmd8ZW58MHx8fHwxNzYwMDMzMzgyfDA&ixlib=rb-4.1.0&q=85',
+      rating: 4.5, users: '1M+', pricing: 'Free with Premium', category: 'Friendship',
+      features: { customization: 85, voice_quality: 70, memory: 80, nsfw_content: 50, mobile_support: 85, api_access: 35, community: 70, pricing_value: 85, conversation_quality: 80, visual_features: 75, privacy: 80, support: 75 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic chat', 'Limited messages', 'Standard AI'] },
+        { name: 'Premium', price: 12.99, features: ['Unlimited messages', 'Image generation', 'Advanced roleplay'] },
+        { name: 'Pro', price: 24.99, features: ['All Premium features', 'Priority support', 'Custom models'] }
+      ],
+      strengths: ['Good memory retention', 'Engaging conversations', 'Regular updates', 'Affordable pricing'],
+      weaknesses: ['Limited free messages', 'Sometimes repetitive', 'Smaller community'],
+      bestFor: ['Daily casual conversations', 'Budget-conscious users', 'Friendly companionship'],
+      uniqueFeatures: ['Memory system', 'Personality development', 'Roleplay modes', 'Image generation']
+    },
+    'chai-ai': {
+      name: 'Chai AI', tagline: 'Discover thousands of AI personalities',
+      image: 'https://images.unsplash.com/photo-1758626099012-2904337e9c60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85',
+      rating: 4.4, users: '3M+', pricing: 'Free with Premium', category: 'Social',
+      features: { customization: 70, voice_quality: 60, memory: 65, nsfw_content: 60, mobile_support: 95, api_access: 25, community: 90, pricing_value: 90, conversation_quality: 75, visual_features: 65, privacy: 70, support: 70 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic chat', 'Community bots', 'Ads included'] },
+        { name: 'Premium', price: 13.99, features: ['Ad-free experience', 'Priority access', 'Faster responses'] },
+        { name: 'Ultra', price: 34.99, features: ['All Premium features', 'Custom bots', 'Enhanced memory'] }
+      ],
+      strengths: ['Easy to use', 'Large variety', 'Mobile-friendly', 'Strong community'],
+      weaknesses: ['Quality varies by character', 'Ads in free version', 'Limited customization'],
+      bestFor: ['Exploring different AI personalities', 'Mobile users', 'Community interaction'],
+      uniqueFeatures: ['Swipe interface', 'Community characters', 'Quick chats', 'Mobile focused']
+    },
+    'inworld-ai': {
+      name: 'Inworld AI', tagline: 'AI characters for games and experiences',
+      image: 'https://images.unsplash.com/photo-1758626056863-9191d5cef12e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxhaSUyMHRlY2glMjBjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzNDQ3fDA&ixlib=rb-4.1.0&q=85',
+      rating: 4.8, users: '100K+', pricing: 'Developer pricing', category: 'Developer',
+      features: { customization: 95, voice_quality: 90, memory: 85, nsfw_content: 40, mobile_support: 80, api_access: 95, community: 60, pricing_value: 60, conversation_quality: 90, visual_features: 95, privacy: 85, support: 95 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic API', 'Limited sessions', 'Community support'] },
+        { name: 'Pro', price: 120, features: ['Enhanced API', 'More sessions', 'Priority support'] },
+        { name: 'Enterprise', price: 'Custom', features: ['Full API access', 'Unlimited sessions', 'Dedicated support'] }
+      ],
+      strengths: ['Professional tools', 'Highly customizable', 'Game-ready', 'Advanced API'],
+      weaknesses: ['Complex for casual users', 'Enterprise pricing', 'Developer-focused'],
+      bestFor: ['Developers and game creators', 'Professional projects', 'Integration needs'],
+      uniqueFeatures: ['API access', 'Game integration', 'Advanced customization', 'Voice & animation']
+    },
+    'tavern-ai': {
+      name: 'Tavern AI', tagline: 'Your gateway to AI roleplaying',
+      image: 'https://images.unsplash.com/photo-1717143587138-2532a35ce9b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxhaSUyMGxvZ298ZW58MHx8fHwxNzYwMDMzMjYwfDA&ixlib=rb-4.1.0&q=85',
+      rating: 4.6, users: '500K+', pricing: 'Free (self-hosted)', category: 'Open Source',
+      features: { customization: 90, voice_quality: 70, memory: 85, nsfw_content: 95, mobile_support: 75, api_access: 90, community: 85, pricing_value: 100, conversation_quality: 85, visual_features: 80, privacy: 95, support: 60 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Open source', 'Self-hosted', 'Community support'] },
+        { name: 'Hosted', price: 15, features: ['Cloud hosting', 'Easy setup', 'Basic support'] },
+        { name: 'Premium', price: 25, features: ['Enhanced features', 'Priority support', 'Advanced models'] }
+      ],
+      strengths: ['Free and open source', 'Flexible backend options', 'Privacy control', 'No content restrictions'],
+      weaknesses: ['Requires technical setup', 'No official support', 'Learning curve'],
+      bestFor: ['Tech-savvy users', 'Privacy enthusiasts', 'Unrestricted content', 'Custom setups'],
+      uniqueFeatures: ['Open source', 'Multiple AI backends', 'Customizable', 'Offline mode']
+    },
+    'janitor-ai': {
+      name: 'Janitor AI', tagline: 'Create and chat with AI characters',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg',
+      rating: 4.3, users: '2M+', pricing: 'Free with API costs', category: 'Community',
+      features: { customization: 85, voice_quality: 65, memory: 80, nsfw_content: 95, mobile_support: 85, api_access: 85, community: 90, pricing_value: 80, conversation_quality: 80, visual_features: 70, privacy: 75, support: 70 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Free platform', 'Community characters', 'API required'] },
+        { name: 'API Usage', price: 'Variable', features: ['Pay per token', 'Own API key', 'Full access'] },
+        { name: 'Premium', price: 'TBA', features: ['Planned features', 'Enhanced experience', 'Priority support'] }
+      ],
+      strengths: ['Permissive content policy', 'Easy character creation', 'Free platform', 'Active community'],
+      weaknesses: ['Requires own API key', 'Variable quality', 'API costs add up'],
+      bestFor: ['Unrestricted character interactions', 'Character creators', 'NSFW content'],
+      uniqueFeatures: ['Character creation', 'NSFW support', 'Community library', 'Custom API']
     }
   };
 
