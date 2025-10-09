@@ -28,7 +28,7 @@ export const aiPlatforms = [
     category: "Popular",
     features: ["Pre-made Characters", "Community Creations", "Multiple Characters", "Free Access"],
     pricing: "Free with Premium option",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/19/Character.ai_2023_vector_logo.svg",
     pros: ["Large character library", "Active community", "Free to use"],
     cons: ["Can be slow during peak times", "Limited customization"],
     bestFor: "Casual users and roleplay enthusiasts"
