@@ -505,6 +505,7 @@
   border-bottom: 1px solid #333;
   color: #ddd;
   vertical-align: middle;
+  text-align: center;
 }
 
 .comparison-table tr:last-child td {
