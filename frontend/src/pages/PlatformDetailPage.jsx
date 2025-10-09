@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Star, Users, ExternalLink, Check, X, TrendingUp, DollarSign, Shield, Zap, MessageCircle, Image as ImageIcon } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import LovescapeDetail from '../components/LovescapeDetail';
 import { aiPlatforms } from '../data/mockData';
 import '../styles/PlatformDetailPage.css';
 
