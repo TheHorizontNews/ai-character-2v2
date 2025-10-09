@@ -22,6 +22,11 @@ const AllComparisonsPage = () => {
   }, [allComparisons, searchQuery, selectedBrand]);
 
   // All comparison data is now generated programmatically
+  
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Get specific comparison subsets
   const lovescapeComparisons = useMemo(() => {
