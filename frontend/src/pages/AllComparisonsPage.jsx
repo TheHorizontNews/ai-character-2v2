@@ -23,50 +23,18 @@ const AllComparisonsPage = () => {
 
   // All comparison data is now generated programmatically
 
-  const comingSoonComparisons = {
-    premium: [
-      'Lovescape vs Kindroid', 'Lovescape vs Paradot', 'Nomi.ai vs Kindroid',
-      'Nomi.ai vs Paradot', 'Kindroid vs Paradot'
-    ],
-    romance: [
-      'DreamGF vs Candy AI', 'DreamGF vs Romantic AI', 'Candy AI vs Romantic AI',
-      'DreamGF vs Kupid AI', 'Candy AI vs Kupid AI', 'Romantic AI vs Kupid AI'
-    ],
-    free: [
-      'Character.AI vs Chai AI', 'Character.AI vs Poe', 'Chai AI vs Poe',
-      'Replika vs Poe', 'Chai AI vs Replika'
-    ],
-    creative: [
-      'Janitor AI vs Tavern AI', 'SoulGen vs DreamGF', 'Janitor AI vs SoulGen',
-      'Tavern AI vs SoulGen', 'Inworld AI vs Tavern AI'
-    ]
-  };
+  // Get specific comparison subsets
+  const lovescapeComparisons = useMemo(() => {
+    return filteredComparisons.filter(
+      comp => comp.platform1 === 'lovescape' || comp.platform2 === 'lovescape'
+    );
+  }, [filteredComparisons]);
 
-  const brands = [
-    'lovescape', 'character-ai', 'replika', 'nomi-ai', 'anima-ai', 'chai-ai',
-    'dreamgf', 'candy-ai', 'janitor-ai', 'poe', 'tavern-ai', 'inworld-ai',
-    'romantic-ai', 'dreambf', 'kindroid', 'paradot', 'soulgen', 'kupid-ai',
-    'ai-mirror', 'talkie-ai', 'polybuzz'
-  ];
-
-  const filteredComparisons = liveComparisons.filter(comparison => {
-    const matchesSearch = comparison.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         comparison.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesBrand = !selectedBrand || 
-                        comparison.platform1 === selectedBrand || 
-                        comparison.platform2 === selectedBrand;
-    
-    return matchesSearch && matchesBrand;
-  });
-
-  const lovescapeComparisons = liveComparisons.filter(
-    comp => comp.platform1 === 'lovescape' || comp.platform2 === 'lovescape'
-  );
-
-  const popularComparisons = liveComparisons.filter(
-    comp => comp.platform1 !== 'lovescape' && comp.platform2 !== 'lovescape'
-  );
+  const popularComparisons = useMemo(() => {
+    return filteredComparisons.filter(
+      comp => comp.platform1 !== 'lovescape' && comp.platform2 !== 'lovescape'
+    );
+  }, [filteredComparisons]);
 
   const handleComparisonClick = (url) => {
     navigate(url);
