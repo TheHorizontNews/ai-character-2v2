@@ -307,13 +307,7 @@ def generate_comparison_page(platform1_key, platform2_key):
                             <td>{platform2['pricing']}</td>
                             <td class="winner">💰 Value Varies</td>
                         </tr>
-                        {"".join([f'''
-                        <tr>
-                            <td>{feature.replace("_", " ").title()}</td>
-                            <td><div class="score-bar"><div class="score-fill" style="width: {platform1['features'][feature]}%"></div><span>{platform1['features'][feature]}/100</span></div></td>
-                            <td><div class="score-bar"><div class="score-fill" style="width: {platform2['features'][feature]}%"></div><span>{platform2['features'][feature]}/100</span></div></td>
-                            <td class="winner">{"🏆 " + winners[feature]}</td>
-                        </tr>''' for feature in feature_labels])}
+                        {"".join([f'<tr><td>{feature.replace("_", " ").title()}</td><td><div class="score-bar"><div class="score-fill" style="width: {platform1["features"][feature]}%"></div><span>{platform1["features"][feature]}/100</span></div></td><td><div class="score-bar"><div class="score-fill" style="width: {platform2["features"][feature]}%"></div><span>{platform2["features"][feature]}/100</span></div></td><td class="winner">{"🏆 " + winners[feature]}</td></tr>' for feature in feature_labels])}
                     </tbody>
                 </table>
             </div>
