@@ -8,6 +8,7 @@ import SEOPage from './pages/SEOPage';
 import ExplorePage from './pages/ExplorePage';
 import ComparePage from './pages/ComparePage';
 import AllComparisonsPage from './pages/AllComparisonsPage';
+import ComparisonDetailPage from './pages/ComparisonDetailPage';
 
 function App() {
   return (
