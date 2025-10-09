@@ -44,7 +44,7 @@ export const aiPlatforms = [
     category: "Wellness",
     features: ["Mental Health Focus", "Personalized Learning", "Avatar Customization", "Mood Tracking"],
     pricing: "Free with Pro subscription",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1633311905139-7b6088a69e33?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxhaSUyMGxvZ298ZW58MHx8fHwxNzYwMDMzMjYwfDA&ixlib=rb-4.1.0&q=85",
     pros: ["Therapeutic approach", "Learns your personality", "Supportive community"],
     cons: ["Romantic features locked behind paywall"],
     bestFor: "Mental wellness and personal growth"
