@@ -260,18 +260,92 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .main-content {
+    padding: 16px 12px;
+  }
+
   .comparisons-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
+    margin: 0 4px;
+  }
+
+  .comparison-card {
+    padding: 20px 16px;
+    text-align: center;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .comparison-platforms {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px 0;
+  }
+
+  .comparison-platforms img {
+    width: 64px;
+    height: 64px;
+    padding: 8px;
+    border-radius: 12px;
+    background: #0a0a0a;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+  }
+
+  .comparison-card:hover .comparison-platforms img {
+    border-color: #667eea;
+    transform: scale(1.05);
   }
 
   .comparison-platforms .vs {
-    order: 2;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+
+  .comparison-card h3 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .comparison-card p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #ccc;
+    text-align: center;
+  }
+
+  .comparison-stats {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .comparison-stats span {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ddd;
+    min-width: 120px;
+    text-align: center;
   }
 
   .category-groups {
@@ -287,5 +361,9 @@
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .section {
+    margin: 0 4px 32px 4px;
   }
 }
