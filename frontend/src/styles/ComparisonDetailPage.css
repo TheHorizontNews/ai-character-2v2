@@ -319,6 +319,7 @@
   padding: 40px;
   margin-bottom: 40px;
   border: 1px solid #333;
+  text-align: center;
 }
 
 .seo-comparison-block h1 {
@@ -329,6 +330,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-align: center;
 }
 
 .seo-intro {
@@ -336,6 +338,7 @@
   line-height: 1.6;
   color: #ccc;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .quick-summary {
