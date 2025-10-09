@@ -5,9 +5,14 @@ import { ArrowLeft, Star, Users, ExternalLink, Check, X, HelpCircle } from 'luci
 import '../styles/ComparisonDetailPage.css';
 
 const ComparisonDetailPage = () => {
-  const { platform1, platform2 } = useParams();
+  const { comparisonId } = useParams();
   const navigate = useNavigate();
   const [chartLoaded, setChartLoaded] = useState(false);
+
+  // Parse platform names from comparisonId (format: platform1-vs-platform2)
+  const platforms = comparisonId ? comparisonId.split('-vs-') : [];
+  const platform1 = platforms[0];
+  const platform2 = platforms[1];
 
   // Platform comparison data - Extended for all 21 platforms
   const platformsData = {
