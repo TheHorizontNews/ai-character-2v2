@@ -258,7 +258,7 @@ def generate_comparison_page(platform1_key, platform2_key):
                 <div class="summary-card">
                     <h3>{platform2['name']} - Best For</h3>
                     <ul>
-                        {"".join([f'<li>{use_case}</li>' for use_case in platform2['best_for']])}
+                        {"".join([f"<li>{use_case}</li>" for use_case in platform2["best_for"]])}
                     </ul>
                 </div>
             </div>
