@@ -1,5 +1,43 @@
 // ai-characters.org - Main JavaScript Functionality
 
+// Sidebar Navigation Handler
+function initSidebarNavigation() {
+  const sidebarItems = document.querySelectorAll('.sidebar-item[data-path]');
+  const logoButton = document.querySelector('.sidebar-logo');
+  
+  // Handle sidebar item clicks
+  sidebarItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const path = this.getAttribute('data-path');
+      if (path) {
+        window.location.href = path;
+      }
+    });
+  });
+  
+  // Handle logo click
+  if (logoButton) {
+    logoButton.addEventListener('click', function() {
+      window.location.href = '/index.html';
+    });
+  }
+  
+  // Set active state based on current page
+  const currentPath = window.location.pathname;
+  sidebarItems.forEach(item => {
+    const itemPath = item.getAttribute('data-path');
+    item.classList.remove('active');
+    
+    if (currentPath === itemPath || 
+        (currentPath === '/' && itemPath === '/index.html') ||
+        (currentPath.includes('/category/') && itemPath.includes('/category/')) ||
+        (currentPath.includes('/compare') && itemPath.includes('/compare')) ||
+        (currentPath.includes('/seo/') && itemPath === '/explore.html')) {
+      item.classList.add('active');
+    }
+  });
+}
+
 class AICharactersApp {
   constructor() {
     this.currentPage = this.getPageFromURL();
