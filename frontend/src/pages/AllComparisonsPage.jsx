@@ -149,7 +149,7 @@ const AllComparisonsPage = () => {
   );
 
   const handleComparisonClick = (url) => {
-    alert(`Individual comparison page "${url}" will be implemented next!`);
+    navigate(url);
   };
 
   const handleRequestComparison = () => {
