@@ -678,7 +678,7 @@ const ComparisonDetailPage = () => {
                     ))}
                   </ul>
                 </div>
-                <div class="cons">
+                <div className="cons">
                   <h4><X size={16} /> Weaknesses</h4>
                   <ul>
                     {platform2Data.weaknesses.map((weakness, index) => (
