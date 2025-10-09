@@ -301,19 +301,30 @@
     padding: 16px 0;
   }
 
-  .comparison-platforms img {
-    width: 64px;
-    height: 64px;
-    padding: 8px;
-    border-radius: 12px;
-    background: #0a0a0a;
-    border: 2px solid #333;
+  .platform-name {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #444;
+    color: #fff;
+    text-align: center;
+    min-width: 140px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
 
-  .comparison-card:hover .comparison-platforms img {
+  .comparison-card:hover .platform-name {
     border-color: #667eea;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
   }
 
   .comparison-platforms .vs {
