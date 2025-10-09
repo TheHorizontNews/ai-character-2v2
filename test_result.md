@@ -366,10 +366,10 @@
 
 ## test_plan:
   current_focus:
-    - "Lovescape Authentic Brand Logo Implementation"
+    - "Lovescape Platform Detail Page Implementation"
   stuck_tasks: []
   test_all: false
-  test_priority: "lovescape_logo_verification"
+  test_priority: "lovescape_detail_page_verification"
 
 ## agent_communication:
     - agent: "main"
