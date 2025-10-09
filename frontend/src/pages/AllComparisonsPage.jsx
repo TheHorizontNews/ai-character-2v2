@@ -218,12 +218,12 @@ const AllComparisonsPage = () => {
         <section className="stats-overview">
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number">6</div>
+              <div className="stat-number">{comparisonStats.live}</div>
               <div className="stat-label">Live Comparisons</div>
               <div className="stat-sublabel">Ready to view</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">204</div>
+              <div className="stat-number">{comparisonStats.upcoming}</div>
               <div className="stat-label">Coming Soon</div>
               <div className="stat-sublabel">In development</div>
             </div>
@@ -233,8 +233,8 @@ const AllComparisonsPage = () => {
               <div className="stat-sublabel">Available for comparison</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">210</div>
-              <div className="stat-label">Total Possible</div>
+              <div className="stat-number">{comparisonStats.total}</div>
+              <div className="stat-label">Total Available</div>
               <div className="stat-sublabel">Platform combinations</div>
             </div>
           </div>
