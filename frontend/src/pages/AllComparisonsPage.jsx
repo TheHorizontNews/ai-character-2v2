@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import { List, Search, Filter } from 'lucide-react';
+import { generateAllComparisons, getComparisonStats, filterComparisons, getBrandList } from '../utils/comparisonGenerator';
 import '../styles/AllComparisonsPage.css';
 
 const AllComparisonsPage = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
-  const [activeTab, setActiveTab] = useState('premium');
+  const [activeTab, setActiveTab] = useState('all');
+
+  // Generate all comparisons and get stats
+  const allComparisons = useMemo(() => generateAllComparisons(), []);
+  const comparisonStats = useMemo(() => getComparisonStats(), []);
+  const brandList = useMemo(() => getBrandList(), []);
+
+  // Filter comparisons based on search and brand selection
+  const filteredComparisons = useMemo(() => {
+    return filterComparisons(allComparisons, searchQuery, selectedBrand);
+  }, [allComparisons, searchQuery, selectedBrand]);
 
   const liveComparisons = [
     {
