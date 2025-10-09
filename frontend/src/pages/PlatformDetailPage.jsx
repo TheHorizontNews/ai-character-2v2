@@ -28,6 +28,19 @@ const PlatformDetailPage = () => {
     );
   }
 
+  // Special handling for Lovescape platform
+  if (platform && platform.slug === 'lovescape') {
+    return (
+      <div className="home-page">
+        <Sidebar />
+        <main className="main-content">
+          <LovescapeDetail />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="home-page">
       <Sidebar />
