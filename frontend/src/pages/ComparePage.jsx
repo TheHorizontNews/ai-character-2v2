@@ -7,6 +7,11 @@ import '../styles/ComparePage.css';
 const ComparePage = () => {
   const navigate = useNavigate();
 
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleComparisonClick = (url) => {
     navigate(url);
   };
