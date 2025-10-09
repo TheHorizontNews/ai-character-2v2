@@ -1009,6 +1009,8 @@
     -webkit-overflow-scrolling: touch;
     margin: 0 -16px;
     padding: 0 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   }
 
   .comparison-table {
@@ -1018,14 +1020,28 @@
   }
 
   .comparison-table th {
-    padding: 8px 4px;
+    padding: 12px 4px;
     font-size: 12px;
     white-space: nowrap;
+    font-weight: 900;
+  }
+
+  .comparison-table th:first-child {
+    border-radius: 12px 0 0 0;
+  }
+
+  .comparison-table th:last-child {
+    border-radius: 0 12px 0 0;
   }
 
   .comparison-table td {
-    padding: 8px 4px;
+    padding: 12px 4px;
     font-size: 11px;
+  }
+
+  .comparison-table .winner {
+    border-left-width: 2px;
+    font-size: 10px;
   }
 
   .comparison-table th:first-child,
