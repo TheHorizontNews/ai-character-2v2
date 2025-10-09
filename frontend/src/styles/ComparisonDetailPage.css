@@ -936,29 +936,65 @@
   }
 
   /* Make tables responsive */
-  .detailed-table-container {
+  .comparison-table-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0 -16px;
+    padding: 0 16px;
   }
 
-  .detailed-table {
-    min-width: 600px;
-    font-size: 14px;
+  .comparison-table {
+    width: 100%;
+    min-width: 100%;
+    font-size: 12px;
   }
 
-  .detailed-table th,
-  .detailed-table td {
-    padding: 8px 6px;
+  .comparison-table th {
+    padding: 8px 4px;
+    font-size: 12px;
     white-space: nowrap;
   }
 
-  .detailed-table .feature-name {
-    min-width: 120px;
-    white-space: normal;
+  .comparison-table td {
+    padding: 8px 4px;
+    font-size: 11px;
   }
 
-  .score-bar-container {
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
     min-width: 80px;
+    max-width: 80px;
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .comparison-table th:nth-child(2),
+  .comparison-table td:nth-child(2),
+  .comparison-table th:nth-child(3),
+  .comparison-table td:nth-child(3) {
+    min-width: 70px;
+    max-width: 70px;
+    text-align: center;
+  }
+
+  .comparison-table th:last-child,
+  .comparison-table td:last-child {
+    min-width: 60px;
+    max-width: 60px;
+    text-align: center;
+  }
+
+  .score-bar {
+    width: 50px;
+    height: 16px;
+    margin: 0 auto;
+  }
+
+  .score-bar span {
+    font-size: 9px;
+    line-height: 16px;
   }
 
   /* Center all section text */
