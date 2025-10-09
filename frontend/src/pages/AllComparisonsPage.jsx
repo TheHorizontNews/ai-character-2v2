@@ -200,9 +200,9 @@ const AllComparisonsPage = () => {
                 className="brand-filter"
               >
                 <option value="">All Brands</option>
-                {brands.map(brand => (
-                  <option key={brand} value={brand}>
-                    {brand.charAt(0).toUpperCase() + brand.slice(1).replace('-', '.')}
+                {brandList.map(brand => (
+                  <option key={brand.slug} value={brand.slug}>
+                    {brand.name}
                   </option>
                 ))}
               </select>
