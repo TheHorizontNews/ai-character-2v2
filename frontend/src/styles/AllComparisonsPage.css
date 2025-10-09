@@ -529,4 +529,45 @@
   .search-input {
     font-size: 16px; /* Prevents zoom on iOS */
   }
+
+  /* Extra responsive table for very small screens */
+  .comparison-table {
+    font-size: 11px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 6px 2px;
+  }
+
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    min-width: 70px;
+    max-width: 70px;
+    font-size: 9px;
+  }
+
+  .comparison-table th:nth-child(2),
+  .comparison-table td:nth-child(2),
+  .comparison-table th:nth-child(3),
+  .comparison-table td:nth-child(3) {
+    min-width: 65px;
+    max-width: 65px;
+  }
+
+  .comparison-table th:last-child,
+  .comparison-table td:last-child {
+    min-width: 55px;
+    max-width: 55px;
+  }
+
+  .score-bar {
+    width: 45px;
+    height: 14px;
+  }
+
+  .score-bar span {
+    font-size: 8px;
+    line-height: 14px;
+  }
 }
