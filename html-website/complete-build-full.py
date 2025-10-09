@@ -453,7 +453,7 @@ def create_base_html(title, description, content, active_page=""):
         </main>
     </div>
     
-    <script src="/js/complete-data.js"></script>
+    <script src="/js/complete-data-full.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>'''
