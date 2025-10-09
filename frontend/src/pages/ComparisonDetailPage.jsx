@@ -336,6 +336,16 @@ const ComparisonDetailPage = () => {
   const platform1Data = platformsData[platform1];
   const platform2Data = platformsData[platform2];
 
+  // Update page title dynamically
+  useEffect(() => {
+    if (platform1Data && platform2Data) {
+      document.title = `${platform1Data.name} vs ${platform2Data.name}: Comprehensive Comparison 2025 - ai-characters.org`;
+    }
+    return () => {
+      document.title = 'AI Character Platforms - ai-characters.org';
+    };
+  }, [platform1Data, platform2Data]);
+
   if (!platform1Data || !platform2Data) {
     return (
       <div className="page-container">
