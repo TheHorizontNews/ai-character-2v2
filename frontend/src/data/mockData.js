@@ -12,7 +12,7 @@ export const aiPlatforms = [
     category: "Premium",
     features: ["Custom Personality", "Voice Customization", "24/7 Support", "Private & Secure"],
     pricing: "Freemium",
-    image: "https://images.unsplash.com/photo-1758626036095-676b425c4288?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHw0fHxhaSUyMGxvZ298ZW58MHx8fHwxNzYwMDMzMjYwfDA&ixlib=rb-4.1.0&q=85",
+    image: "https://customer-assets.emergentagent.com/job_aipals-compare/artifacts/fezbpzru_fbc08f26-febe-420b-912c-0ce88cfce6da_rw_1200.jpg",
     pros: ["Highly customizable characters", "Natural conversations", "Strong privacy protection"],
     cons: ["Premium features require subscription"],
     bestFor: "Users seeking deep emotional connection"
