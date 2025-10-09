@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import { GitCompare, Star, Users, TrendingUp, Heart, Crown, Gamepad2 } from 'lucide-react';
 import '../styles/ComparePage.css';
 
 const ComparePage = () => {
+  const navigate = useNavigate();
+
+  const handleComparisonClick = (url) => {
+    navigate(url);
+  };
   const popularComparisons = [
     {
       id: 'lovescape-vs-character-ai',
