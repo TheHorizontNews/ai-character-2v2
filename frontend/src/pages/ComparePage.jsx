@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import { GitCompare, Star, Users, TrendingUp, Heart, Crown, Gamepad2 } from 'lucide-react';
