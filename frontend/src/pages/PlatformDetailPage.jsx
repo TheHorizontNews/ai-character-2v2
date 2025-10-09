@@ -16,6 +16,26 @@ const PlatformDetailPage = () => {
   useEffect(() => {
     const found = aiPlatforms.find(p => p.slug === slug);
     setPlatform(found);
+    
+    // Add schema markup and update meta for generic platforms (not Lovescape)
+    if (found && found.slug !== 'lovescape') {
+      const title = `${found.name} Review 2025 — ${found.tagline}`;
+      const description = `${found.description.substring(0, 140)}...`;
+      
+      updatePageMeta(title, description);
+      
+      const schemaData = generatePlatformSchema(found);
+      if (schemaData) {
+        addSchemaMarkup(schemaData);
+      }
+    }
+    
+    // Cleanup function
+    return () => {
+      if (found && found.slug !== 'lovescape') {
+        resetPageMeta();
+      }
+    };
   }, [slug]);
 
   if (!platform) {
