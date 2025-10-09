@@ -156,7 +156,7 @@ export const aiPlatforms = [
     category: "Multi-Model",
     features: ["Multiple AI Models", "Bot Creation", "Clean Interface", "Fast Responses"],
     pricing: "Free with subscription",
-    image: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1758626036095-676b425c4288?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxhaSUyMHRlY2glMjBjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzNDQ3fDA&ixlib=rb-4.1.0&q=85",
     pros: ["Access to multiple AIs", "Simple interface", "Reliable service"],
     cons: ["Limited customization", "Message limits on free tier"],
     bestFor: "Users wanting multiple AI models"
