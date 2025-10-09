@@ -85,10 +85,12 @@ const PlatformDetailPage = () => {
 
   // Special handling for Lovescape platform
   if (platform && platform.slug === 'lovescape') {
+    console.log('Rendering Lovescape conditional content');
     return (
       <div className="home-page">
         <Sidebar />
         <main className="main-content">
+          <h1>LOVESCAPE TEST - THIS SHOULD SHOW</h1>
           <div className="detail-page lovescape-detail">
             <button className="back-btn" onClick={() => navigate('/')}>
               <ArrowLeft size={20} />
