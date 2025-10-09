@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import LovescapeDetail from '../components/LovescapeDetail';
 import { aiPlatforms } from '../data/mockData';
+import { generatePlatformSchema, updatePageMeta, addSchemaMarkup, resetPageMeta } from '../utils/schemaMarkup';
 import '../styles/PlatformDetailPage.css';
 
 const PlatformDetailPage = () => {
