@@ -419,7 +419,7 @@ def generate_seo_page(seo_page):
             <section class="detail-section">
                 <h2>Related Topics</h2>
                 <div class="seo-grid">
-                    {"".join([f'<div class="seo-card" onclick="window.location.href=\'/seo/{page}.html\'"><h3>{page.replace("-", " ").title()}</h3><p>Explore more about {page.replace("-", " ")}.</p></div>' for page in seo_page['relatedPages'][:4]])}
+                    {"".join([f'<div class="seo-card" onclick="window.location.href={chr(39)}/seo/{page}.html{chr(39)}"><h3>{page.replace("-", " ").title()}</h3><p>Explore more about {page.replace("-", " ")}.</p></div>' for page in seo_page['relatedPages'][:4]])}
                 </div>
             </section>
         </div>
