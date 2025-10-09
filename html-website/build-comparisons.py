@@ -320,14 +320,7 @@ def generate_comparison_page(platform1_key, platform2_key):
                 <div class="pricing-platform">
                     <h3>{platform1['name']} Pricing</h3>
                     <div class="pricing-tiers">
-                        {"".join([f'''
-                        <div class="pricing-tier">
-                            <h4>{tier['name']}</h4>
-                            <div class="price">${tier['price']}/month</div>
-                            <ul class="tier-features">
-                                {"".join([f'<li>{feature}</li>' for feature in tier['features']])}
-                            </ul>
-                        </div>''' for tier in platform1['pricing_tiers']])}
+                        {"".join([f'<div class="pricing-tier"><h4>{tier["name"]}</h4><div class="price">${tier["price"]}/month</div><ul class="tier-features">{"".join([f"<li>{feature}</li>" for feature in tier["features"]])}</ul></div>' for tier in platform1["pricing_tiers"]])}
                     </div>
                 </div>
                 
