@@ -578,7 +578,7 @@ const ComparisonDetailPage = () => {
         </section>
 
         {/* Interactive Feature Comparison Chart */}
-        <section className="comparison-section">
+        <section className="comparison-section feature-comparison">
           <h2>Feature Comparison</h2>
           <div className="chart-container">
             <canvas id="featureChart"></canvas>
