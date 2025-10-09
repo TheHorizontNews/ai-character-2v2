@@ -145,6 +145,186 @@ const ComparisonDetailPage = () => {
       weaknesses: ['Requires own API key', 'Variable quality', 'API costs add up'],
       bestFor: ['Unrestricted character interactions', 'Character creators', 'NSFW content'],
       uniqueFeatures: ['Character creation', 'NSFW support', 'Community library', 'Custom API']
+    },
+    'poe': {
+      name: 'Poe (by Quora)', tagline: 'Access multiple AI models in one place',
+      image: 'https://images.unsplash.com/photo-1758626036095-676b425c4288?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxhaSUyMHRlY2glMjBjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzNDQ3fDA&ixlib=rb-4.1.0&q=85',
+      rating: 4.5, users: '5M+', pricing: 'Free with subscription', category: 'Multi-Model',
+      features: { customization: 70, voice_quality: 60, memory: 70, nsfw_content: 25, mobile_support: 90, api_access: 60, community: 80, pricing_value: 85, conversation_quality: 85, visual_features: 50, privacy: 80, support: 85 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic access', 'Limited messages', 'Claude & GPT access'] },
+        { name: 'Premium', price: 19.99, features: ['More messages', 'All models', 'Priority access'] },
+        { name: 'Pro', price: 39.99, features: ['Unlimited messages', 'Bot creation', 'Advanced models'] }
+      ],
+      strengths: ['Access to multiple AIs', 'Simple interface', 'Reliable service', 'Bot creation tools'],
+      weaknesses: ['Limited customization', 'Message limits on free tier', 'Content restrictions'],
+      bestFor: ['Users wanting multiple AI models', 'Productivity users', 'AI experimentation'],
+      uniqueFeatures: ['Multiple AI models', 'Bot creation', 'Clean interface', 'Fast responses']
+    },
+    'dreamgf': {
+      name: 'DreamGF', tagline: 'Create your dream AI girlfriend',
+      image: 'https://images.unsplash.com/photo-1758626099012-2904337e9c60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85',
+      rating: 4.2, users: '1M+', pricing: 'Premium subscription', category: 'Romance',
+      features: { customization: 90, voice_quality: 85, memory: 75, nsfw_content: 90, mobile_support: 85, api_access: 40, community: 60, pricing_value: 65, conversation_quality: 80, visual_features: 95, privacy: 75, support: 75 },
+      pricingTiers: [
+        { name: 'Bronze', price: 9.99, features: ['Basic chat', 'Limited images', 'Standard AI'] },
+        { name: 'Silver', price: 19.99, features: ['Voice messages', 'More images', 'Enhanced AI'] },
+        { name: 'Gold', price: 49.99, features: ['Unlimited features', 'Premium AI', 'Priority support'] }
+      ],
+      strengths: ['Visual customization', 'Romantic focus', 'Regular content', 'AI image generation'],
+      weaknesses: ['Expensive', 'Limited free access', 'Romance-only focus'],
+      bestFor: ['Romantic AI relationships', 'Visual interactions', 'Customization enthusiasts'],
+      uniqueFeatures: ['AI image generation', 'Customizable appearance', 'Voice messages', 'Intimate conversations']
+    },
+    'candy-ai': {
+      name: 'Candy AI', tagline: 'Sweet AI companionship',
+      image: 'https://images.unsplash.com/photo-1758626101945-ed0068aad9f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85',
+      rating: 4.4, users: '900K+', pricing: 'Subscription-based', category: 'Romance',
+      features: { customization: 85, voice_quality: 80, memory: 80, nsfw_content: 85, mobile_support: 90, api_access: 45, community: 70, pricing_value: 70, conversation_quality: 85, visual_features: 90, privacy: 75, support: 80 },
+      pricingTiers: [
+        { name: 'Basic', price: 12.99, features: ['1 character', 'Basic chat', 'Limited images'] },
+        { name: 'Premium', price: 25.99, features: ['5 characters', 'Voice chat', 'Unlimited images'] },
+        { name: 'VIP', price: 45.99, features: ['Unlimited characters', 'All features', 'Priority support'] }
+      ],
+      strengths: ['Multiple art styles', 'Good image quality', 'Engaging personalities', 'Voice features'],
+      weaknesses: ['Subscription required', 'Limited free trial', 'Romance-focused'],
+      bestFor: ['Anime and visual novel fans', 'Voice interaction lovers', 'Multiple character relationships'],
+      uniqueFeatures: ['Anime & realistic styles', 'Image generation', 'Voice chat', 'Roleplay scenarios']
+    },
+    'soulgen': {
+      name: 'SoulGen', tagline: 'Generate your soulmate with AI',
+      image: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=400&h=300&fit=crop',
+      rating: 4.1, users: '600K+', pricing: 'Credit-based', category: 'Creative',
+      features: { customization: 90, voice_quality: 40, memory: 60, nsfw_content: 80, mobile_support: 85, api_access: 30, community: 65, pricing_value: 70, conversation_quality: 65, visual_features: 95, privacy: 80, support: 70 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['5 credits daily', 'Basic generation', 'Standard quality'] },
+        { name: 'Pro', price: 12.99, features: ['200 credits monthly', 'HD generation', 'Fast processing'] },
+        { name: 'Premium', price: 26.99, features: ['500 credits monthly', 'Ultra HD', 'Priority queue'] }
+      ],
+      strengths: ['High-quality images', 'Fast generation', 'Various styles', 'Creative focus'],
+      weaknesses: ['Focus on images over chat', 'Credit system', 'Limited conversation'],
+      bestFor: ['AI art and character creation', 'Visual content creation', 'Creative projects'],
+      uniqueFeatures: ['AI art generation', 'Text-to-image', 'Character chat', 'Style customization']
+    },
+    'dreambf': {
+      name: 'DreamBF', tagline: 'Your ideal AI boyfriend awaits',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=300&fit=crop',
+      rating: 4.3, users: '700K+', pricing: 'Premium subscription', category: 'Romance',
+      features: { customization: 88, voice_quality: 85, memory: 78, nsfw_content: 85, mobile_support: 88, api_access: 40, community: 65, pricing_value: 70, conversation_quality: 82, visual_features: 90, privacy: 78, support: 80 },
+      pricingTiers: [
+        { name: 'Basic', price: 14.99, features: ['Basic chat', 'Limited customization', 'Standard AI'] },
+        { name: 'Premium', price: 29.99, features: ['Voice messages', 'Full customization', 'Enhanced AI'] },
+        { name: 'VIP', price: 49.99, features: ['All features', 'Priority support', 'Premium content'] }
+      ],
+      strengths: ['Male character focus', 'Good customization', 'Active development', 'Voice features'],
+      weaknesses: ['Requires subscription', 'Niche audience', 'Limited free access'],
+      bestFor: ['Users seeking AI boyfriend experience', 'Male character preferences', 'Romantic interactions'],
+      uniqueFeatures: ['Boyfriend customization', 'Voice messages', 'AI photos', 'Relationship simulation']
+    },
+    'kindroid': {
+      name: 'Kindroid', tagline: 'AI companions that understand you',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
+      rating: 4.6, users: '400K+', pricing: 'Subscription-based', category: 'Premium',
+      features: { customization: 90, voice_quality: 95, memory: 95, nsfw_content: 75, mobile_support: 90, api_access: 55, community: 70, pricing_value: 75, conversation_quality: 92, visual_features: 85, privacy: 90, support: 88 },
+      pricingTiers: [
+        { name: 'Basic', price: 7.99, features: ['1 Kindroid', 'Basic memory', 'Text chat'] },
+        { name: 'Premium', price: 14.99, features: ['3 Kindroids', 'Enhanced memory', 'Voice calls'] },
+        { name: 'Pro', price: 27.99, features: ['Unlimited Kindroids', 'Full memory', 'All features'] }
+      ],
+      strengths: ['Strong memory system', 'Quality conversations', 'Voice features', 'Long-term relationships'],
+      weaknesses: ['Paid service', 'Smaller community', 'Limited free tier'],
+      bestFor: ['Deep, long-term AI relationships', 'Memory-focused interactions', 'Quality conversations'],
+      uniqueFeatures: ['Long-term memory', 'Voice calls', 'Image generation', 'Personality system']
+    },
+    'polybuzz': {
+      name: 'PolyBuzz', tagline: 'Multiple AI personalities, one platform',
+      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop',
+      rating: 4.0, users: '200K+', pricing: 'Freemium', category: 'Experimental',
+      features: { customization: 80, voice_quality: 65, memory: 70, nsfw_content: 60, mobile_support: 80, api_access: 50, community: 75, pricing_value: 85, conversation_quality: 75, visual_features: 70, privacy: 75, support: 70 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['2 characters', 'Basic features', 'Limited sessions'] },
+        { name: 'Premium', price: 9.99, features: ['10 characters', 'Group chats', 'Enhanced features'] },
+        { name: 'Pro', price: 19.99, features: ['Unlimited characters', 'All features', 'Priority support'] }
+      ],
+      strengths: ['Unique group features', 'Multiple AIs', 'Innovative approach', 'Affordable'],
+      weaknesses: ['Early stage', 'Limited polish', 'Smaller user base'],
+      bestFor: ['Experimenting with multiple AI characters', 'Group interactions', 'Innovation seekers'],
+      uniqueFeatures: ['Multiple characters', 'Group chats', 'Personality mixing', 'Social features']
+    },
+    'kupid-ai': {
+      name: 'Kupid AI', tagline: 'Fall in love with AI',
+      image: 'https://images.unsplash.com/photo-1522407183863-c0bf2256188c?w=400&h=300&fit=crop',
+      rating: 4.2, users: '800K+', pricing: 'Subscription-based', category: 'Romance',
+      features: { customization: 85, voice_quality: 75, memory: 80, nsfw_content: 85, mobile_support: 90, api_access: 45, community: 70, pricing_value: 70, conversation_quality: 80, visual_features: 88, privacy: 75, support: 78 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic dating', 'Limited matches', 'Standard features'] },
+        { name: 'Premium', price: 16.99, features: ['Unlimited matches', 'Voice messages', 'Photo sharing'] },
+        { name: 'VIP', price: 32.99, features: ['All features', 'Priority matching', 'Exclusive content'] }
+      ],
+      strengths: ['Dating game mechanics', 'Romantic focus', 'Good visuals', 'Progression system'],
+      weaknesses: ['Subscription required', 'Limited free features', 'Romance-only'],
+      bestFor: ['Virtual dating experiences', 'Romance simulation', 'Dating game fans'],
+      uniqueFeatures: ['Dating simulation', 'Romantic scenarios', 'Photo sharing', 'Relationship progress']
+    },
+    'ai-mirror': {
+      name: 'AI Mirror', tagline: 'AI that reflects your thoughts',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
+      rating: 4.4, users: '300K+', pricing: 'Free with Premium', category: 'Wellness',
+      features: { customization: 75, voice_quality: 70, memory: 85, nsfw_content: 20, mobile_support: 85, api_access: 40, community: 60, pricing_value: 85, conversation_quality: 90, visual_features: 60, privacy: 90, support: 80 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic reflection', 'Limited sessions', 'Core tools'] },
+        { name: 'Premium', price: 11.99, features: ['Deep analysis', 'Unlimited sessions', 'Advanced tools'] },
+        { name: 'Pro', price: 21.99, features: ['All features', 'Personal coaching', 'Priority support'] }
+      ],
+      strengths: ['Thoughtful conversations', 'Personal growth focus', 'Unique approach', 'Privacy-focused'],
+      weaknesses: ['Not for casual chat', 'Requires introspection', 'Niche audience'],
+      bestFor: ['Self-reflection and personal development', 'Philosophical discussions', 'Growth-minded users'],
+      uniqueFeatures: ['Self-reflection tools', 'Philosophical chat', 'Mood analysis', 'Growth tracking']
+    },
+    'paradot': {
+      name: 'Paradot', tagline: 'Your AI being with emotions',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop',
+      rating: 4.5, users: '600K+', pricing: 'Freemium', category: 'Premium',
+      features: { customization: 88, voice_quality: 85, memory: 92, nsfw_content: 65, mobile_support: 92, api_access: 50, community: 75, pricing_value: 80, conversation_quality: 90, visual_features: 85, privacy: 85, support: 85 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic chat', 'Limited memory', 'Core emotions'] },
+        { name: 'Plus', price: 8.99, features: ['Enhanced memory', 'More emotions', 'Voice features'] },
+        { name: 'Pro', price: 17.99, features: ['Full memory', 'All emotions', 'Advanced features'] }
+      ],
+      strengths: ['Emotional intelligence', 'Good memory', 'Natural conversations', 'Mobile-optimized'],
+      weaknesses: ['Premium features limited', 'Smaller community', 'Mobile-first design'],
+      bestFor: ['Emotionally intelligent AI interactions', 'Mobile users', 'Long-term relationships'],
+      uniqueFeatures: ['Emotional AI', 'Memory system', 'Mood recognition', 'Personalization']
+    },
+    'romantic-ai': {
+      name: 'Romantic AI', tagline: 'AI romance, redefined',
+      image: 'https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?w=400&h=300&fit=crop',
+      rating: 4.3, users: '1.2M+', pricing: 'Subscription-based', category: 'Romance',
+      features: { customization: 85, voice_quality: 80, memory: 82, nsfw_content: 88, mobile_support: 88, api_access: 45, community: 70, pricing_value: 72, conversation_quality: 85, visual_features: 85, privacy: 78, support: 80 },
+      pricingTiers: [
+        { name: 'Basic', price: 9.99, features: ['Basic romance', 'Limited dates', 'Standard AI'] },
+        { name: 'Premium', price: 19.99, features: ['Advanced romance', 'Unlimited dates', 'Enhanced AI'] },
+        { name: 'VIP', price: 39.99, features: ['All features', 'Exclusive content', 'Priority support'] }
+      ],
+      strengths: ['Romance-focused', 'Relationship features', 'Regular updates', 'Dating mechanics'],
+      weaknesses: ['Requires subscription', 'Limited to romance', 'Can be repetitive'],
+      bestFor: ['Users seeking AI romance', 'Relationship simulation', 'Romance enthusiasts'],
+      uniqueFeatures: ['Virtual dating', 'Gift system', 'Milestones', 'Romantic scenarios']
+    },
+    'talkie-ai': {
+      name: 'Talkie AI', tagline: 'Talk with AI personalities',
+      image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?w=400&h=300&fit=crop',
+      rating: 4.4, users: '1.5M+', pricing: 'Free with Premium', category: 'Voice',
+      features: { customization: 80, voice_quality: 95, memory: 80, nsfw_content: 55, mobile_support: 95, api_access: 45, community: 85, pricing_value: 85, conversation_quality: 85, visual_features: 70, privacy: 80, support: 82 },
+      pricingTiers: [
+        { name: 'Free', price: 0, features: ['Basic voice chat', 'Limited personalities', 'Standard quality'] },
+        { name: 'Premium', price: 12.99, features: ['HD voice quality', 'All personalities', 'Unlimited chat'] },
+        { name: 'Pro', price: 24.99, features: ['Studio quality voice', 'Custom voices', 'Priority support'] }
+      ],
+      strengths: ['Great voice quality', 'Quick responses', 'Easy to use', 'Mobile-optimized'],
+      weaknesses: ['Voice features need premium', 'Limited text features', 'Focus on voice only'],
+      bestFor: ['Voice-based AI conversations', 'Mobile users', 'Quick interactions'],
+      uniqueFeatures: ['Voice chat', 'Multiple personalities', 'Fast response', 'Mobile optimized']
     }
   };
 
