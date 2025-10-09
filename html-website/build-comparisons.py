@@ -271,11 +271,7 @@ def generate_comparison_page(platform1_key, platform2_key):
                 <canvas id="featureChart"></canvas>
             </div>
             <div class="feature-winner-grid">
-                {"".join([f'''
-                <div class="feature-winner">
-                    <span class="feature-name">{feature.replace("_", " ").title()}</span>
-                    <span class="winner {winners[feature].lower().replace(".", "-")}">{winners[feature]}</span>
-                </div>''' for feature in feature_labels])}
+                {"".join([f'<div class="feature-winner"><span class="feature-name">{feature.replace("_", " ").title()}</span><span class="winner {winners[feature].lower().replace(".", "-")}">{winners[feature]}</span></div>' for feature in feature_labels])}
             </div>
         </section>
 
