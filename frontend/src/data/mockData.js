@@ -76,7 +76,7 @@ export const aiPlatforms = [
     category: "Premium",
     features: ["Multiple Companions", "AI Selfies", "Voice Messages", "Deep Memory"],
     pricing: "Subscription-based",
-    image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1758626101945-ed0068aad9f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85",
     pros: ["Unique selfie feature", "Multiple AI companions", "Strong personality"],
     cons: ["Requires subscription", "Higher price point"],
     bestFor: "Users wanting visual AI interactions"
