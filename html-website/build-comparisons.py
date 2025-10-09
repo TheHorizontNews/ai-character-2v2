@@ -390,7 +390,7 @@ def generate_comparison_page(platform1_key, platform2_key):
                 <div class="decision-card">
                     <h3>Choose {platform2['name']} if you want:</h3>
                     <ul>
-                        {"".join([f'<li>{feature}</li>' for feature in platform2['unique_features']])}
+                        {"".join([f"<li>{feature}</li>" for feature in platform2["unique_features"]])}
                     </ul>
                     <a href="/platform/{platform2['slug']}.html" class="cta-button">Learn More About {platform2['name']}</a>
                 </div>
