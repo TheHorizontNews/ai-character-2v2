@@ -108,7 +108,7 @@ export const aiPlatforms = [
     category: "Developer",
     features: ["API Access", "Game Integration", "Advanced Customization", "Voice & Animation"],
     pricing: "Developer pricing",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1758626056863-9191d5cef12e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxhaSUyMHRlY2glMjBjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzNDQ3fDA&ixlib=rb-4.1.0&q=85",
     pros: ["Professional tools", "Highly customizable", "Game-ready"],
     cons: ["Complex for casual users", "Enterprise pricing"],
     bestFor: "Developers and game creators"
