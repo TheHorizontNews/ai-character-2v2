@@ -124,7 +124,7 @@ export const aiPlatforms = [
     category: "Open Source",
     features: ["Open Source", "Multiple AI Backends", "Customizable", "Offline Mode"],
     pricing: "Free (self-hosted)",
-    image: "https://images.unsplash.com/photo-1618609377864-68609b857e90?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1717143587138-2532a35ce9b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxhaSUyMGxvZ298ZW58MHx8fHwxNzYwMDMzMjYwfDA&ixlib=rb-4.1.0&q=85",
     pros: ["Free and open source", "Flexible backend options", "Privacy control"],
     cons: ["Requires technical setup", "No official support"],
     bestFor: "Tech-savvy users and privacy enthusiasts"
