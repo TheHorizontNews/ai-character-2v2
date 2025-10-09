@@ -18,6 +18,8 @@ function App() {
           <Route path="/platform/:slug" element={<PlatformDetailPage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/explore" element={<ExplorePage />} />
+          <Route path="/compare" element={<ComparePage />} />
+          <Route path="/all-comparisons" element={<AllComparisonsPage />} />
           <Route path="/seo/*" element={<SEOPage />} />
         </Routes>
       </BrowserRouter>
