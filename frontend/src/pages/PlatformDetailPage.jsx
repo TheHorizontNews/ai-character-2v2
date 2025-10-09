@@ -79,6 +79,10 @@ const PlatformDetailPage = () => {
     );
   }
 
+  // Debug logging
+  console.log('PlatformDetailPage render - platform:', platform);
+  console.log('PlatformDetailPage render - platform slug:', platform?.slug);
+
   // Special handling for Lovescape platform
   if (platform && platform.slug === 'lovescape') {
     return (
