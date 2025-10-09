@@ -485,24 +485,24 @@ const ComparisonDetailPage = () => {
         <div className="comparison-hero">
           <div className="comparison-platforms">
             <div className="platform-hero">
-              <img src={platform1Data.image} alt={platform1Data.name} />
-              <h2>{platform1Data.name}</h2>
-              <p>{platform1Data.tagline}</p>
-              <div className="rating">
-                <Star size={16} fill="currentColor" />
-                {platform1Data.rating} ({platform1Data.users})
+              <div className="platform-name-hero">{platform1Data.name}</div>
+              <p className="platform-tagline">{platform1Data.tagline}</p>
+              <div className="platform-rating">
+                <Star size={18} fill="currentColor" />
+                <span>{platform1Data.rating}</span>
+                <span className="user-count">({platform1Data.users})</span>
               </div>
             </div>
             
-            <div className="vs-divider">VS</div>
+            <div className="vs-divider-hero">VS</div>
             
             <div className="platform-hero">
-              <img src={platform2Data.image} alt={platform2Data.name} />
-              <h2>{platform2Data.name}</h2>
-              <p>{platform2Data.tagline}</p>
-              <div className="rating">
-                <Star size={16} fill="currentColor" />
-                {platform2Data.rating} ({platform2Data.users})
+              <div className="platform-name-hero">{platform2Data.name}</div>
+              <p className="platform-tagline">{platform2Data.tagline}</p>
+              <div className="platform-rating">
+                <Star size={18} fill="currentColor" />
+                <span>{platform2Data.rating}</span>
+                <span className="user-count">({platform2Data.users})</span>
               </div>
             </div>
           </div>
