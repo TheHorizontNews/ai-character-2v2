@@ -188,7 +188,7 @@ export const aiPlatforms = [
     category: "Romance",
     features: ["Anime & Realistic", "Image Generation", "Voice Chat", "Roleplay Scenarios"],
     pricing: "Subscription-based",
-    image: "https://images.unsplash.com/photo-1580477667995-2b94f01c9516?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1758626101945-ed0068aad9f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85",
     pros: ["Multiple art styles", "Good image quality", "Engaging personalities"],
     cons: ["Subscription required", "Limited free trial"],
     bestFor: "Anime and visual novel fans"
