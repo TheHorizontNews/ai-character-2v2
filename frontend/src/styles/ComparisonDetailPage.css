@@ -110,6 +110,122 @@
 }
 
 /* SEO Content Block */
+.seo-content-block {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.seo-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+.seo-main-content h3 {
+  color: #667eea;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  margin-top: 30px;
+}
+
+.seo-main-content h3:first-child {
+  margin-top: 0;
+}
+
+.seo-main-content p {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.seo-sidebar {
+  background: #0a0a0a;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #333;
+  height: fit-content;
+}
+
+.pros-cons-summary {
+  margin-bottom: 30px;
+}
+
+.pros-summary, .cons-summary {
+  margin-bottom: 25px;
+}
+
+.pros-summary h4, .cons-summary h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.pros-summary h4 {
+  color: #667eea;
+}
+
+.cons-summary h4 {
+  color: #ff6b6b;
+}
+
+.pros-summary ul, .cons-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pros-summary li, .cons-summary li {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 6px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.pros-summary li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.cons-summary li:before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.comparison-verdict {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.comparison-verdict h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.comparison-verdict p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
 .seo-comparison-block {
   background: #1a1a1a;
   border-radius: 16px;
