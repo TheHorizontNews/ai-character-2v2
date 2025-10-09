@@ -14,58 +14,8 @@ const PlatformDetailPage = () => {
   const [platform, setPlatform] = useState(null);
 
   useEffect(() => {
-    console.log('PlatformDetailPage useEffect - slug:', slug);
-    console.log('PlatformDetailPage useEffect - aiPlatforms:', aiPlatforms);
     const found = aiPlatforms.find(p => p.slug === slug);
-    console.log('PlatformDetailPage useEffect - found platform:', found);
     setPlatform(found);
-    
-    if (found) {
-      if (found.slug === 'lovescape') {
-        // Handle Lovescape meta and schema
-        document.title = "Lovescape Review 2025 — The Best AI Companion App";
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-          metaDesc.setAttribute('content', 'Discover Lovescape — an advanced AI companion app with voice, personality, and emotions. Build your perfect virtual partner.');
-        }
-        
-        // Add Lovescape schema markup
-        const schemaData = {
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "@id": "https://ai-characters.org/platform/lovescape",
-          "name": "Lovescape",
-          "url": "https://ai-characters.org/platform/lovescape",
-          "image": "https://customer-assets.emergentagent.com/job_aipals-compare/artifacts/fezbpzru_fbc08f26-febe-420b-912c-0ce88cfce6da_rw_1200.jpg",
-          "description": "Lovescape is an advanced AI companion platform that allows users to create customizable virtual partners with unique personalities, voices, and emotional depth.",
-          "brand": { "@type": "Brand", "name": "Lovescape" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "bestRating": "5", "ratingCount": "12500" }
-        };
-        
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify(schemaData);
-        document.head.appendChild(script);
-      } else {
-        // Handle generic platforms
-        const title = `${found.name} Review 2025 — ${found.tagline}`;
-        const description = `${found.description.substring(0, 140)}...`;
-        
-        updatePageMeta(title, description);
-        
-        const schemaData = generatePlatformSchema(found);
-        if (schemaData) {
-          addSchemaMarkup(schemaData);
-        }
-      }
-    }
-    
-    // Cleanup function
-    return () => {
-      if (found) {
-        resetPageMeta();
-      }
-    };
   }, [slug]);
 
   if (!platform) {
