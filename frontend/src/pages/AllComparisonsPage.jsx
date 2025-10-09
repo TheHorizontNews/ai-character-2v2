@@ -9,7 +9,7 @@ const AllComparisonsPage = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
-  const [activeTab, setActiveTab] = useState('all');
+  // activeTab removed since all comparisons are now live
 
   // Generate all comparisons and get stats
   const allComparisons = useMemo(() => generateAllComparisons(), []);
