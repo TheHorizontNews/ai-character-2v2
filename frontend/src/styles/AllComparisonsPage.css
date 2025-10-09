@@ -488,3 +488,45 @@
     margin: 0 4px 24px 4px;
   }
 }
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px 8px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 20px 16px;
+    min-height: auto;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+
+  .stat-label {
+    font-size: 15px;
+  }
+
+  .directory-controls,
+  .stats-overview,
+  .comparisons-grid,
+  .section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .comparison-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .search-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
