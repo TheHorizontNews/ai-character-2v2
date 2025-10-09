@@ -743,6 +743,92 @@ const ComparisonDetailPage = () => {
           </div>
         </section>
 
+        {/* SEO Content Block */}
+        <section className="comparison-section seo-content-block">
+          <h2>Complete {platform1Data.name} vs {platform2Data.name} Analysis</h2>
+          
+          <div className="seo-content-grid">
+            <div className="seo-main-content">
+              <h3>Why Compare {platform1Data.name} and {platform2Data.name}?</h3>
+              <p>
+                When choosing between {platform1Data.name} and {platform2Data.name}, it's essential to understand 
+                their unique approaches to AI companionship. {platform1Data.name}, known for its {platform1Data.uniqueFeatures[0].toLowerCase()}, 
+                offers a {platform1Data.category.toLowerCase()} experience that focuses on {platform1Data.strengths[0].toLowerCase()}. 
+                Meanwhile, {platform2Data.name} excels in {platform2Data.uniqueFeatures[0].toLowerCase()}, providing users with 
+                {platform2Data.strengths[0].toLowerCase()}.
+              </p>
+
+              <h3>Key Differences in AI Technology</h3>
+              <p>
+                The fundamental difference between these platforms lies in their core functionality. 
+                {platform1Data.name} specializes in {platform1Data.strengths[1] ? platform1Data.strengths[1].toLowerCase() : platform1Data.strengths[0].toLowerCase()}, 
+                while {platform2Data.name} focuses on {platform2Data.strengths[1] ? platform2Data.strengths[1].toLowerCase() : platform2Data.strengths[0].toLowerCase()}. 
+                This makes {platform1Data.name} ideal for users seeking {platform1Data.bestFor[0].toLowerCase()}, 
+                whereas {platform2Data.name} better serves those interested in {platform2Data.bestFor[0].toLowerCase()}.
+              </p>
+
+              <h3>Pricing and Value Comparison</h3>
+              <p>
+                From a pricing perspective, {platform1Data.name} follows a {platform1Data.pricing.toLowerCase()} model, 
+                while {platform2Data.name} operates on a {platform2Data.pricing.toLowerCase()} basis. 
+                Users should consider their budget and usage patterns when deciding between these AI companion platforms. 
+                {platform1Data.name} may be more suitable for those who {platform1Data.bestFor[1] ? platform1Data.bestFor[1].toLowerCase() : 'value premium features'}, 
+                while {platform2Data.name} appeals to users who {platform2Data.bestFor[1] ? platform2Data.bestFor[1].toLowerCase() : 'prefer different approaches'}.
+              </p>
+            </div>
+
+            <div className="seo-sidebar">
+              <div className="pros-cons-summary">
+                <div className="pros-summary">
+                  <h4>{platform1Data.name} Advantages</h4>
+                  <ul>
+                    {platform1Data.strengths.slice(0, 3).map((strength, index) => (
+                      <li key={index}>{strength}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="cons-summary">
+                  <h4>{platform1Data.name} Limitations</h4>
+                  <ul>
+                    {platform1Data.weaknesses.slice(0, 2).map((weakness, index) => (
+                      <li key={index}>{weakness}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="pros-summary">
+                  <h4>{platform2Data.name} Advantages</h4>
+                  <ul>
+                    {platform2Data.strengths.slice(0, 3).map((strength, index) => (
+                      <li key={index}>{strength}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="cons-summary">
+                  <h4>{platform2Data.name} Limitations</h4>
+                  <ul>
+                    {platform2Data.weaknesses.slice(0, 2).map((weakness, index) => (
+                      <li key={index}>{weakness}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="comparison-verdict">
+                <h4>Bottom Line</h4>
+                <p>
+                  Choose {platform1Data.name} if you prioritize {platform1Data.uniqueFeatures[0].toLowerCase()} and 
+                  {platform1Data.strengths[0].toLowerCase()}. Opt for {platform2Data.name} if you value 
+                  {platform2Data.uniqueFeatures[0].toLowerCase()} and {platform2Data.strengths[0].toLowerCase()}. 
+                  Both platforms offer solid AI companion experiences with distinct advantages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="comparison-section">
           <h2>Frequently Asked Questions</h2>
