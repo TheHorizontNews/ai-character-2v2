@@ -34,6 +34,8 @@ const HomePage = () => {
           platforms={aiPlatforms}
         />
         
+        <CTABlocks />
+        
         <ComparisonTable />
         
         <PlatformSection
