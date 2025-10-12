@@ -6,6 +6,7 @@ import CategorySection from '../components/CategorySection';
 import ComparisonTable from '../components/ComparisonTable';
 import SEOBlock from '../components/SEOBlock';
 import ExpertInsights from '../components/ExpertInsights';
+import AITrendsSection from '../components/AITrendsSection';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import { aiPlatforms, faqs } from '../data/mockData';
