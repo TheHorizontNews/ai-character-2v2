@@ -67,18 +67,20 @@ const PlatformDetailPage = () => {
           </div>
           
           <div className="detail-content">
-            <section className="detail-section">
-              <h2>About {platform.name}</h2>
-              <p>{platform.description}</p>
-            </section>
-            
-            <section className="detail-section">
+            {/* Enhanced Key Features Section */}
+            <section className="detail-section enhanced-features">
               <h2>Key Features</h2>
-              <div className="features-grid">
+              <p className="section-subtitle">Discover what makes {platform.name} stand out</p>
+              <div className="enhanced-features-grid">
                 {platform.features.map((feature, idx) => (
-                  <div key={idx} className="feature-item">
-                    <Check size={20} className="feature-icon" />
-                    <span>{feature}</span>
+                  <div key={idx} className="enhanced-feature-card">
+                    <div className="feature-icon-wrapper">
+                      <Zap size={28} />
+                    </div>
+                    <h3>{feature}</h3>
+                    <div className="feature-checkmark">
+                      <Check size={20} />
+                    </div>
                   </div>
                 ))}
               </div>
