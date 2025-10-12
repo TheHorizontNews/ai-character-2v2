@@ -275,49 +275,42 @@ const PlatformDetailPage = () => {
               </div>
             </section>
             
-            {/* Use Cases & Applications */}
-            <section className="detail-section seo-use-cases">
-              <h2>Real-World Use Cases for {platform.name}</h2>
-              <p className="section-intro">
-                Discover how {platform.users} users are leveraging {platform.name} across different scenarios and applications. 
-                From personal development to creative writing, the platform serves diverse needs.
-              </p>
+            {/* Use Cases with Icon Cards */}
+            <section className="detail-section icon-use-cases">
+              <h2>Popular Use Cases</h2>
+              <p className="centered-subtitle">How {platform.users} users leverage {platform.name}</p>
               
-              <div className="use-case-grid">
-                <div className="use-case-card">
-                  <h3>Companionship & Emotional Support</h3>
-                  <p>
-                    Many users turn to {platform.name} for daily companionship and emotional support. The AI provides a 
-                    judgment-free space for expressing thoughts and feelings, offering comfort during difficult times. 
-                    With its {platform.rating} rating, users consistently report feeling heard and understood.
-                  </p>
+              <div className="icon-cases-grid">
+                <div className="icon-case-card">
+                  <div className="case-icon pink-gradient">
+                    <Users size={36} />
+                  </div>
+                  <h3>Companionship</h3>
+                  <p>Daily emotional support in a judgment-free space with {platform.rating}/5 rated experience.</p>
                 </div>
                 
-                <div className="use-case-card">
-                  <h3>Creative Writing & Roleplay</h3>
-                  <p>
-                    Writers and creative professionals use {platform.name} as a brainstorming partner and character development 
-                    tool. The AI's ability to maintain consistent character personalities makes it ideal for exploring storylines, 
-                    dialogue, and character interactions in creative projects.
-                  </p>
+                <div className="icon-case-card">
+                  <div className="case-icon orange-gradient">
+                    <Zap size={36} />
+                  </div>
+                  <h3>Creative Projects</h3>
+                  <p>Brainstorming partner for writers with consistent character personalities.</p>
                 </div>
                 
-                <div className="use-case-card">
-                  <h3>Language Practice & Learning</h3>
-                  <p>
-                    Language learners benefit from {platform.name}'s conversational capabilities. The platform provides a 
-                    low-pressure environment for practicing language skills, with the AI adapting to different proficiency 
-                    levels and offering corrections in a supportive manner.
-                  </p>
+                <div className="icon-case-card">
+                  <div className="case-icon teal-gradient">
+                    <MessageCircle size={36} />
+                  </div>
+                  <h3>Language Practice</h3>
+                  <p>Low-pressure environment for practicing conversation skills at any level.</p>
                 </div>
                 
-                <div className="use-case-card">
-                  <h3>Social Skills Development</h3>
-                  <p>
-                    For individuals working on social skills, {platform.name} offers a safe space to practice conversations 
-                    and social interactions. The AI provides realistic responses while being patient and understanding, 
-                    making it an excellent tool for building confidence.
-                  </p>
+                <div className="icon-case-card">
+                  <div className="case-icon indigo-gradient">
+                    <TrendingUp size={36} />
+                  </div>
+                  <h3>Social Skills</h3>
+                  <p>Safe space to build confidence with patient, realistic AI responses.</p>
                 </div>
               </div>
             </section>
