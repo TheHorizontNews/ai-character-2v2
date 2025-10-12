@@ -391,68 +391,48 @@ const PlatformDetailPage = () => {
               </div>
             </section>
             
-            {/* Final Verdict & Recommendations */}
-            <section className="detail-section seo-verdict">
-              <h2>Final Verdict: Is {platform.name} Worth It?</h2>
+            {/* Visual Verdict Section */}
+            <section className="detail-section visual-verdict">
+              <h2>Our Verdict</h2>
+              <p className="centered-subtitle">Is {platform.name} worth it?</p>
               
-              <div className="verdict-content">
-                <div className="verdict-summary">
-                  <h3>Overall Assessment</h3>
-                  <p>
-                    After comprehensive analysis, {platform.name} earns its {platform.rating}/5 rating through consistent 
-                    performance across key areas. The platform successfully delivers on its promise of {platform.tagline.toLowerCase()}, 
-                    backed by a growing community of {platform.users} satisfied users.
-                  </p>
+              <div className="verdict-rating-card">
+                <div className="rating-display">
+                  <Star size={48} fill="#ffd700" color="#ffd700" />
+                  <span className="rating-number">{platform.rating}</span>
+                  <span className="rating-text">out of 5</span>
                 </div>
-                
-                <div className="verdict-strengths">
-                  <h3>Key Strengths</h3>
+                <p className="rating-summary">
+                  {platform.name} delivers on {platform.tagline.toLowerCase()} with {platform.users} satisfied users.
+                </p>
+              </div>
+              
+              <div className="verdict-two-column">
+                <div className="verdict-pros-card">
+                  <h3>✓ Strengths</h3>
                   <ul>
                     {platform.pros.map((pro, idx) => (
-                      <li key={idx}>
-                        <Check size={18} />
-                        <span>{pro}</span>
-                      </li>
+                      <li key={idx}>{pro}</li>
                     ))}
                   </ul>
-                  <p>
-                    These strengths make {platform.name} particularly well-suited for {platform.bestFor.toLowerCase()}. 
-                    The {platform.pricing} model ensures good value for money, while the feature set covers essential 
-                    needs without overwhelming users with unnecessary complexity.
-                  </p>
                 </div>
                 
-                <div className="verdict-considerations">
-                  <h3>Points to Consider</h3>
+                <div className="verdict-cons-card">
+                  <h3>⚠ Considerations</h3>
                   <ul>
                     {platform.cons.map((con, idx) => (
-                      <li key={idx}>
-                        <X size={18} />
-                        <span>{con}</span>
-                      </li>
+                      <li key={idx}>{con}</li>
                     ))}
                   </ul>
-                  <p>
-                    While these limitations exist, they're relatively minor compared to the overall value proposition. 
-                    Most users find that the advantages significantly outweigh any drawbacks, as reflected in the 
-                    platform's strong {platform.rating}/5 rating.
-                  </p>
                 </div>
-                
-                <div className="verdict-recommendation">
-                  <h3>Our Recommendation</h3>
-                  <p>
-                    <strong>We recommend {platform.name}</strong> for anyone seeking {platform.bestFor.toLowerCase()}. 
-                    The combination of reliable performance, {platform.pricing} pricing, and {platform.users} active community 
-                    makes it a solid choice in the AI character platform space. Whether you're new to AI companions or 
-                    an experienced user, {platform.name} offers something valuable.
-                  </p>
-                  <p>
-                    The platform excels in the {platform.category} category, delivering consistent quality across its 
-                    feature set: {platform.features.join(', ')}. For users prioritizing {platform.bestFor.toLowerCase()}, 
-                    {platform.name} represents one of the best options available today.
-                  </p>
-                </div>
+              </div>
+              
+              <div className="final-recommendation">
+                <h3>✨ Recommended For</h3>
+                <p>
+                  Perfect for {platform.bestFor.toLowerCase()} with {platform.pricing} pricing. 
+                  Excels in {platform.category} category with quality features.
+                </p>
               </div>
             </section>
             
