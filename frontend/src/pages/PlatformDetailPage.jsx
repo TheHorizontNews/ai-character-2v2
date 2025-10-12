@@ -234,58 +234,44 @@ const PlatformDetailPage = () => {
               </div>
             </section>
             
-            {/* Detailed Feature Analysis */}
-            <section className="detail-section seo-detailed-features">
-              <h2>Comprehensive Feature Analysis: {platform.name}</h2>
-              <p className="section-intro">
-                In this detailed analysis, we explore everything {platform.name} has to offer. From advanced AI technology 
-                to user experience, discover why {platform.name} is a leading choice for AI character interactions with 
-                its {platform.rating}/5 rating and {platform.users} active user community.
-              </p>
+            {/* Feature Analysis with Visual Cards */}
+            <section className="detail-section visual-features-section">
+              <h2>What Makes {platform.name} Special</h2>
+              <p className="centered-subtitle">Explore key capabilities with {platform.rating}/5 rating and {platform.users} users</p>
               
-              <div className="feature-deep-dive">
-                <h3><MessageCircle size={24} /> Conversation Quality & AI Intelligence</h3>
-                <p>
-                  {platform.name} leverages cutting-edge AI technology to deliver natural, engaging conversations. 
-                  The platform's AI models are trained on diverse datasets, ensuring responses that feel authentic and contextually aware. 
-                  Users consistently rate the conversation quality as one of the platform's strongest features, with the AI demonstrating 
-                  remarkable understanding of context, emotion, and user preferences over time.
-                </p>
-                <p>
-                  What sets {platform.name} apart is its ability to maintain consistent character personalities while adapting to 
-                  individual user interaction styles. Whether you're looking for casual chat, deep philosophical discussions, or 
-                  creative roleplay, the AI adjusts its responses to match your needs and expectations.
-                </p>
-              </div>
-              
-              <div className="feature-deep-dive">
-                <h3><ImageIcon size={24} /> Visual Customization & Character Design</h3>
-                <p>
-                  Visual representation plays a crucial role in AI companionship, and {platform.name} excels in this area. 
-                  The platform offers extensive customization options, allowing users to create or select characters that resonate 
-                  with their preferences. From detailed avatar customization to dynamic visual responses, every aspect is designed 
-                  to enhance immersion and emotional connection.
-                </p>
-                <p>
-                  The character design interface is intuitive yet powerful, suitable for both beginners and advanced users. 
-                  With {platform.pricing} pricing structure, users can access various levels of visual customization, making 
-                  it accessible to a broad audience while offering premium options for those seeking more detailed control.
-                </p>
-              </div>
-              
-              <div className="feature-deep-dive">
-                <h3><Shield size={24} /> Privacy & Security Features</h3>
-                <p>
-                  In the age of digital interactions, privacy and security are paramount. {platform.name} implements robust 
-                  security measures to protect user data and conversations. All interactions are encrypted, and the platform 
-                  adheres to strict data protection standards. Users maintain full control over their data, with options to 
-                  delete conversations and manage their privacy settings at any time.
-                </p>
-                <p>
-                  The platform's commitment to user privacy extends to its AI training processes. Unlike some competitors, 
-                  {platform.name} ensures that user conversations are not used for AI training without explicit consent, 
-                  providing peace of mind for users concerned about data privacy.
-                </p>
+              <div className="visual-features-grid">
+                <div className="visual-feature-card">
+                  <div className="visual-icon blue-gradient">
+                    <MessageCircle size={32} />
+                  </div>
+                  <h3>AI Conversation Quality</h3>
+                  <p>
+                    {platform.name} delivers natural conversations through advanced AI technology. 
+                    The platform maintains consistent character personalities while adapting to your interaction style.
+                  </p>
+                </div>
+                
+                <div className="visual-feature-card">
+                  <div className="visual-icon purple-gradient">
+                    <ImageIcon size={32} />
+                  </div>
+                  <h3>Character Customization</h3>
+                  <p>
+                    Extensive customization options with intuitive interface. Create characters that match your preferences 
+                    with {platform.pricing} pricing for all experience levels.
+                  </p>
+                </div>
+                
+                <div className="visual-feature-card">
+                  <div className="visual-icon green-gradient">
+                    <Shield size={32} />
+                  </div>
+                  <h3>Privacy & Security</h3>
+                  <p>
+                    Robust security with encrypted interactions. Full data control with options to manage privacy 
+                    settings and delete conversations anytime.
+                  </p>
+                </div>
               </div>
             </section>
             
