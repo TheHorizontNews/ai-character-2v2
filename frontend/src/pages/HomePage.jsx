@@ -5,6 +5,7 @@ import PlatformSection from '../components/PlatformSection';
 import CategorySection from '../components/CategorySection';
 import ComparisonTable from '../components/ComparisonTable';
 import SEOBlock from '../components/SEOBlock';
+import ExpertInsights from '../components/ExpertInsights';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import { aiPlatforms, faqs } from '../data/mockData';
