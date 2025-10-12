@@ -347,75 +347,46 @@ const PlatformDetailPage = () => {
               </div>
             </section>
             
-            {/* FAQ Section */}
-            <section className="detail-section seo-faq">
-              <h2>Frequently Asked Questions About {platform.name}</h2>
+            {/* Compact FAQ Section */}
+            <section className="detail-section compact-faq">
+              <h2>Common Questions</h2>
+              <p className="centered-subtitle">Quick answers about {platform.name}</p>
               
-              <div className="faq-list">
-                <div className="faq-item">
-                  <h3>What is {platform.name} and how does it work?</h3>
-                  <p>
-                    {platform.name} is an AI character platform that allows users to interact with AI-powered virtual companions. 
-                    {platform.description} The platform uses advanced natural language processing to create realistic, engaging 
-                    conversations. With {platform.users} active users and a {platform.rating}/5 rating, it's a trusted choice 
-                    for AI companionship.
-                  </p>
+              <div className="compact-faq-grid">
+                <div className="compact-faq-item">
+                  <div className="faq-icon">❓</div>
+                  <h3>What is {platform.name}?</h3>
+                  <p>{platform.description} Uses advanced AI for realistic conversations with {platform.users} users.</p>
                 </div>
                 
-                <div className="faq-item">
-                  <h3>How much does {platform.name} cost?</h3>
-                  <p>
-                    {platform.name} operates on a {platform.pricing} basis. This pricing model allows users to access core 
-                    features while offering premium options for enhanced functionality. The platform provides excellent value 
-                    compared to competitors, with transparent pricing and no hidden fees.
-                  </p>
+                <div className="compact-faq-item">
+                  <div className="faq-icon">💰</div>
+                  <h3>Pricing</h3>
+                  <p>{platform.pricing} with transparent pricing and no hidden fees.</p>
                 </div>
                 
-                <div className="faq-item">
-                  <h3>Is {platform.name} safe and private?</h3>
-                  <p>
-                    Yes, {platform.name} takes user privacy and safety seriously. All conversations are encrypted and stored 
-                    securely. The platform complies with data protection regulations and gives users full control over their 
-                    data. You can delete your conversations and account at any time. The {platform.rating}/5 rating reflects 
-                    users' trust in the platform's security measures.
-                  </p>
+                <div className="compact-faq-item">
+                  <div className="faq-icon">🔒</div>
+                  <h3>Privacy & Safety</h3>
+                  <p>Encrypted conversations with full data control. {platform.rating}/5 trusted rating.</p>
                 </div>
                 
-                <div className="faq-item">
-                  <h3>Who is {platform.name} best suited for?</h3>
-                  <p>
-                    {platform.name} is ideal for {platform.bestFor.toLowerCase()}. The platform serves diverse needs, from 
-                    casual conversation to {platform.category.toLowerCase()} interactions. Whether you're seeking companionship, 
-                    creative inspiration, or just fun conversations, {platform.name} adapts to your preferences.
-                  </p>
+                <div className="compact-faq-item">
+                  <div className="faq-icon">🎯</div>
+                  <h3>Best For</h3>
+                  <p>Ideal for {platform.bestFor.toLowerCase()} with {platform.category} focus.</p>
                 </div>
                 
-                <div className="faq-item">
-                  <h3>What features does {platform.name} offer?</h3>
-                  <p>
-                    {platform.name} offers comprehensive features including {platform.features.join(', ')}. These features 
-                    are designed to provide a rich, immersive experience for users seeking quality AI interactions. The platform 
-                    continues to add new features based on community feedback.
-                  </p>
+                <div className="compact-faq-item">
+                  <div className="faq-icon">⚡</div>
+                  <h3>Key Features</h3>
+                  <p>{platform.features.slice(0, 2).join(', ')} and more premium features.</p>
                 </div>
                 
-                <div className="faq-item">
-                  <h3>How does {platform.name} compare to Character.AI or Replika?</h3>
-                  <p>
-                    While Character.AI focuses on vast character variety and Replika emphasizes therapeutic companionship, 
-                    {platform.name} distinguishes itself through {platform.bestFor.toLowerCase()}. With {platform.users} users 
-                    and a {platform.rating}/5 rating, it offers a unique balance of features and user experience. The {platform.pricing} 
-                    pricing model also makes it accessible to a wide audience.
-                  </p>
-                </div>
-                
-                <div className="faq-item">
-                  <h3>Can I use {platform.name} on mobile devices?</h3>
-                  <p>
-                    Yes, {platform.name} is designed to work seamlessly across devices. Whether you're using a smartphone, 
-                    tablet, or desktop computer, you'll have access to all features. The responsive interface ensures a 
-                    consistent experience regardless of your device, making it easy to continue conversations on the go.
-                  </p>
+                <div className="compact-faq-item">
+                  <div className="faq-icon">📱</div>
+                  <h3>Mobile Access</h3>
+                  <p>Works seamlessly on all devices with responsive interface.</p>
                 </div>
               </div>
             </section>
