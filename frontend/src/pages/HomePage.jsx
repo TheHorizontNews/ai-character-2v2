@@ -63,6 +63,8 @@ const HomePage = () => {
           platforms={popularPlatforms}
         />
         
+        <ExpertInsights />
+        
         <FAQ faqs={faqs} />
         
         <Footer />
