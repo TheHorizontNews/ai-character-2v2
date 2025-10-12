@@ -10,10 +10,13 @@ const ComparisonTable = () => {
 
   // Helper function to convert platform name to slug
   const nameToSlug = (name) => {
+    // Handle special cases
+    if (name === 'Poe (Quora)') return 'poe';
+    
     return name.toLowerCase()
       .replace(/\./g, '-') // Replace dots with hyphens (for Character.AI -> character-ai)
       .replace(/\s+/g, '-') // Replace spaces with hyphens
-      .replace(/\(|\)/g, '') // Remove parentheses
+      .replace(/\(.*?\)/g, '') // Remove content in parentheses
       .replace(/--+/g, '-') // Replace multiple hyphens with single hyphen
       .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
   };
