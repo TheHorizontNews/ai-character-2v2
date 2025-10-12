@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
 import PlatformSection from '../components/PlatformSection';
 import CategorySection from '../components/CategorySection';
+import CTABlocks from '../components/CTABlocks';
 import ComparisonTable from '../components/ComparisonTable';
 import SEOBlock from '../components/SEOBlock';
 import ExpertInsights from '../components/ExpertInsights';
