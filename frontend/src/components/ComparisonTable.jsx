@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Check, X, Star, Zap, Image, Mic, Users, Smartphone, Shield, Crown, Trophy, TrendingUp } from 'lucide-react';
 import '../styles/ComparisonTable.css';
 
