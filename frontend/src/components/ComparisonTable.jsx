@@ -4,8 +4,17 @@ import { Check, X, Star, Zap, Image, Mic, Users, Smartphone, Shield, Crown, Trop
 import '../styles/ComparisonTable.css';
 
 const ComparisonTable = () => {
+  const navigate = useNavigate();
   const [selectedPlatform, setSelectedPlatform] = useState(null);
   const [activeTab, setActiveTab] = useState('top5');
+
+  // Helper function to convert platform name to slug
+  const nameToSlug = (name) => {
+    return name.toLowerCase()
+      .replace(/\./g, '') // Remove dots
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/\(|\)/g, ''); // Remove parentheses
+  };
 
   const allPlatforms = [
     { name: 'Lovescape', rank: 1, color: '#1dd1a1', rating: 9.8, price: 'Freemium', category: 'top5', badge: '🥇', features: { voiceChat: true, visualization: 5, nsfw: true, customization: 5, quality: 5, realism: 5 } },
