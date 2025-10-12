@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Heart, User, Sparkles, UserCheck, Users, Drama, Wand2, Trophy, Flame, HeartHandshake, Search } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
@@ -14,6 +14,11 @@ const ExplorePage = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filteredPages = seoPages.filter(page => {
     const matchesCategory = selectedCategory === 'all' || 
