@@ -143,7 +143,15 @@ const ComparisonTable = () => {
               })}
             </div>
             
-            <button className="compare-cta">View Details</button>
+            <button 
+              className="compare-cta"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent card click from firing
+                navigate(`/platform/${nameToSlug(platform.name)}`);
+              }}
+            >
+              View Details
+            </button>
           </div>
         ))}
       </div>
