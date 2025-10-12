@@ -16,10 +16,7 @@ const HomePage = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   // Filter platforms by category
-  const premiumPlatforms = aiPlatforms.filter(p => p.category === 'Premium');
   const romancePlatforms = aiPlatforms.filter(p => p.category === 'Romance');
-  const popularPlatforms = aiPlatforms.slice(0, 8);
-  const trendingPlatforms = aiPlatforms.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)).slice(0, 8);
 
   return (
     <div className="home-page">
@@ -28,24 +25,12 @@ const HomePage = () => {
       <main className="main-content">
         <Hero />
         
-        <PlatformSection
-          title="Featured Platforms"
-          subtitle="Explore the best AI character creation services"
-          platforms={aiPlatforms.slice(0, 10)}
-        />
-        
         <CategorySection />
         
         <PlatformSection
-          title="Premium Platforms"
-          subtitle="High-quality AI experiences with advanced features"
-          platforms={premiumPlatforms}
-        />
-        
-        <PlatformSection
-          title="Trending Now"
-          subtitle="Most popular platforms based on user ratings"
-          platforms={trendingPlatforms}
+          title="All Platforms"
+          subtitle="Explore all 21 AI character creation platforms"
+          platforms={aiPlatforms}
         />
         
         <ComparisonTable />
@@ -57,12 +42,6 @@ const HomePage = () => {
         />
         
         <SEOBlock />
-        
-        <PlatformSection
-          title="Community Favorites"
-          subtitle="User-recommended AI character platforms"
-          platforms={popularPlatforms}
-        />
         
         <ExpertInsights />
         
