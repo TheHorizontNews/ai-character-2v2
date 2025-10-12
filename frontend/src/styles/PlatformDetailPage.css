@@ -1294,3 +1294,221 @@
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 968px) {
+  .enhanced-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .enhanced-feature-card {
+    padding: 24px 16px;
+  }
+
+  .feature-icon-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .enhanced-feature-card h3 {
+    font-size: 16px;
+  }
+
+  .visual-features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .visual-feature-card {
+    padding: 32px;
+  }
+
+  .visual-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .icon-case-card {
+    padding: 24px;
+  }
+
+  .case-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .highlight-card {
+    padding: 24px;
+  }
+
+  .highlight-number {
+    font-size: 36px;
+  }
+
+  .compact-faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .compact-faq-item {
+    padding: 20px;
+  }
+
+  .faq-icon {
+    font-size: 28px;
+  }
+
+  .verdict-rating-card {
+    padding: 36px 24px;
+  }
+
+  .rating-number {
+    font-size: 52px;
+  }
+
+  .verdict-two-column {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .verdict-pros-card,
+  .verdict-cons-card {
+    padding: 24px;
+  }
+
+  .final-recommendation {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .enhanced-features-grid,
+  .icon-cases-grid,
+  .highlights-grid,
+  .compact-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enhanced-feature-card {
+    padding: 20px;
+  }
+
+  .feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .enhanced-feature-card h3 {
+    font-size: 15px;
+  }
+
+  .visual-feature-card {
+    padding: 24px;
+  }
+
+  .visual-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .visual-feature-card h3 {
+    font-size: 19px;
+  }
+
+  .icon-case-card {
+    padding: 20px;
+  }
+
+  .case-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .icon-case-card h3 {
+    font-size: 17px;
+  }
+
+  .highlight-card {
+    padding: 20px;
+  }
+
+  .highlight-number {
+    font-size: 32px;
+  }
+
+  .highlight-card h3 {
+    font-size: 18px;
+  }
+
+  .compact-faq-item {
+    padding: 16px;
+  }
+
+  .faq-icon {
+    font-size: 24px;
+  }
+
+  .compact-faq-item h3 {
+    font-size: 16px;
+  }
+
+  .compact-faq-item p {
+    font-size: 13px;
+  }
+
+  .verdict-rating-card {
+    padding: 28px 20px;
+  }
+
+  .rating-number {
+    font-size: 44px;
+  }
+
+  .rating-text {
+    font-size: 14px;
+  }
+
+  .rating-summary {
+    font-size: 14px;
+  }
+
+  .verdict-pros-card,
+  .verdict-cons-card {
+    padding: 20px;
+  }
+
+  .verdict-pros-card h3,
+  .verdict-cons-card h3 {
+    font-size: 18px;
+  }
+
+  .verdict-pros-card ul li,
+  .verdict-cons-card ul li {
+    font-size: 14px;
+  }
+
+  .final-recommendation {
+    padding: 24px 20px;
+  }
+
+  .final-recommendation h3 {
+    font-size: 20px;
+  }
+
+  .final-recommendation p {
+    font-size: 14px;
+  }
+}
+
