@@ -66,6 +66,8 @@ const HomePage = () => {
         
         <ExpertInsights />
         
+        <AITrendsSection />
+        
         <FAQ faqs={faqs} />
         
         <Footer />
