@@ -315,53 +315,34 @@ const PlatformDetailPage = () => {
               </div>
             </section>
             
-            {/* Comparison with Competitors */}
-            <section className="detail-section seo-comparison">
-              <h2>How {platform.name} Compares to Other AI Character Platforms</h2>
-              <p className="section-intro">
-                With {platform.users} active users and a {platform.rating}/5 rating, {platform.name} stands among the top 
-                AI character platforms. Here's how it compares to major competitors in key areas:
-              </p>
+            {/* Comparison Highlights */}
+            <section className="detail-section comparison-highlights">
+              <h2>Why Choose {platform.name}</h2>
+              <p className="centered-subtitle">Key advantages with {platform.users} users and {platform.rating}/5 rating</p>
               
-              <div className="comparison-insights">
-                <div className="comparison-point">
+              <div className="highlights-grid">
+                <div className="highlight-card">
+                  <div className="highlight-number">01</div>
                   <h3>Pricing & Value</h3>
-                  <p>
-                    {platform.name} offers a {platform.pricing} model, making it competitive in the market. While some platforms 
-                    offer completely free access with limitations, and others require expensive subscriptions, {platform.name} 
-                    strikes a balance between accessibility and premium features. Users get substantial functionality at a 
-                    reasonable price point, with clear upgrade paths for those seeking advanced features.
-                  </p>
+                  <p>{platform.name} offers {platform.pricing} with balanced features and clear upgrade paths.</p>
                 </div>
                 
-                <div className="comparison-point">
-                  <h3>Feature Set & Capabilities</h3>
-                  <p>
-                    Compared to competitors, {platform.name} excels in {platform.features[0]?.toLowerCase()}. While platforms 
-                    like Character.AI offer vast character libraries and Replika focuses on therapeutic AI, {platform.name} 
-                    differentiates itself through {platform.bestFor.toLowerCase()}. This focused approach allows for deeper 
-                    development in specific areas rather than spreading resources across too many features.
-                  </p>
+                <div className="highlight-card">
+                  <div className="highlight-number">02</div>
+                  <h3>Best For</h3>
+                  <p>Excels in {platform.bestFor.toLowerCase()} with focused development approach.</p>
                 </div>
                 
-                <div className="comparison-point">
-                  <h3>User Experience & Interface</h3>
-                  <p>
-                    The platform's interface is designed for {platform.category.toLowerCase()} interactions, with intuitive 
-                    navigation and responsive design. User feedback consistently highlights the ease of use compared to more 
-                    complex platforms, while still offering depth for power users. The onboarding process is streamlined, 
-                    allowing new users to start conversations within minutes.
-                  </p>
+                <div className="highlight-card">
+                  <div className="highlight-number">03</div>
+                  <h3>User Experience</h3>
+                  <p>Intuitive {platform.category} interface with streamlined onboarding process.</p>
                 </div>
                 
-                <div className="comparison-point">
-                  <h3>Community & Support</h3>
-                  <p>
-                    With {platform.users} active users, {platform.name} has cultivated a vibrant community. The platform 
-                    provides comprehensive support resources, including documentation, community forums, and responsive 
-                    customer service. Regular updates and feature additions demonstrate the team's commitment to continuous 
-                    improvement based on user feedback.
-                  </p>
+                <div className="highlight-card">
+                  <div className="highlight-number">04</div>
+                  <h3>Active Community</h3>
+                  <p>Vibrant {platform.users} user base with responsive support and regular updates.</p>
                 </div>
               </div>
             </section>
