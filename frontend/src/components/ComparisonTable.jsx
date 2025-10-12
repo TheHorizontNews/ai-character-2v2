@@ -11,9 +11,11 @@ const ComparisonTable = () => {
   // Helper function to convert platform name to slug
   const nameToSlug = (name) => {
     return name.toLowerCase()
-      .replace(/\./g, '') // Remove dots
+      .replace(/\./g, '-') // Replace dots with hyphens (for Character.AI -> character-ai)
       .replace(/\s+/g, '-') // Replace spaces with hyphens
-      .replace(/\(|\)/g, ''); // Remove parentheses
+      .replace(/\(|\)/g, '') // Remove parentheses
+      .replace(/--+/g, '-') // Replace multiple hyphens with single hyphen
+      .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
   };
 
   const allPlatforms = [
