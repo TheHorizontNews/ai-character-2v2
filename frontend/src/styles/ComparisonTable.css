@@ -348,12 +348,38 @@
   }
   
   .comparison-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 16px;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #1a1a1a;
+  }
+
+  .comparison-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .comparison-grid::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 3px;
+  }
+
+  .comparison-grid::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+  }
+
+  .comparison-grid::-webkit-scrollbar-thumb:hover {
+    background: #444;
   }
   
   .comparison-card {
     padding: 20px;
+    min-width: 85vw;
+    scroll-snap-align: center;
+    flex-shrink: 0;
   }
   
   .comparison-card-header {
