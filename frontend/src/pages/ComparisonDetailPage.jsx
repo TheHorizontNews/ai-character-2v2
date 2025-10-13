@@ -318,7 +318,7 @@ const ComparisonDetailPage = () => {
     },
     'talkie-ai': {
       name: 'Talkie AI', tagline: 'Talk with AI personalities',
-      image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?w=400&h=300&fit=crop',
+      image: '/images/talkie-ai.webp',
       rating: 4.4, users: '1.5M+', pricing: 'Free with Premium', category: 'Voice',
       features: { customization: 80, voice_quality: 95, memory: 80, nsfw_content: 55, mobile_support: 95, api_access: 45, community: 85, pricing_value: 85, conversation_quality: 85, visual_features: 70, privacy: 80, support: 82 },
       pricingTiers: [
