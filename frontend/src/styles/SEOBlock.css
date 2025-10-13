@@ -126,6 +126,83 @@
   color: #fff;
 }
 
+/* Mobile Styles for V2 */
+@media (max-width: 968px) {
+  .seo-block-v2 {
+    padding: 60px 24px;
+  }
+
+  .seo-title-v2 {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+
+  .reason-item {
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  .reason-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .reason-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .reason-content h3 {
+    font-size: 20px;
+  }
+
+  .reason-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .seo-block-v2 {
+    padding: 50px 20px;
+  }
+
+  .seo-title-v2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .reason-item {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reason-item:hover {
+    padding-left: 0;
+  }
+
+  .reason-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .reason-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .reason-content h3 {
+    font-size: 19px;
+  }
+
+  .reason-content p {
+    font-size: 14px;
+  }
+}
+
+/* Old mobile styles */
 @media (max-width: 768px) {
   .seo-block {
     padding: 50px 20px;
@@ -134,22 +211,5 @@
   .seo-title {
     font-size: 24px;
     margin-bottom: 32px;
-  }
-  
-  .seo-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .seo-item {
-    padding: 24px;
-  }
-  
-  .seo-item h3 {
-    font-size: 18px;
-  }
-  
-  .seo-item p {
-    font-size: 14px;
   }
 }
