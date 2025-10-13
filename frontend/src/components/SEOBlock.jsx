@@ -57,6 +57,22 @@ const SEOBlock = () => {
               companionship on your terms, with no expectations, judgments, or social pressures to navigate.
             </p>
           </div>
+          
+          <div className="seo-item">
+            <h3>Language Learning</h3>
+            <p>
+              Practice conversations in different languages with patient AI companions. Perfect for improving fluency, 
+              vocabulary, and confidence in speaking without fear of embarrassment or judgment from native speakers.
+            </p>
+          </div>
+          
+          <div className="seo-item">
+            <h3>Explore Fantasies Safely</h3>
+            <p>
+              Discover and explore your interests in a judgment-free environment. AI companions adapt to your preferences 
+              and boundaries, providing a safe space for self-discovery and imaginative experiences.
+            </p>
+          </div>
         </div>
       </div>
     </div>
