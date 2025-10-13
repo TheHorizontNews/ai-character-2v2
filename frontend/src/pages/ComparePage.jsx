@@ -146,7 +146,7 @@ const ComparePage = () => {
     {
       title: '🎭 Creative & NSFW',
       description: 'Platforms with creative freedom and adult content',
-      platforms: ['Janitor AI', 'Tavern AI', 'SoulGen', 'DreamBF']
+      platforms: ['Janitor AI', 'Crushon AI', 'SoulGen', 'DreamBF']
     }
   ];
 
