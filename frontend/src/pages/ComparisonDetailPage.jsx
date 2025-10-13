@@ -288,7 +288,7 @@ const ComparisonDetailPage = () => {
     },
     'paradot': {
       name: 'Paradot', tagline: 'Your AI being with emotions',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop',
+      image: '/images/paradot.png',
       rating: 4.5, users: '600K+', pricing: 'Freemium', category: 'Premium',
       features: { customization: 88, voice_quality: 85, memory: 92, nsfw_content: 65, mobile_support: 92, api_access: 50, community: 75, pricing_value: 80, conversation_quality: 90, visual_features: 85, privacy: 85, support: 85 },
       pricingTiers: [
