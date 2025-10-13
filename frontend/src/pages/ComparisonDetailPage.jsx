@@ -258,7 +258,7 @@ const ComparisonDetailPage = () => {
     },
     'kupid-ai': {
       name: 'Kupid AI', tagline: 'Fall in love with AI',
-      image: 'https://images.unsplash.com/photo-1522407183863-c0bf2256188c?w=400&h=300&fit=crop',
+      image: '/images/kupid-ai.webp',
       rating: 4.2, users: '800K+', pricing: 'Subscription-based', category: 'Romance',
       features: { customization: 85, voice_quality: 75, memory: 80, nsfw_content: 85, mobile_support: 90, api_access: 45, community: 70, pricing_value: 70, conversation_quality: 80, visual_features: 88, privacy: 75, support: 78 },
       pricingTiers: [
