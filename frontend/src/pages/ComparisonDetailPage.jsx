@@ -273,7 +273,7 @@ const ComparisonDetailPage = () => {
     },
     'ai-mirror': {
       name: 'AI Mirror', tagline: 'AI that reflects your thoughts',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
+      image: '/images/ai-mirror.png',
       rating: 4.4, users: '300K+', pricing: 'Free with Premium', category: 'Wellness',
       features: { customization: 75, voice_quality: 70, memory: 85, nsfw_content: 20, mobile_support: 85, api_access: 40, community: 60, pricing_value: 85, conversation_quality: 90, visual_features: 60, privacy: 90, support: 80 },
       pricingTiers: [
