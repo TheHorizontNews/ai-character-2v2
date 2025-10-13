@@ -712,63 +712,122 @@
   text-shadow: 0 1px 2px rgba(255,255,255,0.3);
 }
 
-/* Pricing Grid */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.pricing-platform h3 {
-  color: #667eea;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
+/* New Pricing Comparison Table */
+.comparison-subtitle {
   text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  margin-bottom: 32px;
 }
 
-.pricing-tiers {
+.pricing-comparison-table {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.pricing-header-row {
   display: grid;
-  gap: 16px;
+  grid-template-columns: 150px 1fr 1fr;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  border-bottom: 2px solid rgba(102, 126, 234, 0.3);
 }
 
-.pricing-tier {
-  background: #0a0a0a;
-  border: 1px solid #333;
-  border-radius: 12px;
+.tier-label {
+  padding: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.platform-header {
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.pricing-tier:hover {
-  transform: translateY(-2px);
-  border-color: #667eea;
-}
-
-.pricing-tier h4 {
-  color: #fff;
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform1-header {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pricing-comparison-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+.pricing-comparison-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pricing-comparison-row:last-child {
+  border-bottom: none;
+}
+
+.tier-name {
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.platform-price-cell {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.platform-price-cell:first-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.price-tag {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1dd1a1;
   margin-bottom: 8px;
 }
 
-.price {
-  font-size: 28px;
-  font-weight: 900;
-  color: #667eea;
-  margin-bottom: 16px;
-}
-
-.tier-features {
+.mini-features {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.tier-features li {
-  color: #ddd;
+.mini-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.5;
   margin-bottom: 6px;
-  font-size: 14px;
+}
+
+.mini-features li svg {
+  color: #1dd1a1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.not-available {
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* Pros and Cons Grid */
