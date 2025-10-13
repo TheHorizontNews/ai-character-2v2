@@ -140,7 +140,7 @@ export const aiPlatforms = [
     category: "Community",
     features: ["Character Creation", "NSFW Support", "Community Library", "Custom API"],
     pricing: "Free with API costs",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg",
+    image: "/images/janitor-ai.png",
     pros: ["Permissive content policy", "Easy character creation", "Free platform"],
     cons: ["Requires own API key", "Variable quality"],
     bestFor: "Unrestricted character interactions"
