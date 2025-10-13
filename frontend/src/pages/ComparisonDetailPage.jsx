@@ -661,43 +661,68 @@ const ComparisonDetailPage = () => {
           </div>
         </section>
 
-        {/* Pricing Comparison */}
+        {/* Pricing Comparison - Side by Side */}
         <section className="comparison-section">
           <h2>Pricing Comparison</h2>
-          <div className="pricing-grid">
-            <div className="pricing-platform">
-              <h3>{platform1Data.name} Pricing</h3>
-              <div className="pricing-tiers">
-                {platform1Data.pricingTiers.map((tier, index) => (
-                  <div key={index} className="pricing-tier">
-                    <h4>{tier.name}</h4>
-                    <div className="price">${tier.price}/month</div>
-                    <ul className="tier-features">
-                      {tier.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+          <p className="comparison-subtitle">Compare pricing tiers side-by-side</p>
+          
+          <div className="pricing-comparison-table">
+            {/* Header Row */}
+            <div className="pricing-header-row">
+              <div className="tier-label">Plan Tier</div>
+              <div className="platform-header platform1-header">
+                <span>{platform1Data.name}</span>
+              </div>
+              <div className="platform-header platform2-header">
+                <span>{platform2Data.name}</span>
               </div>
             </div>
             
-            <div className="pricing-platform">
-              <h3>{platform2Data.name} Pricing</h3>
-              <div className="pricing-tiers">
-                {platform2Data.pricingTiers.map((tier, index) => (
-                  <div key={index} className="pricing-tier">
-                    <h4>{tier.name}</h4>
-                    <div className="price">${tier.price}/month</div>
-                    <ul className="tier-features">
-                      {tier.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
+            {/* Comparison Rows */}
+            {[0, 1, 2].map((tierIndex) => {
+              const tier1 = platform1Data.pricingTiers[tierIndex];
+              const tier2 = platform2Data.pricingTiers[tierIndex];
+              
+              if (!tier1 && !tier2) return null;
+              
+              return (
+                <div key={tierIndex} className="pricing-comparison-row">
+                  <div className="tier-name">
+                    <strong>{tier1?.name || tier2?.name}</strong>
                   </div>
-                ))}
-              </div>
-            </div>
+                  
+                  <div className="platform-price-cell">
+                    {tier1 ? (
+                      <>
+                        <div className="price-tag">${tier1.price === 0 ? 'Free' : `${tier1.price}`}</div>
+                        <ul className="mini-features">
+                          {tier1.features.map((f, i) => (
+                            <li key={i}><Check size={14} /> {f}</li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <div className="not-available">N/A</div>
+                    )}
+                  </div>
+                  
+                  <div className="platform-price-cell">
+                    {tier2 ? (
+                      <>
+                        <div className="price-tag">${tier2.price === 0 ? 'Free' : `${tier2.price}`}</div>
+                        <ul className="mini-features">
+                          {tier2.features.map((f, i) => (
+                            <li key={i}><Check size={14} /> {f}</li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <div className="not-available">N/A</div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
