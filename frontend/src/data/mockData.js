@@ -60,7 +60,7 @@ export const aiPlatforms = [
     category: "Friendship",
     features: ["Memory System", "Personality Development", "Roleplay Modes", "Image Generation"],
     pricing: "Free with Premium tiers",
-    image: "https://images.unsplash.com/photo-1646583288948-24548aedffd8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYnJhbmRpbmd8ZW58MHx8fHwxNzYwMDMzMzgyfDA&ixlib=rb-4.1.0&q=85",
+    image: "/images/anima-ai.png",
     pros: ["Good memory retention", "Engaging conversations", "Regular updates"],
     cons: ["Limited free messages", "Sometimes repetitive"],
     bestFor: "Daily casual conversations"
