@@ -1395,4 +1395,144 @@
   .faq-item p {
     font-size: 12px;
   }
+
+
+/* Mobile Styles for New Pricing and Strengths/Weaknesses */
+@media (max-width: 768px) {
+  /* Pricing Comparison Mobile */
+  .pricing-comparison-table {
+    overflow-x: auto;
+  }
+
+  .pricing-header-row,
+  .pricing-comparison-row {
+    grid-template-columns: 120px 1fr 1fr;
+    font-size: 14px;
+  }
+
+  .tier-label,
+  .tier-name {
+    padding: 16px 12px;
+    font-size: 14px;
+  }
+
+  .platform-header {
+    padding: 16px 12px;
+    font-size: 15px;
+  }
+
+  .platform-price-cell {
+    padding: 16px 12px;
+  }
+
+  .price-tag {
+    font-size: 20px;
+  }
+
+  .mini-features li {
+    font-size: 12px;
+  }
+
+  /* Strengths & Weaknesses Mobile */
+  .subsection-title {
+    font-size: 19px;
+  }
+
+  .strength-weakness-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sw-header {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .platform1-bg {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sw-content {
+    padding: 20px 16px;
+  }
+
+  .sw-content:first-of-type {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .strength-list li,
+  .weakness-list li {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small mobile adjustments */
+  .pricing-header-row,
+  .pricing-comparison-row {
+    grid-template-columns: 100px 1fr 1fr;
+  }
+
+  .tier-label,
+  .tier-name {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .platform-header {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  .platform-price-cell {
+    padding: 12px 8px;
+  }
+
+  .price-tag {
+    font-size: 18px;
+  }
+
+  .mini-features li {
+    font-size: 11px;
+  }
+
+  .mini-features li svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .subsection-title {
+    font-size: 17px;
+    gap: 8px;
+  }
+
+  .subsection-title svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .sw-header {
+    padding: 14px 12px;
+    font-size: 15px;
+  }
+
+  .sw-content {
+    padding: 16px 12px;
+  }
+
+  .strength-list li,
+  .weakness-list li {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .check-icon,
+  .x-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 }
