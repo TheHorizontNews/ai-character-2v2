@@ -45,11 +45,11 @@
 
 .reason-icon {
   flex-shrink: 0;
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-color));
-  opacity: 0.15;
+  opacity: 0.2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,11 +58,16 @@
   position: relative;
 }
 
+.reason-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
 .reason-icon::after {
   content: '';
   position: absolute;
   inset: -2px;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 2px;
   background: linear-gradient(135deg, var(--accent-color), transparent);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -73,12 +78,12 @@
 }
 
 .reason-item:hover .reason-icon {
-  opacity: 0.25;
-  transform: scale(1.05);
+  opacity: 0.35;
+  transform: scale(1.08);
 }
 
 .reason-item:hover .reason-icon::after {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .reason-content {
