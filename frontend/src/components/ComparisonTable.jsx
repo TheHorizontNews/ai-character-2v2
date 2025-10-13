@@ -30,7 +30,7 @@ const ComparisonTable = () => {
     
     { name: 'Chai AI', rank: 6, color: '#ffd93d', rating: 8.1, price: 'Freemium', category: 'premium', features: { voiceChat: false, visualization: 0, nsfw: 'possible', customization: 3, quality: 3, realism: 3 } },
     { name: 'Inworld AI', rank: 7, color: '#6bcf7f', rating: 8.0, price: 'Developer', category: 'premium', features: { voiceChat: false, visualization: 0, nsfw: false, customization: 5, quality: 5, realism: 4 } },
-    { name: 'Tavern AI', rank: 8, color: '#c77dff', rating: 7.9, price: 'Free', category: 'premium', features: { voiceChat: false, visualization: 0, nsfw: 'optional', customization: 3, quality: 3, realism: 4 } },
+    { name: 'Crushon AI', rank: 8, color: '#ff69b4', rating: 8.3, price: 'Freemium', category: 'premium', features: { voiceChat: false, visualization: 0, nsfw: true, customization: 4, quality: 4, realism: 4 } },
     { name: 'Janitor AI', rank: 9, color: '#ff6b9d', rating: 7.8, price: 'Free', category: 'premium', features: { voiceChat: false, visualization: 0, nsfw: true, customization: 3, quality: 3, realism: 3 } },
     { name: 'Poe (Quora)', rank: 10, color: '#89b0ae', rating: 7.7, price: 'Freemium', category: 'premium', features: { voiceChat: false, visualization: 0, nsfw: false, customization: 2, quality: 3, realism: 3 } },
     
