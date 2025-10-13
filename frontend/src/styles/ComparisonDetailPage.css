@@ -830,49 +830,105 @@
   padding: 20px 0;
 }
 
-/* Pros and Cons Grid */
-.pros-cons-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+/* New Strengths & Weaknesses Comparison */
+.strengths-comparison,
+.weaknesses-comparison {
+  margin-bottom: 40px;
 }
 
-.platform-analysis h3 {
-  color: #667eea;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.pros-cons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.pros, .cons {
-  background: #0a0a0a;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-}
-
-.pros h4 {
-  color: #667eea;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 16px;
+.subsection-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  text-align: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
 }
 
-.cons h4 {
-  color: #ff6b6b;
+.subsection-title svg {
+  color: #1dd1a1;
+}
+
+.weaknesses-comparison .subsection-title svg {
+  color: #ff6b9d;
+}
+
+.strength-weakness-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.sw-header {
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.platform1-bg {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(102, 126, 234, 0.1) 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.platform2-bg {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
+}
+
+.sw-content {
+  padding: 28px 24px;
+}
+
+.sw-content:first-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.strength-list,
+.weakness-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.strength-list li,
+.weakness-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.strength-list li:last-child,
+.weakness-list li:last-child {
+  margin-bottom: 0;
+}
+
+.check-icon {
+  color: #1dd1a1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.x-icon {
+  color: #ff6b9d;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Old styles kept for compatibility */
+.pros h4 {
+  color: #667eea;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 16px;
