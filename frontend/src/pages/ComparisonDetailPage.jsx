@@ -303,7 +303,7 @@ const ComparisonDetailPage = () => {
     },
     'romantic-ai': {
       name: 'Romantic AI', tagline: 'AI romance, redefined',
-      image: 'https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?w=400&h=300&fit=crop',
+      image: '/images/romantic-ai.png',
       rating: 4.3, users: '1.2M+', pricing: 'Subscription-based', category: 'Romance',
       features: { customization: 85, voice_quality: 80, memory: 82, nsfw_content: 88, mobile_support: 88, api_access: 45, community: 70, pricing_value: 72, conversation_quality: 85, visual_features: 85, privacy: 78, support: 80 },
       pricingTiers: [
