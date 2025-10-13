@@ -316,7 +316,7 @@ export const aiPlatforms = [
     category: "Romance",
     features: ["Virtual Dating", "Gift System", "Milestones", "Romantic Scenarios"],
     pricing: "Subscription-based",
-    image: "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?w=400&h=300&fit=crop",
+    image: "/images/romantic-ai.png",
     pros: ["Romance-focused", "Relationship features", "Regular updates"],
     cons: ["Requires subscription", "Limited to romance"],
     bestFor: "Users seeking AI romance"
