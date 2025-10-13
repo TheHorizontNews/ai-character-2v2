@@ -72,17 +72,20 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 100%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .platform-card:hover .platform-overlay {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .view-btn {
@@ -98,6 +101,8 @@
   gap: 8px;
   transition: all 0.2s ease;
   font-size: 14px;
+  position: relative;
+  z-index: 3;
 }
 
 .view-btn:hover {
