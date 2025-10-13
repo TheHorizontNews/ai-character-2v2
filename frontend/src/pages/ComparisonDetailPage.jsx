@@ -213,7 +213,7 @@ const ComparisonDetailPage = () => {
     },
     'dreambf': {
       name: 'DreamBF', tagline: 'Your ideal AI boyfriend awaits',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=300&fit=crop',
+      image: '/images/dreambf.png',
       rating: 4.3, users: '700K+', pricing: 'Premium subscription', category: 'Romance',
       features: { customization: 88, voice_quality: 85, memory: 78, nsfw_content: 85, mobile_support: 88, api_access: 40, community: 65, pricing_value: 70, conversation_quality: 82, visual_features: 90, privacy: 78, support: 80 },
       pricingTiers: [
