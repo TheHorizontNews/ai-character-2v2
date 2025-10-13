@@ -30,6 +30,342 @@
 /* Old card kept for compatibility */
 .platform-card {
   background: #141414;
+
+
+.platform-card-v2:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(29, 209, 161, 0.4);
+  box-shadow: 0 20px 60px rgba(29, 209, 161, 0.25), 0 0 0 1px rgba(29, 209, 161, 0.1);
+}
+
+/* Platform Image V2 */
+.platform-image-v2 {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1) contrast(1.05);
+}
+
+.platform-card-v2:hover .image-wrapper img {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+.image-gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.floating-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffd700;
+  z-index: 3;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.platform-card-v2:hover .floating-badge {
+  transform: scale(1.05);
+}
+
+/* Platform Content V2 */
+.platform-content-v2 {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.platform-name-v2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.platform-category-v2 {
+  font-size: 11px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, rgba(29, 209, 161, 0.15) 0%, rgba(102, 126, 234, 0.15) 100%);
+  color: #1dd1a1;
+  border: 1px solid rgba(29, 209, 161, 0.3);
+  border-radius: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.platform-card-v2:hover .platform-category-v2 {
+  background: linear-gradient(135deg, rgba(29, 209, 161, 0.25) 0%, rgba(102, 126, 234, 0.25) 100%);
+  border-color: rgba(29, 209, 161, 0.5);
+}
+
+.platform-tagline-v2 {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Platform Stats V2 */
+.platform-stats-v2 {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-icon {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* View Details Button */
+.view-details-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #1dd1a1 0%, #16b890 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(29, 209, 161, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-details-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.platform-card-v2:hover .view-details-btn::before {
+  left: 100%;
+}
+
+.view-details-btn:hover {
+  background: linear-gradient(135deg, #16b890 0%, #1dd1a1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29, 209, 161, 0.35);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.view-details-btn:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Mobile Responsive for V2 */
+@media (max-width: 768px) {
+  .platform-card-v2 {
+    min-width: 300px;
+  }
+
+  .platform-image-v2 {
+    height: 200px;
+  }
+
+  .image-wrapper {
+    padding: 24px;
+  }
+
+  .platform-content-v2 {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .platform-name-v2 {
+    font-size: 20px;
+  }
+
+  .platform-tagline-v2 {
+    font-size: 14px;
+  }
+
+  .stat-value {
+    font-size: 14px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+  }
+
+  .view-details-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-card-v2 {
+    min-width: 280px;
+  }
+
+  .platform-image-v2 {
+    height: 180px;
+  }
+
+  .image-wrapper {
+    padding: 20px;
+  }
+
+  .floating-badge {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .platform-content-v2 {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .platform-name-v2 {
+    font-size: 18px;
+  }
+
+  .platform-category-v2 {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .platform-tagline-v2 {
+    font-size: 13px;
+  }
+
+  .platform-stats-v2 {
+    padding: 14px 0;
+  }
+
+  .stat-item {
+    gap: 10px;
+  }
+
+  .stat-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .view-details-btn {
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+}
+
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
