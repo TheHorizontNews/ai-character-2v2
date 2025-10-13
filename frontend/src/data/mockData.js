@@ -204,7 +204,7 @@ export const aiPlatforms = [
     category: "Creative",
     features: ["AI Art Generation", "Text-to-Image", "Character Chat", "Style Customization"],
     pricing: "Credit-based",
-    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=400&h=300&fit=crop",
+    image: "/images/soulgen.jpg",
     pros: ["High-quality images", "Fast generation", "Various styles"],
     cons: ["Focus on images over chat", "Credit system"],
     bestFor: "AI art and character creation"
