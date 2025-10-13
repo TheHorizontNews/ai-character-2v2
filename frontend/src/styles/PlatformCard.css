@@ -70,10 +70,11 @@
 .platform-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   transition: transform 0.3s ease;
   display: block;
+  padding: 16px;
 }
 
 .platform-card:hover .platform-image img {
