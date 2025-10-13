@@ -25,11 +25,12 @@
 }
 
 .seo-item {
-  background: none;
-  border: none;
-  border-radius: 0;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
   padding: 32px;
   transition: all 0.3s ease;
+  box-shadow: none !important;
 }
 
 .seo-item:hover {
