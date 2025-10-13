@@ -12,12 +12,15 @@
   letter-spacing: -0.5px;
   margin: 0 0 32px 0;
   color: #fff;
+  text-align: center;
 }
 
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .category-card {
