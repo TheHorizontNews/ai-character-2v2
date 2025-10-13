@@ -284,7 +284,7 @@ export const aiPlatforms = [
     category: "Wellness",
     features: ["Self-Reflection Tools", "Philosophical Chat", "Mood Analysis", "Growth Tracking"],
     pricing: "Free with Premium",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+    image: "/images/ai-mirror.png",
     pros: ["Thoughtful conversations", "Personal growth focus", "Unique approach"],
     cons: ["Not for casual chat", "Requires introspection"],
     bestFor: "Self-reflection and personal development"
