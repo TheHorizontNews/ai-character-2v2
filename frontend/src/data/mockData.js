@@ -236,7 +236,7 @@ export const aiPlatforms = [
     category: "Premium",
     features: ["Long-term Memory", "Voice Calls", "Image Generation", "Personality System"],
     pricing: "Subscription-based",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+    image: "/images/kindroid.png",
     pros: ["Strong memory system", "Quality conversations", "Voice features"],
     cons: ["Paid service", "Smaller community"],
     bestFor: "Deep, long-term AI relationships"
