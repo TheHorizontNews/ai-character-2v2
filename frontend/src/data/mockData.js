@@ -220,7 +220,7 @@ export const aiPlatforms = [
     category: "Romance",
     features: ["Boyfriend Customization", "Voice Messages", "AI Photos", "Relationship Simulation"],
     pricing: "Premium subscription",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=300&fit=crop",
+    image: "/images/dreambf.png",
     pros: ["Male character focus", "Good customization", "Active development"],
     cons: ["Requires subscription", "Niche audience"],
     bestFor: "Users seeking AI boyfriend experience"
