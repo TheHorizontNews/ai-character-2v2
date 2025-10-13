@@ -136,8 +136,21 @@
 .platform-tagline {
   font-size: 14px;
   color: #999;
-  margin: 0 0 16px 0;
+  margin: 0 0 12px 0;
   line-height: 1.5;
+}
+
+/* NEW: Platform Description */
+.platform-description {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .platform-stats {
