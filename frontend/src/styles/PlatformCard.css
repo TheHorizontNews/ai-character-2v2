@@ -113,6 +113,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   margin-bottom: 8px;
 }
 
@@ -121,6 +122,8 @@
   font-weight: 700;
   color: #fff;
   margin: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .platform-category {
@@ -132,6 +135,8 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .platform-tagline {
