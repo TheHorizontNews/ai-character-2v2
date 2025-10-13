@@ -408,7 +408,7 @@ export const faqs = [
   },
   {
     question: "How much do AI character platforms cost?",
-    answer: "Pricing varies widely. Many platforms like Character.AI and Replika offer free tiers with premium subscriptions ($10-30/month). Premium-only platforms like Nomi.ai and DreamGF charge $15-50/month. Some like Tavern AI are free but require your own API keys."
+    answer: "Pricing varies widely. Many platforms like Character.AI and Replika offer free tiers with premium subscriptions ($10-30/month). Premium-only platforms like Nomi.ai and DreamGF charge $15-50/month. Crushon AI offers affordable plans starting at $5/month with a free tier available."
   },
   {
     question: "Can AI characters replace human relationships?",
