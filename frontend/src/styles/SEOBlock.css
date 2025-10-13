@@ -25,17 +25,19 @@
 }
 
 .seo-item {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
+  background: none;
+  border: none;
+  border-radius: 0;
   padding: 32px;
   transition: all 0.3s ease;
 }
 
 .seo-item:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(29, 209, 161, 0.3);
   transform: translateY(-4px);
+}
+
+.seo-item:hover h3 {
+  color: #16b890;
 }
 
 .seo-item h3 {
