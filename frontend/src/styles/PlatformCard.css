@@ -1,3 +1,33 @@
+/* New V2 Platform Card Design */
+.platform-card-v2 {
+  position: relative;
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(10, 10, 10, 0.95) 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 340px;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.card-gradient-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1dd1a1, #667eea, #f093fb);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.platform-card-v2:hover .card-gradient-border {
+  opacity: 1;
+}
+
+/* Old card kept for compatibility */
 .platform-card {
   background: #141414;
   border-radius: 12px;
