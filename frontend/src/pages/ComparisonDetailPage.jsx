@@ -138,7 +138,7 @@ const ComparisonDetailPage = () => {
     },
     'janitor-ai': {
       name: 'Janitor AI', tagline: 'Create and chat with AI characters',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg',
+      image: '/images/janitor-ai.png',
       rating: 4.3, users: '2M+', pricing: 'Free with API costs', category: 'Community',
       features: { customization: 85, voice_quality: 65, memory: 80, nsfw_content: 95, mobile_support: 85, api_access: 85, community: 90, pricing_value: 80, conversation_quality: 80, visual_features: 70, privacy: 75, support: 70 },
       pricingTiers: [
