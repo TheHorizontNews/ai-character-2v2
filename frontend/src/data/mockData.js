@@ -420,7 +420,7 @@ export const faqs = [
   },
   {
     question: "Are AI character conversations private?",
-    answer: "Reputable platforms encrypt conversations and claim not to share data. However, chats may be stored on servers for AI training. Always review privacy policies. For maximum privacy, consider open-source options like Tavern AI that you can self-host."
+    answer: "Reputable platforms encrypt conversations and claim not to share data. However, chats may be stored on servers for AI training. Always review privacy policies. Platforms like Crushon AI prioritize user privacy while offering unrestricted conversations."
   },
   {
     question: "Can I create multiple AI characters?",
