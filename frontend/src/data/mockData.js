@@ -252,7 +252,7 @@ export const aiPlatforms = [
     category: "Experimental",
     features: ["Multiple Characters", "Group Chats", "Personality Mixing", "Social Features"],
     pricing: "Freemium",
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop",
+    image: "/images/polybuzz.png",
     pros: ["Unique group features", "Multiple AIs", "Innovative approach"],
     cons: ["Early stage", "Limited polish"],
     bestFor: "Experimenting with multiple AI characters"
