@@ -183,7 +183,7 @@ const ComparisonDetailPage = () => {
     },
     'candy-ai': {
       name: 'Candy AI', tagline: 'Sweet AI companionship',
-      image: 'https://images.unsplash.com/photo-1758626101945-ed0068aad9f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85',
+      image: '/images/candy-ai.png',
       rating: 4.4, users: '900K+', pricing: 'Subscription-based', category: 'Romance',
       features: { customization: 85, voice_quality: 80, memory: 80, nsfw_content: 85, mobile_support: 90, api_access: 45, community: 70, pricing_value: 70, conversation_quality: 85, visual_features: 90, privacy: 75, support: 80 },
       pricingTiers: [
