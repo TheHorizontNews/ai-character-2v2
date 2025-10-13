@@ -10,6 +10,7 @@
   max-width: 280px;
   width: 280px;
   flex-shrink: 0;
+  position: relative;
 }
 
 @media (max-width: 768px) {
