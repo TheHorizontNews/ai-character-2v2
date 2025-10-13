@@ -300,7 +300,7 @@ export const aiPlatforms = [
     category: "Premium",
     features: ["Emotional AI", "Memory System", "Mood Recognition", "Personalization"],
     pricing: "Freemium",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop",
+    image: "/images/paradot.png",
     pros: ["Emotional intelligence", "Good memory", "Natural conversations"],
     cons: ["Premium features limited", "Mobile-only initially"],
     bestFor: "Emotionally intelligent AI interactions"
