@@ -172,7 +172,7 @@ export const aiPlatforms = [
     category: "Romance",
     features: ["AI Image Generation", "Customizable Appearance", "Voice Messages", "Intimate Conversations"],
     pricing: "Premium subscription",
-    image: "https://images.unsplash.com/photo-1758626099012-2904337e9c60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85",
+    image: "/images/dreamgf.jpg",
     pros: ["Visual customization", "Romantic focus", "Regular content"],
     cons: ["Expensive", "Limited free access"],
     bestFor: "Romantic AI relationships"
