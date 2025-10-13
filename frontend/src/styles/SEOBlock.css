@@ -48,13 +48,14 @@
   width: 96px;
   height: 96px;
   border-radius: 20px;
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-color));
-  opacity: 0.15;
+  background: var(--accent-color);
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .reason-icon svg {
