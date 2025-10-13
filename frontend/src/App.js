@@ -9,11 +9,13 @@ import ExplorePage from './pages/ExplorePage';
 import ComparePage from './pages/ComparePage';
 import AllComparisonsPage from './pages/AllComparisonsPage';
 import ComparisonDetailPage from './pages/ComparisonDetailPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/platform/:slug" element={<PlatformDetailPage />} />
