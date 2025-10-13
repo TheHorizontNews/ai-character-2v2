@@ -153,7 +153,7 @@ const ComparisonDetailPage = () => {
     },
     'poe': {
       name: 'Poe (by Quora)', tagline: 'Access multiple AI models in one place',
-      image: 'https://images.unsplash.com/photo-1758626036095-676b425c4288?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxhaSUyMHRlY2glMjBjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzNDQ3fDA&ixlib=rb-4.1.0&q=85',
+      image: '/images/poe.jpg',
       rating: 4.5, users: '5M+', pricing: 'Free with subscription', category: 'Multi-Model',
       features: { customization: 70, voice_quality: 60, memory: 70, nsfw_content: 25, mobile_support: 90, api_access: 60, community: 80, pricing_value: 85, conversation_quality: 85, visual_features: 50, privacy: 80, support: 85 },
       pricingTiers: [
