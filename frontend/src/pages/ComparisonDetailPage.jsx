@@ -726,51 +726,67 @@ const ComparisonDetailPage = () => {
           </div>
         </section>
 
-        {/* Strengths & Weaknesses */}
+        {/* Strengths & Weaknesses - Comparative View */}
         <section className="comparison-section">
           <h2>Strengths & Weaknesses Analysis</h2>
-          <div className="pros-cons-grid">
-            <div className="platform-analysis">
-              <h3>{platform1Data.name}</h3>
-              <div className="pros-cons">
-                <div className="pros">
-                  <h4><Check size={16} /> Strengths</h4>
-                  <ul>
-                    {platform1Data.strengths.map((strength, index) => (
-                      <li key={index}>{strength}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="cons">
-                  <h4><X size={16} /> Weaknesses</h4>
-                  <ul>
-                    {platform1Data.weaknesses.map((weakness, index) => (
-                      <li key={index}>{weakness}</li>
-                    ))}
-                  </ul>
-                </div>
+          <p className="comparison-subtitle">Head-to-head comparison of pros and cons</p>
+          
+          <div className="strengths-comparison">
+            <h3 className="subsection-title"><Check size={20} /> Strengths Comparison</h3>
+            <div className="strength-weakness-grid">
+              <div className="sw-header platform1-bg">{platform1Data.name}</div>
+              <div className="sw-header platform2-bg">{platform2Data.name}</div>
+              
+              <div className="sw-content">
+                <ul className="strength-list">
+                  {platform1Data.strengths.map((strength, index) => (
+                    <li key={index}>
+                      <Check size={16} className="check-icon" />
+                      <span>{strength}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="sw-content">
+                <ul className="strength-list">
+                  {platform2Data.strengths.map((strength, index) => (
+                    <li key={index}>
+                      <Check size={16} className="check-icon" />
+                      <span>{strength}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            
-            <div className="platform-analysis">
-              <h3>{platform2Data.name}</h3>
-              <div className="pros-cons">
-                <div className="pros">
-                  <h4><Check size={16} /> Strengths</h4>
-                  <ul>
-                    {platform2Data.strengths.map((strength, index) => (
-                      <li key={index}>{strength}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="cons">
-                  <h4><X size={16} /> Weaknesses</h4>
-                  <ul>
-                    {platform2Data.weaknesses.map((weakness, index) => (
-                      <li key={index}>{weakness}</li>
-                    ))}
-                  </ul>
-                </div>
+          </div>
+          
+          <div className="weaknesses-comparison">
+            <h3 className="subsection-title"><X size={20} /> Weaknesses Comparison</h3>
+            <div className="strength-weakness-grid">
+              <div className="sw-header platform1-bg">{platform1Data.name}</div>
+              <div className="sw-header platform2-bg">{platform2Data.name}</div>
+              
+              <div className="sw-content">
+                <ul className="weakness-list">
+                  {platform1Data.weaknesses.map((weakness, index) => (
+                    <li key={index}>
+                      <X size={16} className="x-icon" />
+                      <span>{weakness}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="sw-content">
+                <ul className="weakness-list">
+                  {platform2Data.weaknesses.map((weakness, index) => (
+                    <li key={index}>
+                      <X size={16} className="x-icon" />
+                      <span>{weakness}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
