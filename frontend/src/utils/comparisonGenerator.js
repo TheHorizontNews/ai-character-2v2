@@ -11,7 +11,7 @@ const generateSEODescription = (platform1, platform2) => {
     'anima-ai': ['memory retention', 'personality development', 'roleplay modes'],
     'chai-ai': ['swipe interface', 'diverse personalities', 'mobile-first design'],
     'inworld-ai': ['developer tools', 'game integration', 'professional APIs'],
-    'tavern-ai': ['open source freedom', 'unlimited customization', 'privacy control'],
+    'crushon-ai': ['unrestricted conversations', 'NSFW friendly', 'affordable pricing'],
     'janitor-ai': ['unrestricted content', 'character creation tools', 'community library'],
     'poe': ['multiple AI models', 'clean interface', 'productivity focus'],
     'dreamgf': ['AI girlfriend experience', 'image generation', 'romantic scenarios'],
