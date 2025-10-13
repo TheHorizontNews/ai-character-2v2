@@ -121,20 +121,20 @@ const ComparisonDetailPage = () => {
       bestFor: ['Developers and game creators', 'Professional projects', 'Integration needs'],
       uniqueFeatures: ['API access', 'Game integration', 'Advanced customization', 'Voice & animation']
     },
-    'tavern-ai': {
-      name: 'Tavern AI', tagline: 'Your gateway to AI roleplaying',
-      image: 'https://images.unsplash.com/photo-1717143587138-2532a35ce9b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxhaSUyMGxvZ298ZW58MHx8fHwxNzYwMDMzMjYwfDA&ixlib=rb-4.1.0&q=85',
-      rating: 4.6, users: '500K+', pricing: 'Free (self-hosted)', category: 'Open Source',
-      features: { customization: 90, voice_quality: 70, memory: 85, nsfw_content: 95, mobile_support: 75, api_access: 90, community: 85, pricing_value: 100, conversation_quality: 85, visual_features: 80, privacy: 95, support: 60 },
+    'crushon-ai': {
+      name: 'Crushon AI', tagline: 'Unleash Your Fantasies with AI Characters',
+      image: '/images/crushon-ai.jpg',
+      rating: 4.7, users: '3M+', pricing: 'Free with Premium ($5-15/month)', category: 'Romance',
+      features: { customization: 85, voice_quality: 75, memory: 80, nsfw_content: 95, mobile_support: 85, api_access: 70, community: 90, pricing_value: 90, conversation_quality: 85, visual_features: 80, privacy: 80, support: 75 },
       pricingTiers: [
-        { name: 'Free', price: 0, features: ['Open source', 'Self-hosted', 'Community support'] },
-        { name: 'Hosted', price: 15, features: ['Cloud hosting', 'Easy setup', 'Basic support'] },
-        { name: 'Premium', price: 25, features: ['Enhanced features', 'Priority support', 'Advanced models'] }
+        { name: 'Free', price: 0, features: ['Basic features', 'Limited messages', 'Community characters'] },
+        { name: 'Standard', price: 5, features: ['Unlimited messages', 'Priority generation', 'Memory features'] },
+        { name: 'Premium', price: 15, features: ['All features', 'Priority support', 'Advanced models', 'No restrictions'] }
       ],
-      strengths: ['Free and open source', 'Flexible backend options', 'Privacy control', 'No content restrictions'],
-      weaknesses: ['Requires technical setup', 'No official support', 'Learning curve'],
-      bestFor: ['Tech-savvy users', 'Privacy enthusiasts', 'Unrestricted content', 'Custom setups'],
-      uniqueFeatures: ['Open source', 'Multiple AI backends', 'Customizable', 'Offline mode']
+      strengths: ['Unrestricted conversations', 'Large character library', 'Affordable pricing', 'Active community'],
+      weaknesses: ['Some features require premium', 'Quality varies by character', 'Limited free tier'],
+      bestFor: ['Unrestricted AI interactions', 'NSFW content', 'Fantasy roleplay', 'Romance scenarios'],
+      uniqueFeatures: ['NSFW friendly', 'Character library', 'Memory features', 'Affordable plans']
     },
     'janitor-ai': {
       name: 'Janitor AI', tagline: 'Create and chat with AI characters',
