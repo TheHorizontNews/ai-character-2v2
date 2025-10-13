@@ -243,7 +243,7 @@ const ComparisonDetailPage = () => {
     },
     'polybuzz': {
       name: 'PolyBuzz', tagline: 'Multiple AI personalities, one platform',
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop',
+      image: '/images/polybuzz.png',
       rating: 4.0, users: '200K+', pricing: 'Freemium', category: 'Experimental',
       features: { customization: 80, voice_quality: 65, memory: 70, nsfw_content: 60, mobile_support: 80, api_access: 50, community: 75, pricing_value: 85, conversation_quality: 75, visual_features: 70, privacy: 75, support: 70 },
       pricingTiers: [
