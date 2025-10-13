@@ -228,7 +228,7 @@ const ComparisonDetailPage = () => {
     },
     'kindroid': {
       name: 'Kindroid', tagline: 'AI companions that understand you',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
+      image: '/images/kindroid.png',
       rating: 4.6, users: '400K+', pricing: 'Subscription-based', category: 'Premium',
       features: { customization: 90, voice_quality: 95, memory: 95, nsfw_content: 75, mobile_support: 90, api_access: 55, community: 70, pricing_value: 75, conversation_quality: 92, visual_features: 85, privacy: 90, support: 88 },
       pricingTiers: [
