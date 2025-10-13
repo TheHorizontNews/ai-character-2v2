@@ -198,7 +198,7 @@ const ComparisonDetailPage = () => {
     },
     'soulgen': {
       name: 'SoulGen', tagline: 'Generate your soulmate with AI',
-      image: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=400&h=300&fit=crop',
+      image: '/images/soulgen.jpg',
       rating: 4.1, users: '600K+', pricing: 'Credit-based', category: 'Creative',
       features: { customization: 90, voice_quality: 40, memory: 60, nsfw_content: 80, mobile_support: 85, api_access: 30, community: 65, pricing_value: 70, conversation_quality: 65, visual_features: 95, privacy: 80, support: 70 },
       pricingTiers: [
