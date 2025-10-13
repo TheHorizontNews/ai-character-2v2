@@ -268,7 +268,7 @@ export const aiPlatforms = [
     category: "Romance",
     features: ["Dating Simulation", "Romantic Scenarios", "Photo Sharing", "Relationship Progress"],
     pricing: "Subscription-based",
-    image: "https://images.unsplash.com/photo-1522407183863-c0bf2256188c?w=400&h=300&fit=crop",
+    image: "/images/kupid-ai.webp",
     pros: ["Dating game mechanics", "Romantic focus", "Good visuals"],
     cons: ["Subscription required", "Limited free features"],
     bestFor: "Virtual dating experiences"
