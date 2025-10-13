@@ -168,7 +168,7 @@ const ComparisonDetailPage = () => {
     },
     'dreamgf': {
       name: 'DreamGF', tagline: 'Create your dream AI girlfriend',
-      image: 'https://images.unsplash.com/photo-1758626099012-2904337e9c60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxhaSUyMHBsYXRmb3JtJTIwbG9nb3N8ZW58MHx8fHwxNzYwMDMzMzc3fDA&ixlib=rb-4.1.0&q=85',
+      image: '/images/dreamgf.jpg',
       rating: 4.2, users: '1M+', pricing: 'Premium subscription', category: 'Romance',
       features: { customization: 90, voice_quality: 85, memory: 75, nsfw_content: 90, mobile_support: 85, api_access: 40, community: 60, pricing_value: 65, conversation_quality: 80, visual_features: 95, privacy: 75, support: 75 },
       pricingTiers: [
