@@ -28,12 +28,25 @@
     padding: 16px;
   }
   
+  .platform-header {
+    gap: 10px;
+  }
+  
   .platform-name {
     font-size: 18px;
   }
   
+  .platform-category {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
   .platform-tagline {
     font-size: 13px;
+  }
+  
+  .platform-description {
+    font-size: 12px;
   }
 }
 
