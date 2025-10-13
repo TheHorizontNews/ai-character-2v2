@@ -332,7 +332,7 @@ export const aiPlatforms = [
     category: "Voice",
     features: ["Voice Chat", "Multiple Personalities", "Fast Response", "Mobile Optimized"],
     pricing: "Free with Premium",
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=400&h=300&fit=crop",
+    image: "/images/talkie-ai.webp",
     pros: ["Great voice quality", "Quick responses", "Easy to use"],
     cons: ["Voice features need premium", "Limited text features"],
     bestFor: "Voice-based AI conversations"
