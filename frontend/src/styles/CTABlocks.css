@@ -143,6 +143,7 @@
 @media (max-width: 968px) {
   .cta-blocks-section {
     padding: 60px 24px;
+    margin-bottom: 40px;
   }
 
   .cta-blocks-container {
