@@ -47,6 +47,7 @@ const PlatformDetailPage = () => {
               <div className="detail-badge">{platform.category}</div>
               <h1 className="detail-title">{platform.name}</h1>
               <p className="detail-tagline">{platform.tagline}</p>
+              <p className="detail-description">{platform.description}</p>
               
               <div className="detail-stats">
                 <div className="detail-stat">
