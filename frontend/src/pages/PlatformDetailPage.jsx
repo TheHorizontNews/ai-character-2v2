@@ -73,17 +73,67 @@ const PlatformDetailPage = () => {
               <h2>Key Features</h2>
               <p className="section-subtitle">Discover what makes {platform.name} stand out</p>
               <div className="enhanced-features-grid">
-                {platform.features.map((feature, idx) => (
-                  <div key={idx} className="enhanced-feature-card">
-                    <div className="feature-icon-wrapper">
-                      <Zap size={28} />
+                {platform.features.map((feature, idx) => {
+                  // Generate descriptions for features
+                  const featureDescriptions = {
+                    'Custom Personality': 'Tailor your AI companion\'s traits, preferences, and communication style to match your ideal personality.',
+                    'Voice Customization': 'Choose from multiple voice options and customize tone, pitch, and speaking style for authentic conversations.',
+                    '24/7 Support': 'Always available whenever you need them - your AI companion is ready to chat any time of day or night.',
+                    'Private & Secure': 'Your conversations are protected with end-to-end encryption and strict privacy policies.',
+                    'Pre-made Characters': 'Explore thousands of ready-to-use characters from various genres, personalities, and backgrounds.',
+                    'Community Creations': 'Access millions of user-created characters and share your own with the community.',
+                    'Multiple Characters': 'Chat with multiple AI personalities simultaneously and switch between conversations seamlessly.',
+                    'Free Access': 'Get started immediately with free access to core features and unlimited conversations.',
+                    'AI Therapy': 'Professional mental health support powered by empathetic AI trained in therapeutic techniques.',
+                    'Mood Tracking': 'Monitor your emotional well-being with intelligent mood tracking and personalized insights.',
+                    'Journal Integration': 'Combine AI conversations with digital journaling for deeper self-reflection and growth.',
+                    'Progress Analytics': 'Track your mental health journey with detailed analytics and progress reports.',
+                    'Anime Style': 'Experience conversations with beautifully designed anime-inspired character avatars.',
+                    'Visual Avatars': 'Interact with stunning visual representations that bring your AI companion to life.',
+                    'Relationship Building': 'Develop deep, meaningful connections through progressive relationship mechanics.',
+                    'Memory System': 'Advanced memory capabilities ensure your AI remembers important details about you and past conversations.',
+                    'Romantic Focus': 'Designed specifically for romantic interactions with flirting, dating scenarios, and intimate conversations.',
+                    'Emotional Intelligence': 'Sophisticated emotional understanding that responds appropriately to your feelings and mood.',
+                    'Voice Chat': 'Natural voice conversations with realistic speech synthesis and voice recognition.',
+                    'Real-time Response': 'Lightning-fast responses that make conversations feel natural and engaging.',
+                    'NSFW Friendly': 'Open platform that allows adult content and mature conversations without restrictions.',
+                    'Character Library': 'Extensive collection of pre-built characters spanning diverse personalities and scenarios.',
+                    'Customizable AI': 'Deep customization options to fine-tune every aspect of your AI companion\'s behavior.',
+                    'Memory Features': 'Intelligent memory system that recalls personal details, preferences, and conversation history.',
+                    'Image Generation': 'Create custom images and visual content of your AI companion using advanced AI art generation.',
+                    'Chat History': 'Complete conversation history with search, export, and organization features.',
+                    'Character Creator': 'Powerful tools to design and customize your own unique AI characters from scratch.',
+                    'API Access': 'Developer-friendly API for integrating AI capabilities into your own applications.',
+                    'Multiple Models': 'Access to various AI models including GPT-4, Claude, and specialized conversation models.',
+                    'Model Comparison': 'Compare responses from different AI models side-by-side to get the best answers.',
+                    'Discord Bot': 'Seamless integration with Discord for chatting with AI characters in your servers.',
+                    'Free Tier': 'Generous free plan with access to essential features and regular conversation quotas.',
+                    'Premium Features': 'Advanced capabilities including priority access, enhanced memory, and exclusive content.',
+                    'Offline Mode': 'Continue conversations without internet connection using local AI processing.',
+                    'Multi-platform': 'Available across web, iOS, Android, and desktop with synced conversations.',
+                    'Group Chat': 'Create conversations involving multiple AI characters for dynamic interactions.',
+                    'Scene Builder': 'Design custom scenarios and roleplay settings for your AI conversations.',
+                    'Import/Export': 'Easily backup, transfer, or share your character configurations and chat history.',
+                    'Open Source': 'Transparent codebase that you can modify, self-host, and customize freely.',
+                    'Self-hosted': 'Full control by hosting the platform on your own servers with complete data ownership.',
+                    'Community Support': 'Active community forums, guides, and peer support for troubleshooting and tips.'
+                  };
+                  
+                  const description = featureDescriptions[feature] || 'Experience enhanced AI interactions with this powerful feature.';
+                  
+                  return (
+                    <div key={idx} className="enhanced-feature-card">
+                      <div className="feature-icon-wrapper">
+                        <Zap size={28} />
+                      </div>
+                      <h3>{feature}</h3>
+                      <p className="feature-description">{description}</p>
+                      <div className="feature-checkmark">
+                        <Check size={20} />
+                      </div>
                     </div>
-                    <h3>{feature}</h3>
-                    <div className="feature-checkmark">
-                      <Check size={20} />
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </section>
             
