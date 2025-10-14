@@ -84,6 +84,9 @@ const PlatformDetailPage = () => {
                     'Community Creations': 'Access millions of user-created characters and share your own with the community.',
                     'Multiple Characters': 'Chat with multiple AI personalities simultaneously and switch between conversations seamlessly.',
                     'Free Access': 'Get started immediately with free access to core features and unlimited conversations.',
+                    'Mental Health Focus': 'Specialized AI designed for emotional support, therapeutic conversations, and mental wellness improvement.',
+                    'Personalized Learning': 'AI that continuously adapts to your personality, preferences, and communication style over time.',
+                    'Avatar Customization': 'Create and customize your AI companion\'s appearance with detailed avatar options and styling.',
                     'AI Therapy': 'Professional mental health support powered by empathetic AI trained in therapeutic techniques.',
                     'Mood Tracking': 'Monitor your emotional well-being with intelligent mood tracking and personalized insights.',
                     'Journal Integration': 'Combine AI conversations with digital journaling for deeper self-reflection and growth.',
@@ -116,7 +119,9 @@ const PlatformDetailPage = () => {
                     'Import/Export': 'Easily backup, transfer, or share your character configurations and chat history.',
                     'Open Source': 'Transparent codebase that you can modify, self-host, and customize freely.',
                     'Self-hosted': 'Full control by hosting the platform on your own servers with complete data ownership.',
-                    'Community Support': 'Active community forums, guides, and peer support for troubleshooting and tips.'
+                    'Community Support': 'Active community forums, guides, and peer support for troubleshooting and tips.',
+                    'Multiple AI Backends': 'Connect to various AI services and language models for diverse conversation experiences.',
+                    'Customizable': 'Extensive customization options for interface, behavior, and AI parameters.'
                   };
                   
                   const description = featureDescriptions[feature] || 'Experience enhanced AI interactions with this powerful feature.';
