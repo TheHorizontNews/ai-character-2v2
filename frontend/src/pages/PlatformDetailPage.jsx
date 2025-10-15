@@ -29,11 +29,19 @@ const PlatformDetailPage = () => {
     );
   }
 
+  // Debug: Check if platformMeta is loaded
+  const metaTitle = platformMeta[platform.slug]?.title || `${platform.name} Review 2025`;
+  const metaDescription = platformMeta[platform.slug]?.description || platform.description;
+  
+  console.log('Platform slug:', platform.slug);
+  console.log('Meta title from platformMeta:', platformMeta[platform.slug]?.title);
+  console.log('Using title:', metaTitle);
+
   return (
     <div className="home-page">
       <SEOHead 
-        title={platformMeta[platform.slug]?.title || `${platform.name} Review 2025`}
-        description={platformMeta[platform.slug]?.description || platform.description}
+        title={metaTitle}
+        description={metaDescription}
         keywords={[
           platform.name.toLowerCase(),
           ...platform.features.slice(0, 5),
