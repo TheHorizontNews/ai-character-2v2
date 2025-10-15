@@ -1279,7 +1279,12 @@
 
 /* Visual Feature Cards */
 .visual-features-section {
-  margin-top: 80px;
+  margin-top: 20px;
+}
+
+.visual-features-section h2 {
+  text-align: center !important;
+  margin-bottom: 8px;
 }
 
 .visual-features-grid {
