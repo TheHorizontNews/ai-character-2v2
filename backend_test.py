@@ -16,7 +16,10 @@ load_dotenv('/app/frontend/.env')
 
 # Get backend URL from frontend environment
 BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://aivertex.preview.emergentagent.com')
+# Test the backend directly on localhost to bypass any reverse proxy
+DIRECT_BACKEND_URL = 'http://localhost:8001'
 print(f"Testing backend at: {BACKEND_URL}")
+print(f"Testing backend directly at: {DIRECT_BACKEND_URL}")
 
 # Bot User-Agents for testing
 BOT_USER_AGENTS = {
