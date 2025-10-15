@@ -815,6 +815,28 @@
     margin-top: 24px;
   }
   
+  .content-features-accordion {
+    margin-top: 24px;
+  }
+  
+  .accordion-header {
+    padding: 14px 16px;
+  }
+  
+  .accordion-content p {
+    padding: 0 16px;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  
+  .accordion-content p:first-child {
+    padding-top: 12px;
+  }
+  
+  .accordion-content p:last-child {
+    padding-bottom: 12px;
+  }
+  
   .feature-item {
     padding: 10px 14px;
   }
