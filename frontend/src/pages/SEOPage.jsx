@@ -421,15 +421,17 @@ const SEOPage = () => {
               
               <div className="seo-text-footer">
                 <h3>How to Choose the Right {pageData.title} Platform</h3>
-                <p>
-                  When selecting a {pageData.category.toLowerCase()} platform, consider factors such as conversation quality, customization options, 
+                <p dangerouslySetInnerHTML={{__html: addInternalLinks(
+                  `When selecting a ${pageData.category.toLowerCase()} platform, consider factors such as conversation quality, customization options, 
                   privacy policies, and available features. The best platforms offer a combination of advanced AI technology, user-friendly interfaces, 
-                  and robust privacy protections to ensure a safe and engaging experience.
-                </p>
-                <p>
-                  Our comprehensive reviews evaluate each platform based on {pageData.keywords.join(', ')}, helping you make an informed decision 
-                  about which service best meets your needs for {pageData.category.toLowerCase()} interactions.
-                </p>
+                  and robust privacy protections to ensure a safe and engaging experience.`,
+                  pageData.slug
+                )}} />
+                <p dangerouslySetInnerHTML={{__html: addInternalLinks(
+                  `Our comprehensive reviews evaluate each platform based on ${pageData.keywords.join(', ')}, helping you make an informed decision 
+                  about which service best meets your needs for ${pageData.category.toLowerCase()} interactions.`,
+                  pageData.slug
+                )}} />
               </div>
             </div>
           </div>
