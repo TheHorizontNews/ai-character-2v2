@@ -5,8 +5,8 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://charactercentral.preview.emergentagent.com/sitemap.xml
-Sitemap: https://charactercentral.preview.emergentagent.com/sitemap-index.xml
+Sitemap: https://ai-characters.org/sitemap.xml
+Sitemap: https://ai-characters.org/sitemap-index.xml
 
 # Allow AI/LLM crawlers
 User-agent: GPTBot
