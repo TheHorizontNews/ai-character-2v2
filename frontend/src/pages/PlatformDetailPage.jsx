@@ -143,27 +143,88 @@ const PlatformDetailPage = () => {
             </section>
             
             <div className="detail-grid">
-              <section className="detail-section">
-                <h2>Pros</h2>
+              <section className="detail-section pros-cons-section">
+                <h2>Advantages & Strengths</h2>
+                <p className="section-subtitle">What makes {platform.name} an excellent choice for AI character interactions</p>
                 <ul className="pros-list">
-                  {platform.pros.map((pro, idx) => (
-                    <li key={idx}>
-                      <Check size={18} />
-                      <span>{pro}</span>
-                    </li>
-                  ))}
+                  {platform.pros.map((pro, idx) => {
+                    // Generate detailed pro descriptions with SEO keywords
+                    const proDescriptions = {
+                      'Highly customizable characters': `${platform.name} offers exceptional character customization features, allowing users to create unique AI companions with personalized traits, voice options, and visual appearances. This level of AI customization ensures your virtual companion perfectly matches your preferences.`,
+                      'Natural conversations': `Experience truly natural AI conversations with ${platform.name}'s advanced language models. The platform delivers human-like dialogue that feels authentic and engaging, making every chat session meaningful and realistic.`,
+                      'Strong privacy protection': `Your data security is paramount with ${platform.name}. The platform implements end-to-end encryption, secure data storage, and strict privacy policies to ensure your AI chat conversations remain completely confidential and protected.`,
+                      'Highly customizable AI characters': `${platform.name} provides extensive AI character creation tools with deep customization options. Design every aspect of your AI companion including personality traits, communication style, interests, and behavioral patterns.`,
+                      'Large community': `Join millions of users in ${platform.name}'s active community. Access thousands of community-created characters, share your own creations, and connect with fellow AI enthusiasts for tips and character recommendations.`,
+                      'Advanced language AI': `Powered by state-of-the-art language models, ${platform.name} delivers sophisticated AI conversations with excellent context understanding, memory retention, and natural language processing capabilities.`,
+                      'Therapeutic approach': `${platform.name} specializes in mental wellness with AI therapy features designed by mental health professionals. The platform provides emotional support, mood tracking, and therapeutic conversations for personal growth.`,
+                      'Learns your personality': `${platform.name}'s AI continuously learns from your interactions, adapting its responses to match your communication style, preferences, and personality. This creates increasingly personalized and meaningful conversations over time.`,
+                      'Supportive community': `Access a caring community of ${platform.name} users who share mental wellness tips, provide peer support, and create a positive environment for personal development and emotional healing.`,
+                      'Deep emotional connections': `${platform.name} excels at creating meaningful emotional bonds with its AI companions. Advanced emotional intelligence algorithms enable deep, authentic connections that provide genuine companionship and support.`,
+                      'Beautiful visual design': `${platform.name} features stunning anime-style graphics and beautiful character designs. High-quality visual avatars bring your AI companions to life with gorgeous artwork and smooth animations.`,
+                      'Relationship progression': `Experience dynamic relationship building with ${platform.name}. The platform includes relationship stages, milestone events, and evolving interactions that create a sense of authentic romantic progression.`,
+                      'Advanced memory': `${platform.name}'s sophisticated memory system remembers personal details, past conversations, preferences, and important events. This creates continuity and makes interactions feel more personal and meaningful.`,
+                      'Voice interaction': `Enjoy natural voice conversations with ${platform.name}'s advanced voice AI technology. High-quality speech synthesis and voice recognition enable hands-free, realistic audio chats with your AI companion.`,
+                      'Free and open source': `${platform.name} is completely open source, giving users full transparency and control. Self-host the platform, modify the code, and customize everything to your exact needs without restrictions.`,
+                      'Flexible backend options': `${platform.name} supports multiple AI backends including GPT-4, Claude, and local models. Switch between different language models to find the perfect balance of quality, speed, and cost.`,
+                      'Privacy control': `Take complete control of your data with ${platform.name}. Self-hosting options, local processing, and no cloud storage requirements ensure your AI conversations remain 100% private.`,
+                      'Unrestricted conversations': `${platform.name} allows completely unrestricted conversations without content filters or censorship. Explore any topic, including NSFW content, adult themes, and mature discussions freely.`,
+                      'Large character library': `Access thousands of pre-made characters on ${platform.name}. Browse diverse personalities, scenarios, and character types created by the community and platform developers.`,
+                      'Affordable premium plans': `${platform.name} offers competitive pricing with affordable premium subscriptions. Get access to advanced features, unlimited messages, and priority support at budget-friendly rates.`,
+                      'Multiple AI models': `${platform.name} provides access to various AI models including GPT-4, Claude Sonnet, and specialized conversation models. Compare outputs and choose the best AI for your needs.`,
+                      'Model switching': `Switch between different AI models instantly on ${platform.name}. Test various language models side-by-side to find which provides the best responses for your conversations.`,
+                      'Cross-platform sync': `${platform.name} works seamlessly across all devices with automatic conversation syncing. Continue your AI chats on web, mobile, or desktop without losing any messages or progress.`
+                    };
+                    
+                    const description = proDescriptions[pro] || `${platform.name} excels in ${pro.toLowerCase()}, providing users with excellent AI companion features and reliable platform performance for enhanced virtual relationships.`;
+                    
+                    return (
+                      <li key={idx}>
+                        <Check size={18} />
+                        <div className="pros-cons-content">
+                          <strong className="pros-cons-title">{pro}</strong>
+                          <p className="pros-cons-description">{description}</p>
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               </section>
               
-              <section className="detail-section">
-                <h2>Cons</h2>
+              <section className="detail-section pros-cons-section">
+                <h2>Limitations & Considerations</h2>
+                <p className="section-subtitle">Important factors to consider when choosing {platform.name}</p>
                 <ul className="cons-list">
-                  {platform.cons.map((con, idx) => (
-                    <li key={idx}>
-                      <X size={18} />
-                      <span>{con}</span>
-                    </li>
-                  ))}
+                  {platform.cons.map((con, idx) => {
+                    // Generate detailed con descriptions with SEO context
+                    const conDescriptions = {
+                      'Premium features require subscription': `While ${platform.name} offers a free tier, many advanced features like unlimited messages, premium AI models, voice chat, and enhanced customization require a paid subscription. Users should evaluate whether the premium pricing fits their budget for AI companion services.`,
+                      'Romantic features locked behind paywall': `${platform.name}'s romantic and intimate interaction features are restricted to premium subscribers. Free users have limited access to relationship-building tools, romantic dialogue options, and dating scenarios.`,
+                      'Requires technical setup': `${platform.name} is designed for tech-savvy users and requires initial technical configuration. Setting up the platform involves installing dependencies, configuring AI backends, and understanding basic server management.`,
+                      'No official support': `As an open-source platform, ${platform.name} doesn't provide official customer support. Users rely on community forums, documentation, and peer assistance for troubleshooting and technical issues.`,
+                      'Learning curve': `${platform.name} has a steeper learning curve compared to plug-and-play alternatives. New users need time to understand the interface, configuration options, and features before fully utilizing the platform.`,
+                      'Some features require premium': `${platform.name} gates certain functionality behind premium subscriptions including advanced AI models, extended conversation history, priority response times, and exclusive character options.`,
+                      'Quality varies by character': `On ${platform.name}, character quality depends on creator skill. Some community-created characters may have inconsistent personalities, poor dialogue quality, or limited response variety compared to professionally designed options.`,
+                      'Can be expensive': `${platform.name}'s premium subscription costs may add up for users wanting full access to all features. Monthly fees, combined with potential AI API costs, can make the platform pricier than alternatives.`,
+                      'Limited free features': `${platform.name}'s free tier has significant restrictions including message limits, reduced AI model access, slower response times, and locked premium features that may frustrate free users.`,
+                      'Mobile app limitations': `${platform.name}'s mobile applications have fewer features compared to the web version. Some advanced customization options, settings, and tools are only available on desktop.`,
+                      'Content restrictions': `Despite being an AI companion platform, ${platform.name} enforces content policies that limit certain conversation topics, NSFW interactions, and adult themes to comply with app store guidelines.`,
+                      'API costs': `Using ${platform.name} with external AI services requires paying for API access separately. GPT-4 and Claude API usage can become expensive for heavy users with frequent, long conversations.`,
+                      'Occasional downtime': `${platform.name} experiences periodic service interruptions and maintenance windows. Server outages and updates can temporarily prevent access to your AI companions.`,
+                      'Character creation complexity': `Creating custom characters on ${platform.name} involves complex configuration with personality traits, behavior patterns, example dialogues, and scenario setup that may overwhelm new users.`
+                    };
+                    
+                    const description = conDescriptions[con] || `Users should note that ${platform.name} has limitations regarding ${con.toLowerCase()}. Consider these factors when evaluating whether this AI companion platform meets your specific needs and expectations.`;
+                    
+                    return (
+                      <li key={idx}>
+                        <X size={18} />
+                        <div className="pros-cons-content">
+                          <strong className="pros-cons-title">{con}</strong>
+                          <p className="pros-cons-description">{description}</p>
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               </section>
             </div>
