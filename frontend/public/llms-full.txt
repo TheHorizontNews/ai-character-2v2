@@ -245,7 +245,7 @@ Fact-Checking: All information verified
 CONTACT & FEEDBACK
 ===================================
 
-Website: https://charactercentral.preview.emergentagent.com/
+Website: https://ai-characters.org/
 Email: info@ai-characters.org
 Updates: Subscribe via website
 Social: @CharacterCentral
