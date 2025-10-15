@@ -360,16 +360,18 @@ const SEOPage = () => {
               <div className="seo-text-grid">
                 <div className="seo-text-main">
                   <h3>What makes {pageData.title} unique?</h3>
-                  <p>
-                    {pageData.title} represents the cutting edge of artificial intelligence technology in the {pageData.category.toLowerCase()} space. 
+                  <p dangerouslySetInnerHTML={{__html: addInternalLinks(
+                    `${pageData.title} represents the cutting edge of artificial intelligence technology in the ${pageData.category.toLowerCase()} space. 
                     These platforms leverage advanced machine learning algorithms to create meaningful interactions that go beyond simple chatbots, 
-                    offering users personalized experiences through {pageData.keywords.slice(0, 2).join(' and ')}.
-                  </p>
-                  <p>
-                    The evolution of {pageData.keywords[0]} technology has transformed how we interact with digital companions. Modern {pageData.title.toLowerCase()} 
+                    offering users personalized experiences through ${pageData.keywords.slice(0, 2).join(' and ')}.`,
+                    pageData.slug
+                  )}} />
+                  <p dangerouslySetInnerHTML={{__html: addInternalLinks(
+                    `The evolution of ${pageData.keywords[0]} technology has transformed how we interact with digital companions. Modern ${pageData.title.toLowerCase()} 
                     platforms utilize natural language processing, emotional intelligence, and adaptive personality systems to create authentic relationships 
-                    that respond to user preferences and conversation styles.
-                  </p>
+                    that respond to user preferences and conversation styles.`,
+                    pageData.slug
+                  )}} />
                   
                   <h3>Key Benefits of {pageData.title}</h3>
                   <ul className="seo-benefits-list">
