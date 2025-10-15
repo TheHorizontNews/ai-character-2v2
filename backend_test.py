@@ -128,33 +128,33 @@ class BotMetaMiddlewareTest:
         
     def test_bot_detection(self):
         """Test 1: Bot Detection Test"""
-        print("\n=== Test 1: Bot Detection ===")
+        print("\n=== Test 1: Bot Detection (Direct Backend) ===")
         
-        # Test with different bot User-Agents
+        # Test with different bot User-Agents on direct backend
         for bot_name, user_agent in BOT_USER_AGENTS.items():
             try:
-                response = self.make_request('/', user_agent)
+                response = self.make_request('/', user_agent, use_direct=True)
                 
                 # Check if bot was detected (should have X-Bot-Detected header)
                 bot_detected = response.headers.get('X-Bot-Detected') == 'true'
                 
-                if bot_detected:
+                if bot_detected and response.status_code == 200:
                     self.log_result(f"Bot Detection - {bot_name}", True, "Bot correctly detected")
                 else:
-                    self.log_result(f"Bot Detection - {bot_name}", False, "Bot not detected")
+                    self.log_result(f"Bot Detection - {bot_name}", False, f"Bot not detected (status: {response.status_code})")
                     
             except Exception as e:
                 self.log_error(f"Bot Detection - {bot_name}", e)
                 
-        # Test with regular browser (should NOT be detected as bot)
+        # Test with regular browser (should get 404 since no route for /)
         try:
-            response = self.make_request('/', REGULAR_BROWSER)
-            bot_detected = response.headers.get('X-Bot-Detected') == 'true'
+            response = self.make_request('/', REGULAR_BROWSER, use_direct=True)
             
-            if not bot_detected:
-                self.log_result("Regular Browser Detection", True, "Regular browser correctly not detected as bot")
+            # Regular browser should get 404 (no route) and no X-Bot-Detected header
+            if response.status_code == 404 and not response.headers.get('X-Bot-Detected'):
+                self.log_result("Regular Browser Detection", True, "Regular browser correctly not detected as bot (404 as expected)")
             else:
-                self.log_result("Regular Browser Detection", False, "Regular browser incorrectly detected as bot")
+                self.log_result("Regular Browser Detection", False, f"Unexpected response: status {response.status_code}, bot header: {response.headers.get('X-Bot-Detected')}")
                 
         except Exception as e:
             self.log_error("Regular Browser Detection", e)
