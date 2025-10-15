@@ -12,6 +12,7 @@ import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { aiPlatforms, faqs } from '../data/mockData';
+import { homepageMeta, SITE_DOMAIN } from '../data/metaTags';
 import '../styles/HomePage.css';
 
 const HomePage = () => {
@@ -23,8 +24,8 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <SEOHead 
-        title="Best AI Character & Companion Platforms 2025"
-        description="Discover and compare the top 21 AI character and companion platforms. Expert reviews, detailed comparisons, and guides for AI girlfriends, chatbots, and virtual companions."
+        title={homepageMeta.title}
+        description={homepageMeta.description}
         keywords={[
           'ai characters',
           'ai companions',
