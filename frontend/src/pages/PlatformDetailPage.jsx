@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Star, Users, ExternalLink, Check, X, TrendingUp, DollarSign, Shield, Zap, MessageCircle, Image as ImageIcon } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
 import { aiPlatforms } from '../data/mockData';
 import '../styles/PlatformDetailPage.css';
 
@@ -29,6 +30,21 @@ const PlatformDetailPage = () => {
 
   return (
     <div className="home-page">
+      <SEOHead 
+        title={`${platform.name} Review 2025 - Features, Pricing & User Experience`}
+        description={`Comprehensive ${platform.name} review: ${platform.tagline}. Explore features, pricing, pros & cons. ${platform.rating}/5 rating from ${platform.users} users. ${platform.category} AI platform.`}
+        keywords={[
+          platform.name.toLowerCase(),
+          ...platform.features.slice(0, 5),
+          platform.category.toLowerCase(),
+          'review',
+          'ai companion',
+          platform.pricing.toLowerCase(),
+          '2025'
+        ]}
+        ogImage={platform.image}
+        canonical={`https://ai-characters.org/platform/${platform.slug}`}
+      />
       <Sidebar />
       
       <main className="main-content">
