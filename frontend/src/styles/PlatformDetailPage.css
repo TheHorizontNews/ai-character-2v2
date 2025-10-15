@@ -739,6 +739,29 @@
   flex-shrink: 0;
 }
 
+.seo-cta-button {
+  margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #1dd1a1, #16a085);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(29, 209, 161, 0.3);
+}
+
+.seo-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(29, 209, 161, 0.5);
+  background: linear-gradient(135deg, #16a085, #1dd1a1);
+}
+
 .seo-image {
   position: relative;
   border-radius: 16px;
