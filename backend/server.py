@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 from typing import List
 import uuid
 from datetime import datetime
+from bot_meta_middleware import BotMetaMiddleware
 
 
 ROOT_DIR = Path(__file__).parent
@@ -21,6 +22,9 @@ db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
 app = FastAPI()
+
+# Add Bot Meta Middleware FIRST (before CORS)
+app.add_middleware(BotMetaMiddleware)
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
