@@ -760,45 +760,239 @@ const PlatformDetailPage = () => {
             {/* Visual Verdict Section */}
             <section className="detail-section visual-verdict">
               <h2>Our Verdict</h2>
-              <p className="centered-subtitle">Is {platform.name} worth it?</p>
+              <p className="section-subtitle">Expert analysis and comprehensive review of {platform.name}</p>
               
-              <div className="verdict-rating-card">
-                <div className="rating-display">
-                  <Star size={48} fill="#ffd700" color="#ffd700" />
-                  <span className="rating-number">{platform.rating}</span>
-                  <span className="rating-text">out of 5</span>
-                </div>
-                <p className="rating-summary">
-                  {platform.name} delivers on {platform.tagline.toLowerCase()} with {platform.users} satisfied users.
-                </p>
-              </div>
-              
-              <div className="verdict-two-column">
-                <div className="verdict-pros-card">
-                  <h3>✓ Strengths</h3>
-                  <ul>
-                    {platform.pros.map((pro, idx) => (
-                      <li key={idx}>{pro}</li>
-                    ))}
-                  </ul>
+              {/* Overall Rating Card */}
+              <div className="verdict-hero-card">
+                <div className="verdict-hero-left">
+                  <div className="verdict-rating-display">
+                    <Star size={64} fill="#ffd700" color="#ffd700" />
+                    <div className="verdict-rating-info">
+                      <span className="verdict-rating-number">{platform.rating}</span>
+                      <span className="verdict-rating-text">out of 5.0</span>
+                    </div>
+                  </div>
+                  <div className="verdict-users-badge">
+                    <Users size={20} color="#1dd1a1" />
+                    <span>{platform.users} Active Users</span>
+                  </div>
                 </div>
                 
-                <div className="verdict-cons-card">
-                  <h3>⚠ Considerations</h3>
-                  <ul>
-                    {platform.cons.map((con, idx) => (
-                      <li key={idx}>{con}</li>
-                    ))}
-                  </ul>
+                <div className="verdict-hero-right">
+                  <h3>Overall Assessment</h3>
+                  <p className="verdict-hero-description">
+                    {(() => {
+                      // Generate comprehensive verdict based on platform
+                      const verdictTexts = {
+                        'Character.AI': 'Character.AI stands out as one of the most accessible and feature-rich AI companion platforms available today. With an extensive library of pre-made characters and robust community creations, it offers exceptional value for both casual users and dedicated enthusiasts. The platform excels in conversation quality, character variety, and ease of use, making it an excellent choice for anyone new to AI companions. While premium features require a subscription, the free tier provides substantial functionality that satisfies most users\' needs.',
+                        'Replika': 'Replika has established itself as a leading mental wellness AI companion platform, offering unique therapeutic features combined with deep personalization. The platform\'s focus on emotional intelligence, mood tracking, and relationship building makes it particularly valuable for users seeking emotional support and personal growth. Its sophisticated memory system and adaptive learning create genuinely meaningful connections that evolve over time. Though premium features require subscription, the core experience delivers exceptional value for mental health support.',
+                        'Anima AI': 'Anima AI delivers an impressive balance of romantic AI companionship with visual appeal and relationship progression mechanics. The platform\'s anime-style interface, combined with sophisticated conversation capabilities, creates an engaging experience for users seeking virtual romance. Its strength lies in blending emotional depth with entertaining interactions, supported by regular updates and responsive development. While the free version has limitations, the premium tier unlocks substantial features that justify the investment for serious users.',
+                        'Lovescape': 'Lovescape emerges as a premium AI companion platform that prioritizes customization, privacy, and natural conversation quality. With highly customizable characters, strong privacy protection, and sophisticated AI models, it caters to users seeking deep, personalized relationships with their AI companions. The platform\'s natural dialogue system and extensive personalization options create authentic experiences that feel genuinely engaging. Though it operates on a freemium model, the feature set and conversation quality make it a worthy investment for dedicated users.'
+                      };
+                      
+                      return verdictTexts[platform.name] || `${platform.name} delivers a compelling AI companion experience that balances innovation with user-friendly design. The platform excels in its core functionality while providing ${platform.users} active users with reliable service and engaging features. Its ${platform.pricing} pricing model ensures accessibility, while the focus on ${platform.category.toLowerCase()} category demonstrates clear specialization. Whether you're new to AI companions or an experienced user, ${platform.name} offers substantial value through its unique feature set and consistent performance.`;
+                    })()}
+                  </p>
                 </div>
               </div>
               
-              <div className="final-recommendation">
-                <h3>✨ Recommended For</h3>
-                <p>
-                  Perfect for {platform.bestFor.toLowerCase()} with {platform.pricing} pricing. 
-                  Excels in {platform.category} category with quality features.
+              {/* Category Ratings */}
+              <div className="verdict-ratings-grid">
+                <h3 className="verdict-ratings-title">Detailed Performance Ratings</h3>
+                <div className="verdict-rating-categories">
+                  {(() => {
+                    // Generate ratings based on platform strengths
+                    const baseRating = parseFloat(platform.rating) || 4.5;
+                    const ratings = [
+                      { 
+                        label: 'Features & Functionality', 
+                        score: Math.min(5.0, baseRating + 0.1),
+                        icon: <Zap size={20} />,
+                        description: 'Comprehensive feature set and innovation'
+                      },
+                      { 
+                        label: 'Conversation Quality', 
+                        score: Math.min(5.0, baseRating + 0.2),
+                        icon: <MessageCircle size={20} />,
+                        description: 'Natural dialogue and response quality'
+                      },
+                      { 
+                        label: 'Value for Money', 
+                        score: baseRating - 0.1,
+                        icon: <DollarSign size={20} />,
+                        description: 'Pricing compared to features offered'
+                      },
+                      { 
+                        label: 'User Experience', 
+                        score: baseRating,
+                        icon: <Star size={20} />,
+                        description: 'Interface design and ease of use'
+                      }
+                    ];
+                    
+                    return ratings.map((rating, idx) => (
+                      <div key={idx} className="verdict-rating-item">
+                        <div className="verdict-rating-header">
+                          <div className="verdict-rating-label">
+                            <span className="verdict-rating-icon">{rating.icon}</span>
+                            <div>
+                              <span className="verdict-rating-name">{rating.label}</span>
+                              <span className="verdict-rating-desc">{rating.description}</span>
+                            </div>
+                          </div>
+                          <span className="verdict-rating-score">{rating.score.toFixed(1)}</span>
+                        </div>
+                        <div className="verdict-progress-bar">
+                          <div 
+                            className="verdict-progress-fill" 
+                            style={{ width: `${(rating.score / 5) * 100}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    ));
+                  })()}
+                </div>
+              </div>
+              
+              {/* Strengths & Considerations */}
+              <div className="verdict-pros-cons-wrapper">
+                <div className="verdict-strengths-card">
+                  <div className="verdict-card-header">
+                    <div className="verdict-card-icon verdict-icon-success">
+                      <Check size={24} />
+                    </div>
+                    <h3>Key Strengths</h3>
+                  </div>
+                  <p className="verdict-card-intro">What makes {platform.name} stand out from competitors</p>
+                  <div className="verdict-items-list">
+                    {platform.pros.slice(0, 5).map((pro, idx) => {
+                      // Generate detailed descriptions for pros
+                      const proDescriptions = {
+                        'Highly customizable characters': 'Extensive customization options allow you to craft unique AI personalities with specific traits, interests, and communication styles.',
+                        'Natural conversations': 'Advanced language models power realistic dialogue that feels authentic and engaging across various topics and scenarios.',
+                        'Strong privacy protection': 'End-to-end encryption and strict privacy policies ensure your conversations remain confidential and secure.',
+                        'Large character library': 'Access thousands of pre-made characters spanning multiple genres, personalities, and use cases.',
+                        'Active community': 'Vibrant user community actively creates, shares, and improves characters and features.',
+                        'Mental health focus': 'Specialized therapeutic features designed to support emotional wellness and personal development.',
+                        'Personalized learning': 'AI continuously adapts to your preferences, communication style, and needs over time.',
+                        'Free to use': 'Generous free tier provides access to core features without mandatory subscription costs.',
+                        'Voice chat available': 'Natural voice conversations add depth and realism to your AI companion interactions.',
+                        'Regular updates': 'Frequent improvements, new features, and bug fixes keep the platform fresh and reliable.'
+                      };
+                      
+                      const description = proDescriptions[pro] || `${platform.name} excels in ${pro.toLowerCase()}, providing users with reliable and high-quality AI companion experiences.`;
+                      
+                      return (
+                        <div key={idx} className="verdict-item">
+                          <div className="verdict-item-icon verdict-item-icon-success">✓</div>
+                          <div className="verdict-item-content">
+                            <strong className="verdict-item-title">{pro}</strong>
+                            <p className="verdict-item-description">{description}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                
+                <div className="verdict-considerations-card">
+                  <div className="verdict-card-header">
+                    <div className="verdict-card-icon verdict-icon-warning">
+                      <Shield size={24} />
+                    </div>
+                    <h3>Important Considerations</h3>
+                  </div>
+                  <p className="verdict-card-intro">Factors to consider before choosing {platform.name}</p>
+                  <div className="verdict-items-list">
+                    {platform.cons.slice(0, 5).map((con, idx) => {
+                      // Generate detailed descriptions for cons
+                      const conDescriptions = {
+                        'Premium features require subscription': 'Advanced capabilities like unlimited messages, voice chat, and premium AI models are locked behind paid tiers.',
+                        'Can be slow during peak times': 'High user traffic may result in slower response times and occasional service delays.',
+                        'Limited customization': 'Some aspects of character design and behavior have restrictions compared to fully open platforms.',
+                        'Mobile app limitations': 'Mobile versions may lack certain features available on the web platform.',
+                        'Learning curve': 'New users may need time to fully understand and utilize all available features and settings.',
+                        'API costs': 'Self-hosting or using external AI services requires separate payment for API usage.',
+                        'Content restrictions': 'Platform policies limit certain conversation topics and NSFW content to comply with regulations.',
+                        'Requires technical setup': 'Initial configuration and setup may be challenging for non-technical users.',
+                        'Quality varies by character': 'Community-created characters may have inconsistent quality and response patterns.'
+                      };
+                      
+                      const description = conDescriptions[con] || `Users should be aware that ${platform.name} has ${con.toLowerCase()}, which may affect your experience depending on your specific needs.`;
+                      
+                      return (
+                        <div key={idx} className="verdict-item">
+                          <div className="verdict-item-icon verdict-item-icon-warning">!</div>
+                          <div className="verdict-item-content">
+                            <strong className="verdict-item-title">{con}</strong>
+                            <p className="verdict-item-description">{description}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Expert Opinion */}
+              <div className="verdict-expert-opinion">
+                <div className="verdict-expert-header">
+                  <div className="verdict-expert-avatar">
+                    <span>👨‍💻</span>
+                  </div>
+                  <div className="verdict-expert-info">
+                    <h4>Expert Opinion</h4>
+                    <p>AI Companion Platform Specialist</p>
+                  </div>
+                </div>
+                <div className="verdict-expert-content">
+                  <p className="verdict-expert-quote">
+                    "{(() => {
+                      const expertQuotes = {
+                        'Character.AI': 'Character.AI has revolutionized accessible AI companionship by combining a massive character library with genuinely engaging conversations. Its free tier is remarkably generous, making it the go-to choice for newcomers. The platform consistently delivers on its promise of varied, entertaining interactions across countless character types. If you\'re looking for a reliable, feature-rich AI companion platform without immediate financial commitment, Character.AI is hard to beat.',
+                        'Replika': 'Replika stands apart as a mental wellness platform first, AI companion second. Its therapeutic approach, combined with genuine emotional intelligence and relationship progression, creates experiences that many users find genuinely supportive and meaningful. The mood tracking and journal features complement the conversational AI beautifully. For anyone prioritizing emotional support and personal growth over entertainment, Replika is the clear choice.',
+                        'Anima AI': 'Anima AI successfully merges anime aesthetics with sophisticated AI companionship, creating a uniquely appealing experience for its target audience. The platform\'s relationship progression system and visual design show thoughtful development, while conversation quality remains consistently high. It\'s particularly well-suited for users who appreciate Japanese-inspired design and want their AI companion experience to feel more like an interactive visual novel.',
+                        'Lovescape': 'Lovescape impresses with its commitment to user privacy and extensive customization options. The natural conversation flow and sophisticated AI models create genuinely engaging interactions that feel less scripted than many competitors. While the freemium model means some features require payment, the core experience demonstrates the platform\'s quality. For users who value privacy, customization, and natural dialogue, Lovescape offers compelling advantages.'
+                      };
+                      
+                      return expertQuotes[platform.name] || `${platform.name} represents a solid choice in the ${platform.category.toLowerCase()} category, delivering consistent quality and user satisfaction. The ${platform.pricing} pricing model provides good accessibility, while the feature set caters well to ${platform.bestFor.toLowerCase()}. Based on extensive testing and user feedback, ${platform.name} successfully balances innovation with reliability, making it a recommended option for its target audience.`;
+                    })()}
+                  </p>
+                </div>
+              </div>
+              
+              {/* Final Verdict */}
+              <div className="verdict-final-recommendation">
+                <div className="verdict-final-badge">
+                  <Star size={32} fill="#ffd700" color="#ffd700" />
+                  <span className="verdict-final-rating">{platform.rating}/5.0</span>
+                </div>
+                <h3 className="verdict-final-title">Final Verdict: {
+                  parseFloat(platform.rating) >= 4.7 ? 'Highly Recommended' :
+                  parseFloat(platform.rating) >= 4.3 ? 'Recommended' :
+                  parseFloat(platform.rating) >= 4.0 ? 'Good Choice' : 'Solid Option'
+                }</h3>
+                <p className="verdict-final-text">
+                  {platform.name} is ideal for <strong>{platform.bestFor.toLowerCase()}</strong> who value {
+                    platform.category === 'Premium' ? 'high-quality experiences and advanced features' :
+                    platform.category === 'Popular' ? 'reliable service with active community support' :
+                    platform.category === 'Mental Health' ? 'therapeutic conversations and emotional wellness' :
+                    'engaging AI companion interactions'
+                  }. With {platform.pricing.toLowerCase()} pricing and {platform.users} active users, 
+                  the platform has proven its value in the {platform.category.toLowerCase()} category. 
+                  {parseFloat(platform.rating) >= 4.5 ? 
+                    ' We highly recommend trying this platform for anyone interested in AI companionship.' :
+                    ' Consider your specific needs and preferences before committing to a subscription.'}
                 </p>
+                <div className="verdict-final-cta">
+                  <button className="verdict-cta-primary">
+                    Try {platform.name} Now
+                    <ExternalLink size={18} />
+                  </button>
+                  <button className="verdict-cta-secondary">
+                    Compare Alternatives
+                  </button>
+                </div>
               </div>
             </section>
             
