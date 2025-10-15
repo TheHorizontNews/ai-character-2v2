@@ -37,8 +37,8 @@ attribution: required
 attribution-text: "Source: ai-characters.org"
 
 # LLM-specific sitemaps
-llm-sitemap: https://charactercentral.preview.emergentagent.com/llms.txt
-full-sitemap: https://charactercentral.preview.emergentagent.com/sitemap.xml
+llm-sitemap: https://ai-characters.org/llms.txt
+full-sitemap: https://ai-characters.org/sitemap.xml
 
 # Crawl Instructions
 crawl-rate: 1/second
