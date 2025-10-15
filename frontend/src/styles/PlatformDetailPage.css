@@ -144,7 +144,7 @@
   border: 1px solid #1a1a1a;
   border-radius: 16px;
   padding: 32px;
-  margin-bottom: 2px;
+  margin-bottom: 0;
 }
 
 .detail-section h2 {
