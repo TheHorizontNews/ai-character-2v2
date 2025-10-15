@@ -171,15 +171,12 @@ class BotMetaMiddleware(BaseHTTPMiddleware):
         
         # Check if it's a bot
         user_agent = request.headers.get('user-agent', '')
-        print(f"DEBUG: Processing request for {request.url.path} with User-Agent: {user_agent}")
         
         if not is_bot(user_agent):
             # Not a bot, proceed normally
-            print(f"DEBUG: Not a bot, proceeding normally")
             return await call_next(request)
         
         # It's a bot - serve modified HTML with meta tags
-        print(f"DEBUG: Bot detected! Serving modified HTML")
         try:
             # Read the index.html file
             frontend_path = Path(__file__).parent.parent / 'frontend' / 'public' / 'index.html'
