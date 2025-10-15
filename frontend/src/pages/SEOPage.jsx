@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import PlatformCard from '../components/PlatformCard';
@@ -13,6 +13,63 @@ const SEOPage = () => {
   const navigate = useNavigate();
   const fullSlug = params['*'] || params.slug;
   const pageData = seoPages.find(p => p.slug === fullSlug);
+  
+  // Function to add internal links to text
+  const addInternalLinks = (text, currentSlug) => {
+    // Get pages from the same category (for clustering)
+    const sameCategoryPages = seoPages.filter(page => 
+      page.category === pageData.category && 
+      page.slug !== currentSlug
+    );
+    
+    // Get related pages from different categories
+    const relatedPages = seoPages.filter(page => 
+      pageData.relatedPages && 
+      pageData.relatedPages.includes(page.slug)
+    );
+    
+    // Combine and limit to 3 most relevant pages
+    const relevantPages = [...sameCategoryPages, ...relatedPages]
+      .filter((page, index, self) => 
+        index === self.findIndex(p => p.slug === page.slug)
+      )
+      .slice(0, 3);
+    
+    let linkedText = text;
+    let linksAdded = 0;
+    const maxLinks = 3;
+    
+    // Add links based on keywords and titles
+    relevantPages.forEach(page => {
+      if (linksAdded >= maxLinks) return;
+      
+      // Try to link page title
+      const titleRegex = new RegExp(`\\b${page.title}\\b`, 'gi');
+      if (titleRegex.test(linkedText) && !linkedText.includes(`/character-review/${page.slug}`)) {
+        linkedText = linkedText.replace(titleRegex, (match) => 
+          `<a href="/character-review/${page.slug}" class="internal-link">${match}</a>`
+        );
+        linksAdded++;
+        return;
+      }
+      
+      // Try to link main keywords
+      if (linksAdded < maxLinks) {
+        page.keywords.slice(0, 2).forEach(keyword => {
+          if (linksAdded >= maxLinks) return;
+          const keywordRegex = new RegExp(`\\b${keyword}\\b(?![^<]*>)`, 'i');
+          if (keywordRegex.test(linkedText) && !linkedText.includes(`/character-review/${page.slug}`)) {
+            linkedText = linkedText.replace(keywordRegex, (match) => 
+              `<a href="/character-review/${page.slug}" class="internal-link">${match}</a>`
+            );
+            linksAdded++;
+          }
+        });
+      }
+    });
+    
+    return linkedText;
+  };
 
   if (!pageData) {
     return (
