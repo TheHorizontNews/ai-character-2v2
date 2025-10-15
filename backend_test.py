@@ -343,7 +343,7 @@ class BotMetaMiddlewareTest:
             
         # Test specific comparison
         try:
-            response = self.make_request('/compare/lovescape-vs-character-ai', BOT_USER_AGENTS['SlackBot'])
+            response = self.make_request('/compare/lovescape-vs-character-ai', BOT_USER_AGENTS['SlackBot'], use_direct=True)
             
             if response.status_code == 200:
                 meta_data = self.extract_meta_tags(response.text)
