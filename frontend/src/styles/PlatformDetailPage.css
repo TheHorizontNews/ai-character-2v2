@@ -1538,6 +1538,35 @@
   text-align: center;
 }
 
+/* Comparison CTA */
+.comparison-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.comparison-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.comparison-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
 /* Compact FAQ */
 .compact-faq {
   margin-top: 0;
