@@ -390,12 +390,17 @@
 /* Enhanced Best For Section */
 .best-for-section h2 {
   margin-bottom: 8px;
+  text-align: center !important;
 }
 
 .best-for-section .section-subtitle {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 32px;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
 }
 
 .best-for-card {
