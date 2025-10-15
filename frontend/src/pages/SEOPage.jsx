@@ -102,6 +102,26 @@ const SEOPage = () => {
       
       <main className="main-content">
         <div className="seo-page">
+          <SEOHead 
+            title={`${pageData.title} - Complete Guide & Best Platforms 2025`}
+            description={`${pageData.description} Discover the best ${pageData.title.toLowerCase()} platforms with expert reviews, comparisons, and user guides.`}
+            keywords={[...pageData.keywords, pageData.category.toLowerCase(), 'review', 'comparison', 'guide', '2025']}
+            ogImage={(() => {
+              const title = pageData.title.toLowerCase();
+              if (title.includes('girlfriend')) {
+                return 'https://images.pexels.com/photos/10769510/pexels-photo-10769510.jpeg?auto=compress&cs=tinysrgb&w=1200';
+              } else if (title.includes('boyfriend')) {
+                return 'https://images.pexels.com/photos/3779448/pexels-photo-3779448.jpeg?auto=compress&cs=tinysrgb&w=1200';
+              } else if (title.includes('chatbot') || title.includes('chat')) {
+                return 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80';
+              } else if (title.includes('character')) {
+                return 'https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=1200&q=80';
+              } else {
+                return 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200';
+              }
+            })()}
+            canonical={`https://ai-characters.org/character-review/${pageData.slug}`}
+          />
           <button className="back-btn" onClick={() => navigate('/explore')}>
             <ArrowLeft size={20} />
             <span>Back to explore</span>
