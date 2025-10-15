@@ -583,6 +583,10 @@ const PlatformDetailPage = () => {
                       ))}
                     </ul>
                   </div>
+                  <button className="seo-cta-button">
+                    Visit {platform.name} Official Site
+                    <ExternalLink size={18} />
+                  </button>
                 </div>
                 <div className="seo-image">
                   <img src={platform.image} alt={`${platform.name} platform`} />
