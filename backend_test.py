@@ -409,7 +409,7 @@ class BotMetaMiddlewareTest:
         print("\n=== Test 10: API Routes Not Affected ===")
         
         try:
-            response = self.make_request('/api/', BOT_USER_AGENTS['TelegramBot'])
+            response = self.make_request('/api/', BOT_USER_AGENTS['TelegramBot'], use_direct=True)
             
             if response.status_code == 200:
                 # Should return JSON, not HTML
