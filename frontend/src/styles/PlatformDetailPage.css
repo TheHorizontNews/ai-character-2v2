@@ -822,12 +822,12 @@
   }
   
   .detail-content {
-    gap: 6px;
+    gap: 2px;
   }
   
   .detail-section {
     padding: 24px 20px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
   }
   
   .detail-section h2 {
