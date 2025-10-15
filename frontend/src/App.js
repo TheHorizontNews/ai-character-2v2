@@ -30,6 +30,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </HelmetProvider>
   );
 }
 
