@@ -817,6 +817,7 @@
   .platforms-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    justify-items: center;
   }
   
   .related-pages {
