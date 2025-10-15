@@ -880,23 +880,64 @@
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+    margin-bottom: 32px;
   }
   
   .stat-card {
     padding: 16px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
   }
   
   .stat-icon {
     width: 48px;
     height: 48px;
+    margin: 0 auto;
+  }
+  
+  .stat-info {
+    text-align: center;
+    width: 100%;
   }
   
   .stat-value {
-    font-size: 20px;
+    font-size: 22px;
   }
   
   .stat-label {
     font-size: 11px;
+  }
+  
+  .features-progress {
+    margin-top: 32px;
+  }
+  
+  .features-progress h3 {
+    font-size: 18px;
+  }
+  
+  .features-intro {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .progress-header {
+    font-size: 13px;
+  }
+  
+  .features-note {
+    font-size: 12px;
+    padding: 12px;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ideal-users-list {
+    grid-template-columns: 1fr;
   }
   
   .features-progress h3 {
