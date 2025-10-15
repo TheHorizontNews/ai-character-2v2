@@ -271,7 +271,7 @@ class BotMetaMiddlewareTest:
         
         for seo_page in test_seo_pages:
             try:
-                response = self.make_request(seo_page['path'], BOT_USER_AGENTS['FacebookBot'])
+                response = self.make_request(seo_page['path'], BOT_USER_AGENTS['FacebookBot'], use_direct=True)
                 
                 if response.status_code == 200:
                     meta_data = self.extract_meta_tags(response.text)
