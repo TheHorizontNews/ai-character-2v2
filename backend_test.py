@@ -161,10 +161,10 @@ class BotMetaMiddlewareTest:
             
     def test_homepage_meta_tags(self):
         """Test 2: Homepage Meta Tags"""
-        print("\n=== Test 2: Homepage Meta Tags ===")
+        print("\n=== Test 2: Homepage Meta Tags (Direct Backend) ===")
         
         try:
-            response = self.make_request('/', BOT_USER_AGENTS['TelegramBot'])
+            response = self.make_request('/', BOT_USER_AGENTS['TelegramBot'], use_direct=True)
             
             if response.status_code == 200:
                 meta_data = self.extract_meta_tags(response.text)
