@@ -1517,14 +1517,14 @@
 
 /* Compact FAQ */
 .compact-faq {
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .compact-faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .compact-faq-item {
