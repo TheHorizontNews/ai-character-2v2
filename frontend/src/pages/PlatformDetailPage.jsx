@@ -32,10 +32,8 @@ const PlatformDetailPage = () => {
   return (
     <div className="home-page">
       <SEOHead 
-        title={platform.slug === 'lovescape' ? 'Lovescape — AI Companions & Characters Platform' : `${platform.name} Review 2025 — ${platform.tagline}`}
-        description={platform.slug === 'lovescape' 
-          ? 'Lovescape by Character Central — create, chat, and connect with unique AI characters and companions built to engage and evolve.'
-          : `${platform.name} — ${platform.description}`}
+        title={platformMeta[platform.slug]?.title || `${platform.name} Review 2025`}
+        description={platformMeta[platform.slug]?.description || platform.description}
         keywords={[
           platform.name.toLowerCase(),
           ...platform.features.slice(0, 5),
@@ -45,8 +43,8 @@ const PlatformDetailPage = () => {
           platform.pricing.toLowerCase(),
           '2025'
         ]}
-        ogImage={platform.slug === 'lovescape' ? 'https://charactercentral.preview.emergentagent.com/platform/lovescape/og-image.jpg' : 'https://charactercentral.preview.emergentagent.com/og-image.png'}
-        canonical={`https://charactercentral.preview.emergentagent.com/platform/${platform.slug}`}
+        ogImage={platformMeta[platform.slug]?.ogImage || `${SITE_DOMAIN}/og-image.png`}
+        canonical={`${SITE_DOMAIN}/platform/${platform.slug}`}
         ogType="article"
         schemaData={{
           "@context": "https://schema.org",
