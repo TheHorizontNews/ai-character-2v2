@@ -1,7 +1,7 @@
 // Centralized meta tags data matching backend meta_data.py
 // This ensures consistency between React Helmet (for users) and backend pre-rendering (for bots)
 
-const SITE_DOMAIN = "https://charactercentral.preview.emergentagent.com";
+const SITE_DOMAIN = "https://ai-characters.org";
 const SITE_NAME = "Character Central";
 const DEFAULT_OG_IMAGE = `${SITE_DOMAIN}/og-image.png`;
 
