@@ -715,6 +715,13 @@ const PlatformDetailPage = () => {
                   <p>Vibrant {platform.users} user base with responsive support and regular updates.</p>
                 </div>
               </div>
+              
+              <div className="comparison-cta-wrapper">
+                <button className="comparison-cta-button">
+                  Experience {platform.name} Now
+                  <ExternalLink size={20} />
+                </button>
+              </div>
             </section>
             
             {/* Compact FAQ Section */}
