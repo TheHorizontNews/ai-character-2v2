@@ -36,7 +36,7 @@ const HomePage = () => {
           'ai chat platforms',
           'best ai companions 2025'
         ]}
-        ogImage="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&q=80"
+        ogImage="https://ai-characters.org/og-image.png"
         canonical="https://ai-characters.org/"
         schemaData={{
           "@context": "https://schema.org",
