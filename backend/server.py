@@ -80,6 +80,19 @@ async def get_sitemap_xsl():
             return Response(content=f.read(), media_type="application/xml")
     return Response(content="XSL not found", status_code=404)
 
+# API route for sitemap download
+@api_router.get("/sitemap/download")
+async def download_sitemap():
+    """Download sitemap.xml"""
+    xml_content = generate_main_sitemap()
+    return Response(
+        content=xml_content,
+        media_type="application/xml",
+        headers={
+            "Content-Disposition": "attachment; filename=sitemap.xml"
+        }
+    )
+
 # Include the router in the main app
 app.include_router(api_router)
 
