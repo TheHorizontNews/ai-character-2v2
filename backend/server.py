@@ -71,6 +71,15 @@ async def get_sitemap_index():
     xml_content = generate_sitemap_index()
     return Response(content=xml_content, media_type="application/xml")
 
+@app.get("/sitemap.xsl")
+async def get_sitemap_xsl():
+    """Sitemap XSL stylesheet"""
+    xsl_path = Path(__file__).parent.parent / 'frontend' / 'public' / 'sitemap.xsl'
+    if xsl_path.exists():
+        with open(xsl_path, 'r', encoding='utf-8') as f:
+            return Response(content=f.read(), media_type="application/xml")
+    return Response(content="XSL not found", status_code=404)
+
 # Include the router in the main app
 app.include_router(api_router)
 
