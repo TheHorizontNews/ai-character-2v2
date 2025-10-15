@@ -56,11 +56,12 @@ class BotMetaMiddlewareTest:
         self.errors.append(error_msg)
         print(error_msg)
         
-    def make_request(self, path, user_agent, timeout=10):
+    def make_request(self, path, user_agent, timeout=10, use_direct=False):
         """Make HTTP request with specified user agent"""
         try:
             headers = {'User-Agent': user_agent}
-            url = f"{BACKEND_URL}{path}"
+            base_url = DIRECT_BACKEND_URL if use_direct else BACKEND_URL
+            url = f"{base_url}{path}"
             response = requests.get(url, headers=headers, timeout=timeout)
             return response
         except Exception as e:
