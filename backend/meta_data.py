@@ -2,7 +2,7 @@
 # Each page has unique title, description, and OG tags for SEO optimization
 
 # Domain configuration
-SITE_DOMAIN = "https://charactercentral.preview.emergentagent.com"
+SITE_DOMAIN = "https://ai-characters.org"
 SITE_NAME = "Character Central"
 DEFAULT_OG_IMAGE = f"{SITE_DOMAIN}/og-image.png"
 
