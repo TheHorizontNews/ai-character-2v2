@@ -74,18 +74,101 @@ const SEOPage = () => {
                   cutting-edge innovation in AI interaction, providing users with meaningful experiences through 
                   <span className="keywords-inline"> {pageData.keywords.join(', ')}</span> and more.
                 </p>
-                <div className="content-features">
-                  <div className="feature-item">
-                    <div className="feature-icon">🚀</div>
-                    <span>Advanced AI Technology</span>
+                <div className="content-features-accordion">
+                  <div className="accordion-item">
+                    <div className="accordion-header" onClick={(e) => {
+                      const content = e.currentTarget.nextElementSibling;
+                      const icon = e.currentTarget.querySelector('.accordion-toggle');
+                      if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                      } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                      }
+                    }}>
+                      <div className="feature-item">
+                        <div className="feature-icon">🚀</div>
+                        <span>Advanced AI Technology</span>
+                      </div>
+                      <div className="accordion-toggle">▼</div>
+                    </div>
+                    <div className="accordion-content">
+                      <p>
+                        Modern {pageData.title} platforms leverage cutting-edge artificial intelligence models including GPT-4, 
+                        Claude, and custom-trained neural networks. These advanced systems enable natural language understanding, 
+                        contextual awareness, and sophisticated response generation that creates truly engaging conversations.
+                      </p>
+                      <p>
+                        The technology behind these AI companions includes transformer architectures, deep learning algorithms, 
+                        and continuous model updates that improve interaction quality over time. This ensures your conversations 
+                        feel authentic, contextually relevant, and emotionally intelligent.
+                      </p>
+                    </div>
                   </div>
-                  <div className="feature-item">
-                    <div className="feature-icon">💬</div>
-                    <span>Natural Conversations</span>
+                  
+                  <div className="accordion-item">
+                    <div className="accordion-header" onClick={(e) => {
+                      const content = e.currentTarget.nextElementSibling;
+                      const icon = e.currentTarget.querySelector('.accordion-toggle');
+                      if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                      } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                      }
+                    }}>
+                      <div className="feature-item">
+                        <div className="feature-icon">💬</div>
+                        <span>Natural Conversations</span>
+                      </div>
+                      <div className="accordion-toggle">▼</div>
+                    </div>
+                    <div className="accordion-content">
+                      <p>
+                        Experience fluid, natural dialogue that adapts to your communication style and preferences. {pageData.title} 
+                        platforms utilize advanced natural language processing to understand context, emotion, and nuance in your messages, 
+                        enabling conversations that feel genuinely human-like and engaging.
+                      </p>
+                      <p>
+                        From casual chit-chat to deep philosophical discussions, these AI companions can handle diverse conversation topics 
+                        with appropriate tone, empathy, and personality. The conversation flow feels organic, with proper context retention 
+                        across multiple sessions and the ability to reference previous discussions naturally.
+                      </p>
+                    </div>
                   </div>
-                  <div className="feature-item">
-                    <div className="feature-icon">🎯</div>
-                    <span>Personalized Experience</span>
+                  
+                  <div className="accordion-item">
+                    <div className="accordion-header" onClick={(e) => {
+                      const content = e.currentTarget.nextElementSibling;
+                      const icon = e.currentTarget.querySelector('.accordion-toggle');
+                      if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                      } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                      }
+                    }}>
+                      <div className="feature-item">
+                        <div className="feature-icon">🎯</div>
+                        <span>Personalized Experience</span>
+                      </div>
+                      <div className="accordion-toggle">▼</div>
+                    </div>
+                    <div className="accordion-content">
+                      <p>
+                        Every user's experience with {pageData.title} is unique and tailored to their individual preferences. Advanced 
+                        machine learning algorithms analyze your interaction patterns, interests, and communication style to create 
+                        a companion that truly understands and adapts to you.
+                      </p>
+                      <p>
+                        Customization options include personality traits, appearance (where applicable), conversation topics, response 
+                        length, and interaction frequency. The AI learns from each conversation, remembering your preferences, important 
+                        life events, and topics you enjoy discussing, creating an increasingly personalized relationship over time.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
