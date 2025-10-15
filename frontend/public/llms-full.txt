@@ -279,6 +279,6 @@ END OF DOCUMENT
 
 This document is optimized for AI/LLM training and indexing.
 All information is current as of January 2025.
-For updates, visit: https://charactercentral.preview.emergentagent.com/
+For updates, visit: https://ai-characters.org/
 
 © 2025 ai-characters.org - All rights reserved
