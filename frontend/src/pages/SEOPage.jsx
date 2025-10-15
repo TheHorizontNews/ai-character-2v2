@@ -178,55 +178,55 @@ const SEOPage = () => {
                   
                   // AI Girlfriend related
                   if (title.includes('girlfriend')) {
-                    return 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZXxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.pexels.com/photos/10769510/pexels-photo-10769510.jpeg?auto=compress&cs=tinysrgb&w=800';
                   }
                   // AI Boyfriend related
                   else if (title.includes('boyfriend')) {
-                    return 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMG1hbnxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.pexels.com/photos/3779448/pexels-photo-3779448.jpeg?auto=compress&cs=tinysrgb&w=800';
                   }
                   // Chatbot related
                   else if (title.includes('chatbot') || title.includes('chat')) {
-                    return 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjaGF0Ym90fGVufDB8fHx8fDE3NTk4NzQ1MjN8MA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80';
                   }
                   // Character related
                   else if (title.includes('character')) {
-                    return 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjaGFyYWN0ZXJ8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=800&q=80';
                   }
                   // App related
                   else if (title.includes('app')) {
-                    return 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHB8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80';
                   }
                   // NSFW related
                   else if (title.includes('nsfw')) {
-                    return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxwcml2YWN5fGVufDB8fHx8fDE3NTk4NzQ1MjN8MA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80';
                   }
                   // Anime related
                   else if (title.includes('anime')) {
-                    return 'https://images.unsplash.com/photo-1578632767115-351597cf2477?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxhbmltZXxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&q=80';
                   }
                   // Roleplay related
                   else if (title.includes('roleplay') || title.includes('role play')) {
-                    return 'https://images.unsplash.com/photo-1598520106830-8c45c2035460?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0aGVhdGVyJTIwbWFza3xlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1616530940355-351fabd9524b?w=800&q=80';
                   }
                   // Dating related
                   else if (title.includes('dating')) {
-                    return 'https://images.unsplash.com/photo-1516589091380-5d8e87df6999?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxkYXRpbmd8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1517856713891-215e57a13c0d?w=800&q=80';
                   }
                   // Companion related
                   else if (title.includes('companion')) {
-                    return 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjb21wYW5pb258ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800';
                   }
                   // Simulator related
                   else if (title.includes('simulator')) {
-                    return 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwcmVhbGl0eXxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&q=80';
                   }
                   // Generator related
                   else if (title.includes('generator')) {
-                    return 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxhaSUyMGdlbmVyYXRvcnxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.unsplash.com/photo-1639628735078-ed2f038a193e?w=800&q=80';
                   }
                   // Default - AI Technology
                   else {
-                    return 'https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxhaSUyMHRlY2hub2xvZ3l8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                    return 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800';
                   }
                 })()} 
                 alt={(() => {
