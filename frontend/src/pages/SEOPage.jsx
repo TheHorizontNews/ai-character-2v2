@@ -173,9 +173,125 @@ const SEOPage = () => {
                 </div>
               </div>
               <div className="content-image">
-                <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHxibHVlfDE3NTk4NzQ1MjN8MA&ixlib=rb-4.1.0&q=85" alt="AI Technology" />
+                <img src={(() => {
+                  const title = pageData.title.toLowerCase();
+                  
+                  // AI Girlfriend related
+                  if (title.includes('girlfriend')) {
+                    return 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZXxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // AI Boyfriend related
+                  else if (title.includes('boyfriend')) {
+                    return 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMG1hbnxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Chatbot related
+                  else if (title.includes('chatbot') || title.includes('chat')) {
+                    return 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjaGF0Ym90fGVufDB8fHx8fDE3NTk4NzQ1MjN8MA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Character related
+                  else if (title.includes('character')) {
+                    return 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjaGFyYWN0ZXJ8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                  }
+                  // App related
+                  else if (title.includes('app')) {
+                    return 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHB8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                  }
+                  // NSFW related
+                  else if (title.includes('nsfw')) {
+                    return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxwcml2YWN5fGVufDB8fHx8fDE3NTk4NzQ1MjN8MA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Anime related
+                  else if (title.includes('anime')) {
+                    return 'https://images.unsplash.com/photo-1578632767115-351597cf2477?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxhbmltZXxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Roleplay related
+                  else if (title.includes('roleplay') || title.includes('role play')) {
+                    return 'https://images.unsplash.com/photo-1598520106830-8c45c2035460?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0aGVhdGVyJTIwbWFza3xlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Dating related
+                  else if (title.includes('dating')) {
+                    return 'https://images.unsplash.com/photo-1516589091380-5d8e87df6999?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxkYXRpbmd8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Companion related
+                  else if (title.includes('companion')) {
+                    return 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjb21wYW5pb258ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Simulator related
+                  else if (title.includes('simulator')) {
+                    return 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwcmVhbGl0eXxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Generator related
+                  else if (title.includes('generator')) {
+                    return 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxhaSUyMGdlbmVyYXRvcnxlbnwwfHx8fHwxNzU5ODc0NTIzfDA&ixlib=rb-4.1.0&q=85';
+                  }
+                  // Default - AI Technology
+                  else {
+                    return 'https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxhaSUyMHRlY2hub2xvZ3l8ZW58MHx8fHx8MTc1OTg3NDUyM3ww&ixlib=rb-4.1.0&q=85';
+                  }
+                })()} 
+                alt={(() => {
+                  const title = pageData.title.toLowerCase();
+                  
+                  if (title.includes('girlfriend')) {
+                    return `${pageData.title} - Virtual Romance and AI Companionship`;
+                  } else if (title.includes('boyfriend')) {
+                    return `${pageData.title} - AI Male Companion and Virtual Romance`;
+                  } else if (title.includes('chatbot') || title.includes('chat')) {
+                    return `${pageData.title} - AI Chat Technology`;
+                  } else if (title.includes('character')) {
+                    return `${pageData.title} - AI Character Creation`;
+                  } else if (title.includes('app')) {
+                    return `${pageData.title} - Mobile Application`;
+                  } else if (title.includes('nsfw')) {
+                    return `${pageData.title} - Private and Secure AI Chat`;
+                  } else if (title.includes('anime')) {
+                    return `${pageData.title} - Anime Style AI Companions`;
+                  } else if (title.includes('roleplay')) {
+                    return `${pageData.title} - Interactive Roleplay Experience`;
+                  } else if (title.includes('dating')) {
+                    return `${pageData.title} - Virtual Dating Experience`;
+                  } else if (title.includes('companion')) {
+                    return `${pageData.title} - AI Companionship Technology`;
+                  } else if (title.includes('simulator')) {
+                    return `${pageData.title} - Virtual Simulation Platform`;
+                  } else if (title.includes('generator')) {
+                    return `${pageData.title} - AI Content Generation`;
+                  } else {
+                    return `${pageData.title} - Advanced AI Technology`;
+                  }
+                })()} />
                 <div className="image-overlay">
-                  <div className="overlay-text">AI Technology</div>
+                  <div className="overlay-text">{(() => {
+                    const title = pageData.title.toLowerCase();
+                    
+                    if (title.includes('girlfriend')) {
+                      return 'Virtual Romance';
+                    } else if (title.includes('boyfriend')) {
+                      return 'AI Male Companion';
+                    } else if (title.includes('chatbot') || title.includes('chat')) {
+                      return 'AI Chat';
+                    } else if (title.includes('character')) {
+                      return 'Character AI';
+                    } else if (title.includes('app')) {
+                      return 'Mobile App';
+                    } else if (title.includes('nsfw')) {
+                      return 'Private Chat';
+                    } else if (title.includes('anime')) {
+                      return 'Anime AI';
+                    } else if (title.includes('roleplay')) {
+                      return 'Roleplay';
+                    } else if (title.includes('dating')) {
+                      return 'Virtual Dating';
+                    } else if (title.includes('companion')) {
+                      return 'AI Companion';
+                    } else if (title.includes('simulator')) {
+                      return 'VR Simulation';
+                    } else if (title.includes('generator')) {
+                      return 'AI Generator';
+                    } else {
+                      return 'AI Technology';
+                    }
+                  })()}</div>
                 </div>
               </div>
             </div>
