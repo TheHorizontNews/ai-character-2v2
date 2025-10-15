@@ -2282,47 +2282,141 @@
     font-size: 13px;
   }
 
-  .verdict-rating-card {
-    padding: 28px 20px;
-  }
-
-  .rating-number {
-    font-size: 44px;
-  }
-
-  .rating-text {
-    font-size: 14px;
-  }
-
-  .rating-summary {
-    font-size: 14px;
-  }
-
-  .verdict-pros-card,
-  .verdict-cons-card {
-    padding: 20px;
-  }
-
-  .verdict-pros-card h3,
-  .verdict-cons-card h3 {
-    font-size: 18px;
-  }
-
-  .verdict-pros-card ul li,
-  .verdict-cons-card ul li {
-    font-size: 14px;
-  }
-
-  .final-recommendation {
+  /* Verdict Mobile Extra Small */
+  .verdict-hero-card {
     padding: 24px 20px;
   }
-
-  .final-recommendation h3 {
+  
+  .verdict-rating-number {
+    font-size: 48px;
+  }
+  
+  .verdict-users-badge {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+  
+  .verdict-hero-right h3 {
     font-size: 20px;
   }
-
-  .final-recommendation p {
+  
+  .verdict-hero-description {
     font-size: 14px;
+  }
+  
+  .verdict-ratings-grid {
+    padding: 24px 16px;
+  }
+  
+  .verdict-ratings-title {
+    font-size: 18px;
+  }
+  
+  .verdict-rating-item {
+    padding: 16px;
+  }
+  
+  .verdict-rating-name {
+    font-size: 14px;
+  }
+  
+  .verdict-rating-desc {
+    font-size: 12px;
+  }
+  
+  .verdict-rating-score {
+    font-size: 24px;
+  }
+  
+  .verdict-strengths-card,
+  .verdict-considerations-card {
+    padding: 24px 16px;
+  }
+  
+  .verdict-card-header h3 {
+    font-size: 18px;
+  }
+  
+  .verdict-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .verdict-card-intro {
+    padding-left: 56px;
+    font-size: 12px;
+  }
+  
+  .verdict-item {
+    gap: 12px;
+  }
+  
+  .verdict-item-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .verdict-item-title {
+    font-size: 14px;
+  }
+  
+  .verdict-item-description {
+    font-size: 13px;
+  }
+  
+  .verdict-expert-opinion {
+    padding: 24px 16px;
+  }
+  
+  .verdict-expert-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .verdict-expert-avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+  }
+  
+  .verdict-expert-info h4 {
+    font-size: 16px;
+  }
+  
+  .verdict-expert-info p {
+    font-size: 13px;
+  }
+  
+  .verdict-expert-quote {
+    font-size: 14px;
+  }
+  
+  .verdict-final-recommendation {
+    padding: 28px 20px;
+  }
+  
+  .verdict-final-badge {
+    gap: 12px;
+  }
+  
+  .verdict-final-rating {
+    font-size: 36px;
+  }
+  
+  .verdict-final-title {
+    font-size: 20px;
+  }
+  
+  .verdict-final-text {
+    font-size: 14px;
+  }
+  
+  .verdict-cta-primary,
+  .verdict-cta-secondary {
+    padding: 14px 24px;
+    font-size: 15px;
   }
 }
 
