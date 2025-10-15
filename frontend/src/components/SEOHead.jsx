@@ -5,13 +5,13 @@ const SEOHead = ({
   title, 
   description, 
   keywords = [],
-  ogImage = 'https://charactercentral.preview.emergentagent.com/og-image.png',
+  ogImage = 'https://ai-characters.org/og-image.png',
   ogType = 'website',
   canonical,
   noindex = false,
   schemaData = null
 }) => {
-  const siteUrl = 'https://charactercentral.preview.emergentagent.com';
+  const siteUrl = 'https://ai-characters.org';
   const siteName = 'Character Central';
   const fullTitle = title ? `${title} | Character Central` : 'Character Central - Best AI Character Platform Reviews';
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : siteUrl);
