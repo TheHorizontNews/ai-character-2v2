@@ -197,7 +197,7 @@ const SEOPage = () => {
                   <button
                     key={page.slug}
                     className="related-card"
-                    onClick={() => navigate(`/seo/${page.slug}`)}
+                    onClick={() => navigate(`/character-review/${page.slug}`)}
                   >
                     <div className="related-content">
                       <span className="related-category">{page.category}</span>
