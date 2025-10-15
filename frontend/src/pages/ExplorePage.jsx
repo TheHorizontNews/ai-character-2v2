@@ -92,7 +92,7 @@ const ExplorePage = () => {
                     <div
                       key={page.slug}
                       className="page-card"
-                      onClick={() => navigate(`/seo/${page.slug}`)}
+                      onClick={() => navigate(`/character-review/${page.slug}`)}
                     >
                       <div className="page-category-badge">{page.category}</div>
                       <h3>{page.title}</h3>
