@@ -821,6 +821,25 @@
     gap: 24px;
   }
   
+  .detail-content {
+    gap: 16px;
+  }
+  
+  .detail-section {
+    padding: 24px 20px;
+    margin-bottom: 16px;
+  }
+  
+  .detail-section h2 {
+    font-size: 20px;
+    text-align: center !important;
+  }
+  
+  .detail-section p {
+    font-size: 15px;
+    text-align: center !important;
+  }
+  
   .detail-hero-image {
     height: 200px;
   }
