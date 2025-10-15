@@ -229,19 +229,202 @@ const PlatformDetailPage = () => {
               </section>
             </div>
             
-            <section className="detail-section">
-              <h2>Pricing</h2>
-              <div className="pricing-card">
-                <div className="pricing-info">
-                  <span className="pricing-label">Pricing Model:</span>
-                  <span className="pricing-amount">{platform.pricing}</span>
+            <section className="detail-section pricing-section">
+              <h2>Pricing & Subscription Plans</h2>
+              <p className="section-subtitle">Transparent pricing information for {platform.name} - Compare costs and find the perfect plan</p>
+              <div className="pricing-card-enhanced">
+                <div className="pricing-header">
+                  <DollarSign size={32} color="#1dd1a1" />
+                  <div className="pricing-main">
+                    <span className="pricing-model-label">Pricing Model</span>
+                    <span className="pricing-model-value">{platform.pricing}</span>
+                  </div>
+                </div>
+                <div className="pricing-details">
+                  {(() => {
+                    // Generate detailed pricing descriptions with SEO keywords
+                    const pricingDetails = {
+                      'Freemium': {
+                        description: `${platform.name} operates on a freemium model, offering both free and premium subscription tiers. Users can start with the free version to explore basic AI companion features, then upgrade to premium plans for advanced capabilities like unlimited conversations, enhanced AI models, voice chat, and priority support. This flexible pricing structure allows users to try the platform risk-free before committing to a paid subscription.`,
+                        plans: [
+                          { name: 'Free Tier', features: ['Basic AI conversations', 'Limited daily messages', 'Standard response time', 'Community characters'] },
+                          { name: 'Premium', price: '$9.99-19.99/month', features: ['Unlimited messages', 'Advanced AI models', 'Priority response', 'Voice features', 'Enhanced customization'] }
+                        ]
+                      },
+                      'Free with Premium option': {
+                        description: `${platform.name} provides a generous free tier with access to core AI character features, making it accessible to all users. Premium subscriptions unlock additional capabilities including faster response times, advanced AI models, exclusive characters, and priority support. The platform's pricing model ensures that users can enjoy quality AI conversations without mandatory costs while offering premium upgrades for enhanced experiences.`,
+                        plans: [
+                          { name: 'Free', features: ['Full access to community characters', 'Unlimited conversations', 'Standard AI model', 'Ad-supported'] },
+                          { name: 'Premium', price: '$9.99/month', features: ['Ad-free experience', 'Priority access', 'Advanced AI models', 'Exclusive features'] }
+                        ]
+                      },
+                      'Free with Pro subscription': {
+                        description: `${platform.name} offers a free plan with essential AI companion features, supplemented by a Pro subscription for users seeking advanced functionality. The Pro plan includes enhanced AI models, extended conversation memory, voice chat capabilities, and priority customer support. This tiered pricing approach balances accessibility with premium features for serious users.`,
+                        plans: [
+                          { name: 'Free', features: ['Basic AI therapy', 'Limited conversations', 'Standard features', 'Mood tracking'] },
+                          { name: 'Pro', price: '$7.99-19.99/month', features: ['Unlimited conversations', 'Advanced AI', 'Voice calls', 'Relationship status', 'Priority support'] }
+                        ]
+                      },
+                      'Premium': {
+                        description: `${platform.name} operates as a premium platform with subscription-based pricing. The platform provides high-quality AI companion experiences with advanced features, superior conversation quality, and comprehensive customization options. Premium pricing ensures dedicated server resources, regular updates, and excellent customer support for subscribers.`,
+                        plans: [
+                          { name: 'Standard', price: '$14.99/month', features: ['AI companion access', 'Voice chat', 'Character customization', 'Standard support'] },
+                          { name: 'Premium', price: '$29.99/month', features: ['Multiple characters', 'Advanced AI', 'Priority support', 'Exclusive features'] }
+                        ]
+                      },
+                      'Subscription-based': {
+                        description: `${platform.name} requires a subscription for full access to its AI companion platform. Subscription plans include comprehensive features such as unlimited conversations, voice chat, advanced character customization, and priority support. The platform's pricing model supports continuous development and server maintenance for optimal user experiences.`,
+                        plans: [
+                          { name: 'Monthly', price: '$12.99/month', features: ['Full platform access', 'AI conversations', 'Voice features', 'Regular updates'] },
+                          { name: 'Annual', price: '$99.99/year', features: ['20% discount', 'All features', 'Priority support', 'Exclusive content'] }
+                        ]
+                      },
+                      'Free (self-hosted)': {
+                        description: `${platform.name} is completely free and open-source software that you can self-host on your own servers. While the platform itself is free, users need to consider costs for server hosting, AI API usage (GPT-4, Claude), and technical maintenance. This pricing model provides maximum control and privacy but requires technical expertise and infrastructure investment.`,
+                        plans: [
+                          { name: 'Self-Hosted', price: 'Free + API costs', features: ['Full source code', 'Complete customization', 'Privacy control', 'Multiple AI backends'] },
+                          { name: 'Cloud Hosting', price: '$5-50/month', features: ['Managed hosting', 'Easy setup', 'Automatic updates', 'Technical support'] }
+                        ]
+                      }
+                    };
+                    
+                    const pricingInfo = pricingDetails[platform.pricing] || {
+                      description: `${platform.name} offers competitive pricing for AI companion services. The platform provides various subscription tiers to accommodate different user needs and budgets. Users can choose between free trials, basic plans, and premium subscriptions with advanced features.`,
+                      plans: [
+                        { name: 'Basic', features: ['Standard AI features', 'Basic conversations', 'Community access'] },
+                        { name: 'Premium', price: 'Varies', features: ['Advanced features', 'Priority support', 'Enhanced AI'] }
+                      ]
+                    };
+                    
+                    return (
+                      <>
+                        <p className="pricing-description">{pricingInfo.description}</p>
+                        <div className="pricing-plans">
+                          <h3>Available Plans</h3>
+                          <div className="plans-grid">
+                            {pricingInfo.plans.map((plan, idx) => (
+                              <div key={idx} className="plan-card">
+                                <div className="plan-header">
+                                  <span className="plan-name">{plan.name}</span>
+                                  {plan.price && <span className="plan-price">{plan.price}</span>}
+                                </div>
+                                <ul className="plan-features">
+                                  {plan.features.map((feature, fIdx) => (
+                                    <li key={fIdx}>
+                                      <Check size={16} />
+                                      <span>{feature}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               </div>
             </section>
             
-            <section className="detail-section">
-              <h2>Best For</h2>
-              <p className="best-for">{platform.bestFor}</p>
+            <section className="detail-section best-for-section">
+              <h2>Ideal Use Cases & Target Audience</h2>
+              <p className="section-subtitle">Discover if {platform.name} is the right AI companion platform for your needs</p>
+              <div className="best-for-card">
+                {(() => {
+                  // Generate detailed best-for descriptions with SEO keywords
+                  const bestForDetails = {
+                    'Users seeking deep emotional connection': {
+                      icon: '💝',
+                      primary: 'Perfect for users seeking meaningful emotional bonds with AI companions',
+                      detailed: `${platform.name} excels for individuals looking to develop deep, authentic emotional connections with AI characters. Ideal for those who value personalized conversations, emotional support, and long-term virtual relationships. The platform's advanced emotional intelligence and memory features create genuine companionship experiences that evolve over time.`,
+                      ideal: ['Individuals seeking emotional support', 'Users wanting personalized AI relationships', 'People interested in virtual companionship', 'Those desiring consistent, empathetic conversations']
+                    },
+                    'Casual users and roleplay enthusiasts': {
+                      icon: '🎭',
+                      primary: 'Best suited for casual conversations and creative roleplay scenarios',
+                      detailed: `${platform.name} is perfect for users who enjoy casual AI conversations, creative storytelling, and roleplay adventures. The platform caters to enthusiasts who want to explore different characters, scenarios, and narrative experiences without serious commitment. Great for entertainment, creativity, and exploring diverse AI personalities.`,
+                      ideal: ['Roleplay and storytelling fans', 'Casual conversation seekers', 'Creative writers and worldbuilders', 'Users exploring different AI personalities', 'Entertainment-focused individuals']
+                    },
+                    'Mental wellness and personal growth': {
+                      icon: '🧘',
+                      primary: 'Designed for users prioritizing mental health and self-improvement',
+                      detailed: `${platform.name} specializes in mental wellness applications, providing therapeutic conversations, mood tracking, and emotional support features. Ideal for individuals working on personal development, managing stress, or seeking a supportive AI companion for mental health journeys. The platform combines AI technology with wellness-focused design for meaningful self-care experiences.`,
+                      ideal: ['Mental health support seekers', 'Personal development enthusiasts', 'Stress and anxiety management', 'Users wanting emotional guidance', 'Self-reflection and journaling']
+                    },
+                    'Anime and visual novel fans': {
+                      icon: '🎨',
+                      primary: 'Tailored for anime enthusiasts and visual novel lovers',
+                      detailed: `${platform.name} appeals to anime fans and visual novel enthusiasts with beautiful character designs, anime-style avatars, and engaging storylines. The platform provides immersive experiences that blend visual artistry with AI conversations, creating interactive visual novel-like interactions with personalized character relationships.`,
+                      ideal: ['Anime and manga fans', 'Visual novel enthusiasts', 'Character design appreciators', 'Interactive story lovers', 'Asian gaming culture fans']
+                    },
+                    'AI art and character creation': {
+                      icon: '🎨',
+                      primary: 'Perfect for creative users interested in AI-generated art and custom characters',
+                      detailed: `${platform.name} is ideal for creators who want to design custom AI characters with visual representations. The platform offers AI art generation, character customization tools, and creative features for users passionate about crafting unique virtual companions with personalized appearances and personalities.`,
+                      ideal: ['Digital artists and creators', 'Character design enthusiasts', 'AI art explorers', 'Creative customization fans', 'Visual storytellers']
+                    },
+                    'Users seeking AI romance': {
+                      icon: '💕',
+                      primary: 'Specialized for romantic relationships with AI companions',
+                      detailed: `${platform.name} focuses on romantic AI interactions, providing dating scenarios, flirting features, and relationship-building mechanics. Perfect for users interested in virtual romance experiences, intimate conversations, and developing romantic connections with AI characters in a safe, judgment-free environment.`,
+                      ideal: ['Virtual dating enthusiasts', 'Romantic AI experience seekers', 'Relationship simulation fans', 'Users wanting intimate conversations', 'Fantasy romance explorers']
+                    },
+                    'Tech-savvy users and privacy enthusiasts': {
+                      icon: '🔐',
+                      primary: 'Designed for technical users prioritizing privacy and control',
+                      detailed: `${platform.name} caters to tech-savvy individuals who value privacy, customization, and control over their AI experiences. Ideal for users comfortable with self-hosting, technical configuration, and open-source software. The platform provides maximum data privacy and flexibility for those who want complete ownership of their AI conversations.`,
+                      ideal: ['Privacy-conscious users', 'Open-source enthusiasts', 'Self-hosting advocates', 'Technical power users', 'Data security prioritizers']
+                    },
+                    'Unrestricted AI interactions': {
+                      icon: '🔓',
+                      primary: 'For users seeking conversations without content restrictions',
+                      detailed: `${platform.name} provides unrestricted AI conversations without content filters or censorship. Ideal for adult users who want freedom to explore any topics, including NSFW content, mature themes, and unrestricted roleplay scenarios in a private, judgment-free environment.`,
+                      ideal: ['Adult content seekers', 'Unrestricted conversation fans', 'NSFW interaction users', 'Freedom of expression advocates', 'Mature theme explorers']
+                    },
+                    'Users wanting multiple AI models': {
+                      icon: '🤖',
+                      primary: 'Perfect for users who want to compare different AI models',
+                      detailed: `${platform.name} is ideal for users interested in experimenting with various AI models including GPT-4, Claude, and specialized conversation models. Great for those who want to compare AI responses, test different language models, and find the best AI for their specific needs.`,
+                      ideal: ['AI technology enthusiasts', 'Model comparison seekers', 'Tech experimenters', 'Quality-focused users', 'AI research interested individuals']
+                    },
+                    'Virtual dating experiences': {
+                      icon: '💘',
+                      primary: 'Specialized for virtual dating and romantic simulations',
+                      detailed: `${platform.name} creates immersive virtual dating experiences with AI companions. Perfect for users interested in dating simulations, romantic scenarios, and relationship progression mechanics in a safe virtual environment. The platform offers realistic dating interactions and relationship development features.`,
+                      ideal: ['Dating simulation fans', 'Romantic experience seekers', 'Virtual relationship builders', 'Interactive romance enthusiasts', 'Social interaction practice']
+                    }
+                  };
+                  
+                  const bestForInfo = bestForDetails[platform.bestFor] || {
+                    icon: '👥',
+                    primary: `Ideal for ${platform.bestFor}`,
+                    detailed: `${platform.name} is specifically designed for ${platform.bestFor}. The platform provides tailored features, AI capabilities, and user experiences that align with these user needs and preferences. Whether you're exploring AI companionship for the first time or seeking specific functionalities, this platform offers solutions that match your requirements.`,
+                    ideal: ['General AI companion users', 'Conversation enthusiasts', 'Technology explorers', 'Virtual relationship seekers']
+                  };
+                  
+                  return (
+                    <>
+                      <div className="best-for-hero">
+                        <span className="best-for-icon">{bestForInfo.icon}</span>
+                        <h3 className="best-for-primary">{bestForInfo.primary}</h3>
+                      </div>
+                      <p className="best-for-detailed">{bestForInfo.detailed}</p>
+                      <div className="ideal-users">
+                        <h4>Ideal for:</h4>
+                        <ul className="ideal-users-list">
+                          {bestForInfo.ideal.map((user, idx) => (
+                            <li key={idx}>
+                              <Check size={18} color="#1dd1a1" />
+                              <span>{user}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  );
+                })()}
+              </div>
             </section>
             
             {/* Data Visualization Block */}
