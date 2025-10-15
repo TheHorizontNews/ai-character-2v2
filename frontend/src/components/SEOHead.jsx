@@ -47,7 +47,7 @@ const SEOHead = ({
       <link rel="canonical" href={fullCanonical} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
-      {/* Open Graph / Facebook - Enhanced for Telegram */}
+      {/* Open Graph / Facebook - All tags synchronized with primary tags */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:title" content={fullTitle} />
@@ -60,7 +60,7 @@ const SEOHead = ({
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
 
-      {/* Twitter */}
+      {/* Twitter - All tags synchronized with primary tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={fullCanonical} />
       <meta name="twitter:title" content={fullTitle} />
@@ -76,9 +76,11 @@ const SEOHead = ({
       <meta name="author" content="AI Characters" />
 
       {/* Schema.org JSON-LD */}
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
+      {schemaData && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      )}
     </Helmet>
   );
 };
