@@ -437,7 +437,7 @@ class BotMetaMiddlewareTest:
         print("\n=== Test 8: OG Image Tags ===")
         
         try:
-            response = self.make_request('/', BOT_USER_AGENTS['FacebookBot'])
+            response = self.make_request('/', BOT_USER_AGENTS['FacebookBot'], use_direct=True)
             
             if response.status_code == 200:
                 meta_data = self.extract_meta_tags(response.text)
