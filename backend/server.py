@@ -1,6 +1,7 @@
 from fastapi import FastAPI, APIRouter
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
+from starlette.responses import Response
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
@@ -10,6 +11,7 @@ from typing import List
 import uuid
 from datetime import datetime
 from bot_meta_middleware import BotMetaMiddleware
+from sitemap_generator import generate_main_sitemap, generate_sitemap_index
 
 
 ROOT_DIR = Path(__file__).parent
