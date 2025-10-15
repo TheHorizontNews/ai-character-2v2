@@ -4,6 +4,7 @@ import { ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import PlatformCard from '../components/PlatformCard';
 import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
 import { seoPages } from '../data/seoPages';
 import { aiPlatforms } from '../data/mockData';
 import '../styles/SEOPage.css';
