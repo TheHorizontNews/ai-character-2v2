@@ -11,7 +11,32 @@
         <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon.svg" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.svg" />
         
-        <!-- Meta tags will be managed by React Helmet (for users) and Backend Middleware (for bots) -->
+        <!-- Base Meta Tags for Homepage (will be overridden by React Helmet on other pages) -->
+        <title>ai-characters.org — AI Character & Companion Platform Reviews</title>
+        <meta name="description" content="Discover the best AI character and companion platforms. Expert reviews, comparisons, and guides for Character.AI, Replika, Lovescape, and 21+ platforms." />
+        
+        <!-- Base Open Graph Tags for Homepage -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Character Central" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="ai-characters.org — Your Guide to AI Characters & Companions" />
+        <meta property="og:description" content="Compare and discover the best AI character platforms. Expert reviews of 21+ platforms including Character.AI, Replika, and Lovescape." />
+        <meta property="og:image" content="https://charactercentral.preview.emergentagent.com/og-image.png" />
+        <meta property="og:url" content="https://charactercentral.preview.emergentagent.com/" />
+        
+        <!-- Base Twitter Card Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@CharacterCentral" />
+        <meta name="twitter:title" content="ai-characters.org — Your Guide to AI Characters & Companions" />
+        <meta name="twitter:description" content="Compare and discover the best AI character platforms. Expert reviews of 21+ platforms." />
+        <meta name="twitter:image" content="https://charactercentral.preview.emergentagent.com/og-image.png" />
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://charactercentral.preview.emergentagent.com/" />
+        
+        <!-- Note: These tags are for homepage. Other pages will have unique tags injected by:
+             - Backend Middleware (for bots like Telegram/Facebook)
+             - React Helmet (for regular users after JS loads) -->
         
         <!--
       manifest.json provides metadata used when your web app is installed on a
