@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import PlatformDetailPage from './pages/PlatformDetailPage';
 import CategoryPage from './pages/CategoryPage';
@@ -13,9 +14,10 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <ScrollToTop />
+    <HelmetProvider>
+      <div className="App">
+        <BrowserRouter>
+          <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/platform/:slug" element={<PlatformDetailPage />} />
