@@ -136,7 +136,7 @@
 .detail-content {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 24px;
 }
 
 .detail-section {
