@@ -24,7 +24,7 @@ function App() {
           <Route path="/compare" element={<ComparePage />} />
           <Route path="/all-comparisons" element={<AllComparisonsPage />} />
           <Route path="/compare/:comparisonId" element={<ComparisonDetailPage />} />
-          <Route path="/seo/*" element={<SEOPage />} />
+          <Route path="/character-review/*" element={<SEOPage />} />
         </Routes>
       </BrowserRouter>
     </div>
