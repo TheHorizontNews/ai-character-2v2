@@ -121,6 +121,85 @@ const SEOPage = () => {
               }
             })()}
             canonical={`https://ai-characters.org/character-review/${pageData.slug}`}
+            ogType="article"
+            schemaData={{
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Article",
+                  "@id": `https://ai-characters.org/character-review/${pageData.slug}#article`,
+                  "headline": `${pageData.title} - Complete Guide & Best Platforms 2025`,
+                  "description": `${pageData.description} Discover the best ${pageData.title.toLowerCase()} platforms with expert reviews, comparisons, and user guides.`,
+                  "image": {
+                    "@type": "ImageObject",
+                    "url": (() => {
+                      const title = pageData.title.toLowerCase();
+                      if (title.includes('girlfriend')) {
+                        return 'https://images.pexels.com/photos/10769510/pexels-photo-10769510.jpeg?auto=compress&cs=tinysrgb&w=1200';
+                      } else if (title.includes('boyfriend')) {
+                        return 'https://images.pexels.com/photos/3779448/pexels-photo-3779448.jpeg?auto=compress&cs=tinysrgb&w=1200';
+                      } else if (title.includes('chatbot') || title.includes('chat')) {
+                        return 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80';
+                      } else if (title.includes('character')) {
+                        return 'https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=1200&q=80';
+                      } else {
+                        return 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200';
+                      }
+                    })(),
+                    "width": 1200,
+                    "height": 630
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "AI Characters",
+                    "url": "https://ai-characters.org/"
+                  },
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "AI Characters",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://ai-characters.org/favicon.svg"
+                    }
+                  },
+                  "datePublished": "2025-01-01",
+                  "dateModified": new Date().toISOString().split('T')[0],
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": `https://ai-characters.org/character-review/${pageData.slug}`
+                  },
+                  "keywords": pageData.keywords.join(', '),
+                  "articleSection": pageData.category,
+                  "about": {
+                    "@type": "Thing",
+                    "name": pageData.title
+                  }
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://ai-characters.org/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Character Reviews",
+                      "item": "https://ai-characters.org/explore"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": pageData.title,
+                      "item": `https://ai-characters.org/character-review/${pageData.slug}`
+                    }
+                  ]
+                }
+              ]
+            }}
           />
           <button className="back-btn" onClick={() => navigate('/explore')}>
             <ArrowLeft size={20} />
