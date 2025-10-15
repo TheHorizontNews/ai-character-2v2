@@ -226,7 +226,7 @@ class BotMetaMiddlewareTest:
         
         for platform in test_platforms:
             try:
-                response = self.make_request(platform['path'], BOT_USER_AGENTS['TelegramBot'])
+                response = self.make_request(platform['path'], BOT_USER_AGENTS['TelegramBot'], use_direct=True)
                 
                 if response.status_code == 200:
                     meta_data = self.extract_meta_tags(response.text)
