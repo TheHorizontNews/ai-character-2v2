@@ -58,6 +58,19 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+# Sitemap routes (outside /api prefix for SEO)
+@app.get("/sitemap.xml")
+async def get_sitemap():
+    """Main sitemap with all URLs"""
+    xml_content = generate_main_sitemap()
+    return Response(content=xml_content, media_type="application/xml")
+
+@app.get("/sitemap-index.xml")
+async def get_sitemap_index():
+    """Sitemap index"""
+    xml_content = generate_sitemap_index()
+    return Response(content=xml_content, media_type="application/xml")
+
 # Include the router in the main app
 app.include_router(api_router)
 
