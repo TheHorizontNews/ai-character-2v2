@@ -485,7 +485,7 @@ class BotMetaMiddlewareTest:
         
         for test_path in test_paths:
             try:
-                response = self.make_request(test_path['path'], BOT_USER_AGENTS['GoogleBot'])
+                response = self.make_request(test_path['path'], BOT_USER_AGENTS['GoogleBot'], use_direct=True)
                 
                 if response.status_code == 200:
                     meta_data = self.extract_meta_tags(response.text)
