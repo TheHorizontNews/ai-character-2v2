@@ -2,7 +2,7 @@
 from datetime import datetime
 from typing import List, Dict
 
-SITE_DOMAIN = "https://charactercentral.preview.emergentagent.com"
+SITE_DOMAIN = "https://ai-characters.org"
 
 # Priority levels
 PRIORITY_HOMEPAGE = "1.0"
