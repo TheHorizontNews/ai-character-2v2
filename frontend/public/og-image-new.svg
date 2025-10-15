@@ -1,0 +1,34 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1dd1a1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Main Content -->
+  <g transform="translate(600, 315)">
+    <!-- Logo Circle -->
+    <circle cx="0" cy="-120" r="80" fill="rgba(255,255,255,0.2)"/>
+    <text x="0" y="-80" text-anchor="middle" font-size="80" fill="white">🤖</text>
+    
+    <!-- Title -->
+    <text x="0" y="20" text-anchor="middle" font-size="72" font-weight="900" fill="white" font-family="Arial, sans-serif">
+      AI Characters
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="80" text-anchor="middle" font-size="36" fill="white" fill-opacity="0.95" font-family="Arial, sans-serif">
+      Best AI Companion Platform Reviews
+    </text>
+    
+    <!-- Badge -->
+    <rect x="-150" y="110" width="300" height="50" rx="25" fill="rgba(255,255,255,0.2)"/>
+    <text x="0" y="143" text-anchor="middle" font-size="28" fill="white" font-family="Arial, sans-serif">
+      21+ Platforms Reviewed
+    </text>
+  </g>
+</svg>
