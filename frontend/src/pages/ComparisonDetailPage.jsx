@@ -472,8 +472,26 @@ const ComparisonDetailPage = () => {
     }
   ];
 
+  const comparisonMeta = getComparisonMeta(platform1Data.name, platform2Data.name);
+
   return (
     <div className="page-container">
+      <SEOHead 
+        title={comparisonMeta.title}
+        description={comparisonMeta.description}
+        keywords={[
+          platform1Data.name.toLowerCase(),
+          platform2Data.name.toLowerCase(),
+          'comparison',
+          'vs',
+          'ai platform',
+          'review',
+          '2025'
+        ]}
+        ogImage={platform1Data.image || `${SITE_DOMAIN}/og-image.png`}
+        canonical={`${SITE_DOMAIN}/compare/${comparisonId}`}
+        ogType="article"
+      />
       <Sidebar />
       
       <main className="main-content">
