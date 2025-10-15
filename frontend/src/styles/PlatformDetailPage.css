@@ -853,9 +853,17 @@
   margin-top: 60px;
 }
 
-.enhanced-features h2,
+.enhanced-features h2 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .enhanced-features .section-subtitle {
-  text-align: center;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
 }
 
 .enhanced-features-grid {
