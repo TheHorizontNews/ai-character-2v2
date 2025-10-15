@@ -5,15 +5,15 @@ const SEOHead = ({
   title, 
   description, 
   keywords = [],
-  ogImage = 'https://ai-characters.org/og-image.png',
+  ogImage = 'https://charactercentral.preview.emergentagent.com/og-image.png',
   ogType = 'website',
   canonical,
   noindex = false,
   schemaData = null
 }) => {
-  const siteUrl = 'https://ai-characters.org';
-  const siteName = 'AI Characters';
-  const fullTitle = title ? `${title} | AI Characters` : 'AI Characters - Best AI Companion Platform Reviews';
+  const siteUrl = 'https://charactercentral.preview.emergentagent.com';
+  const siteName = 'Character Central';
+  const fullTitle = title ? `${title} | Character Central` : 'Character Central - Best AI Character Platform Reviews';
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : siteUrl);
 
   // Default schema.org data
