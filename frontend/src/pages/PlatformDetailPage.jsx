@@ -44,6 +44,95 @@ const PlatformDetailPage = () => {
         ]}
         ogImage={platform.image}
         canonical={`https://ai-characters.org/platform/${platform.slug}`}
+        ogType="article"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Review",
+              "@id": `https://ai-characters.org/platform/${platform.slug}#review`,
+              "itemReviewed": {
+                "@type": "SoftwareApplication",
+                "name": platform.name,
+                "applicationCategory": "AI Companion",
+                "operatingSystem": "Web, iOS, Android",
+                "offers": {
+                  "@type": "Offer",
+                  "price": platform.pricing === 'Free' ? "0" : "9.99",
+                  "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": platform.rating,
+                  "bestRating": "5",
+                  "worstRating": "1",
+                  "ratingCount": platform.users.replace(/[^0-9]/g, '')
+                },
+                "image": platform.image,
+                "description": platform.tagline
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": platform.rating,
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "AI Characters"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "AI Characters",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://ai-characters.org/favicon.svg"
+                }
+              },
+              "datePublished": "2025-01-01",
+              "reviewBody": `${platform.tagline}. ${platform.description || ''}`,
+              "positiveNotes": {
+                "@type": "ItemList",
+                "itemListElement": platform.pros.slice(0, 5).map((pro, idx) => ({
+                  "@type": "ListItem",
+                  "position": idx + 1,
+                  "name": pro
+                }))
+              },
+              "negativeNotes": {
+                "@type": "ItemList",
+                "itemListElement": platform.cons.slice(0, 5).map((con, idx) => ({
+                  "@type": "ListItem",
+                  "position": idx + 1,
+                  "name": con
+                }))
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://ai-characters.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Platforms",
+                  "item": "https://ai-characters.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": platform.name,
+                  "item": `https://ai-characters.org/platform/${platform.slug}`
+                }
+              ]
+            }
+          ]
+        }}
       />
       <Sidebar />
       
