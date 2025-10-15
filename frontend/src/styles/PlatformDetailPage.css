@@ -2080,26 +2080,130 @@
     font-size: 28px;
   }
 
-  .verdict-rating-card {
-    padding: 36px 24px;
+  /* Verdict Mobile Styles */
+  .verdict-hero-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 24px;
   }
-
-  .rating-number {
-    font-size: 52px;
+  
+  .verdict-rating-number {
+    font-size: 56px;
   }
-
-  .verdict-two-column {
+  
+  .verdict-hero-right h3 {
+    font-size: 22px;
+  }
+  
+  .verdict-hero-description {
+    font-size: 15px;
+  }
+  
+  .verdict-ratings-grid {
+    padding: 28px 20px;
+  }
+  
+  .verdict-ratings-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .verdict-rating-categories {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-
-  .verdict-pros-card,
-  .verdict-cons-card {
-    padding: 24px;
+  
+  .verdict-rating-item {
+    padding: 20px;
   }
-
-  .final-recommendation {
-    padding: 28px 24px;
+  
+  .verdict-rating-score {
+    font-size: 28px;
+  }
+  
+  .verdict-pros-cons-wrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .verdict-strengths-card,
+  .verdict-considerations-card {
+    padding: 28px 20px;
+  }
+  
+  .verdict-card-header h3 {
+    font-size: 20px;
+  }
+  
+  .verdict-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .verdict-card-intro {
+    padding-left: 64px;
+    font-size: 13px;
+  }
+  
+  .verdict-items-list {
+    gap: 20px;
+  }
+  
+  .verdict-item-title {
+    font-size: 15px;
+  }
+  
+  .verdict-item-description {
+    font-size: 13px;
+  }
+  
+  .verdict-expert-opinion {
+    padding: 28px 20px;
+  }
+  
+  .verdict-expert-avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+  }
+  
+  .verdict-expert-info h4 {
+    font-size: 18px;
+  }
+  
+  .verdict-expert-content {
+    padding-left: 0;
+  }
+  
+  .verdict-expert-quote {
+    font-size: 15px;
+  }
+  
+  .verdict-final-recommendation {
+    padding: 36px 24px;
+  }
+  
+  .verdict-final-rating {
+    font-size: 40px;
+  }
+  
+  .verdict-final-title {
+    font-size: 24px;
+  }
+  
+  .verdict-final-text {
+    font-size: 15px;
+  }
+  
+  .verdict-final-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .verdict-cta-primary,
+  .verdict-cta-secondary {
+    width: 100%;
+    justify-content: center;
   }
 }
 
