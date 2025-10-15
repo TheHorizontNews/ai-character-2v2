@@ -898,16 +898,23 @@
   }
   
   .stat-info {
-    text-align: center;
+    text-align: center !important;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .stat-value {
     font-size: 22px;
+    text-align: center !important;
   }
   
   .stat-label {
     font-size: 11px;
+    text-align: center !important;
+    display: block;
+    width: 100%;
   }
   
   .features-progress {
