@@ -488,11 +488,17 @@
 
 .platforms-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
   gap: 24px;
   max-width: 1400px;
   margin: 0 auto;
-  justify-items: center;
+  justify-content: center;
+}
+
+.platforms-grid .platform-card {
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
 }
 
 .related-pages {
