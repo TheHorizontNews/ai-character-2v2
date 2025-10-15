@@ -5,7 +5,7 @@ const SEOHead = ({
   title, 
   description, 
   keywords = [],
-  ogImage = 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&q=80',
+  ogImage = 'https://ai-characters.org/og-image.png',
   ogType = 'website',
   canonical,
   noindex = false,
