@@ -22,11 +22,17 @@ const HomePage = () => {
   // Filter platforms by category
   const romancePlatforms = aiPlatforms.filter(p => p.category === 'Romance');
 
+  // Generate schema.org JSON-LD
+  const schemaJsonLd = schemaToJsonLd(
+    generatePageSchema('homepage', { platforms: aiPlatforms })
+  );
+
   return (
     <div className="home-page">
       <SEOHead 
         title={homepageMeta.title}
         description={homepageMeta.description}
+        schemaJsonLd={schemaJsonLd}
         keywords={[
           'ai characters',
           'ai companions',
