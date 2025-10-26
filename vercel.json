@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "name": "ai-characters",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml"
+      }
+    },
+    {
+      "src": "/sitemap-index.xml",
+      "dest": "/sitemap-index.xml",
+      "headers": {
+        "Content-Type": "application/xml"
+      }
+    },
+    {
+      "src": "/sitemap.xsl",
+      "dest": "/sitemap.xsl",
+      "headers": {
+        "Content-Type": "application/xml"
+      }
+    },
+    {
+      "src": "/ai.txt",
+      "dest": "/ai.txt",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    },
+    {
+      "src": "/llms.txt",
+      "dest": "/llms.txt",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    },
+    {
+      "src": "/llms-full.txt",
+      "dest": "/llms-full.txt",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/ai.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ]
+}
