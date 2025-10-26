@@ -39,6 +39,14 @@ const ExplorePage = () => {
     groupedPages[page.category].push(page);
   });
 
+  // Generate schema.org JSON-LD
+  const schemaJsonLd = schemaToJsonLd(
+    generatePageSchema('explore', {
+      pages: seoPages,
+      categories: seoCategories
+    })
+  );
+
   return (
     <div className="home-page">
       <SEOHead 
