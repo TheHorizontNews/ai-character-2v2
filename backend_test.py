@@ -999,10 +999,17 @@ class ComprehensiveBackendTest:
                 
     def run_all_tests(self):
         """Run all tests"""
-        print("🤖 Starting Bot Detection and Meta Tag Pre-rendering Middleware Tests")
+        print("🤖 Starting Comprehensive Backend and Schema.org Testing")
         print("=" * 80)
         
-        # Run all test methods
+        # Backend functionality tests
+        print("\n🔧 BACKEND FUNCTIONALITY TESTS")
+        self.test_sitemap_xml()
+        self.test_sitemap_index_xml()
+        self.test_backend_api_health()
+        
+        # Bot detection and meta tag tests
+        print("\n🤖 BOT DETECTION & META TAG TESTS")
         self.test_bot_detection()
         self.test_homepage_meta_tags()
         self.test_platform_pages_meta_tags()
@@ -1013,6 +1020,20 @@ class ComprehensiveBackendTest:
         self.test_og_image_tags()
         self.test_twitter_cards()
         self.test_api_routes_not_affected()
+        
+        # Schema.org validation tests
+        print("\n📋 SCHEMA.ORG VALIDATION TESTS")
+        self.test_homepage_schema()
+        self.test_platform_page_schema()
+        self.test_seo_page_schema()
+        self.test_comparison_page_schema()
+        self.test_explore_page_schema()
+        self.test_compare_hub_schema()
+        
+        # Additional validation tests
+        print("\n✅ ADDITIONAL VALIDATION TESTS")
+        self.test_meta_tags_uniqueness()
+        self.test_javascript_console_errors()
         
         # Print summary
         print("\n" + "=" * 80)
