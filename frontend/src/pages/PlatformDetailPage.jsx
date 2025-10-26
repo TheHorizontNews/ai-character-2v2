@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { aiPlatforms } from '../data/mockData';
 import { platformMeta, SITE_DOMAIN } from '../data/metaTags';
+import { generatePageSchema, schemaToJsonLd } from '../utils/schemaGenerator';
 import '../styles/PlatformDetailPage.css';
 
 const PlatformDetailPage = () => {
