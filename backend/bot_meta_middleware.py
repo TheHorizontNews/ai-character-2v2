@@ -40,8 +40,8 @@ def is_bot(user_agent: str) -> bool:
     user_agent_lower = user_agent.lower()
     return any(bot.lower() in user_agent_lower for bot in BOT_USER_AGENTS)
 
-def inject_meta_tags(html_content: str, meta_data: dict, canonical_url: str) -> str:
-    """Inject meta tags into HTML content"""
+def inject_meta_tags(html_content: str, meta_data: dict, canonical_url: str, schema_json: str = None) -> str:
+    """Inject meta tags and schema into HTML content"""
     
     # Extract existing head content
     head_pattern = r'<head>(.*?)</head>'
@@ -49,6 +49,16 @@ def inject_meta_tags(html_content: str, meta_data: dict, canonical_url: str) -> 
     
     if not head_match:
         return html_content
+    
+    # Build schema.org JSON-LD
+    schema_tag = ""
+    if schema_json:
+        schema_tag = f"""
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {schema_json}
+    </script>
+    """
     
     # Build meta tags HTML
     meta_tags = f"""
@@ -72,6 +82,7 @@ def inject_meta_tags(html_content: str, meta_data: dict, canonical_url: str) -> 
     <meta name="twitter:description" content="{meta_data['og_description']}" />
     <meta name="twitter:image" content="{meta_data.get('og_image', DEFAULT_OG_IMAGE)}" />
     <meta name="twitter:site" content="@CharacterCentral" />
+    {schema_tag}
     """
     
     # Remove existing meta tags that we're replacing
