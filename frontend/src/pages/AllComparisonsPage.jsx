@@ -65,6 +65,7 @@ const AllComparisonsPage = () => {
       <SEOHead 
         title="All AI Platform Comparisons — Complete Comparison List 2025"
         description="Browse all AI character platform comparisons. Find detailed side-by-side reviews of your favorite platforms."
+        schemaJsonLd={schemaJsonLd}
         keywords={[
           'AI platform comparisons',
           'compare AI platforms',
