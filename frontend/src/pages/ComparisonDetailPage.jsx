@@ -823,10 +823,21 @@ const ComparisonDetailPage = () => {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-              <button className="cta-button">
-                Learn More About {platform1Data.name}
-                <ExternalLink size={16} />
-              </button>
+              <div className="decision-buttons">
+                <button 
+                  className="cta-button secondary"
+                  onClick={() => navigate(`/platform/${platform1}`)}
+                >
+                  Learn More About {platform1Data.name}
+                </button>
+                <button 
+                  className="cta-button primary"
+                  onClick={() => window.open(platform1Data.website || '#', '_blank')}
+                >
+                  Visit {platform1Data.name}
+                  <ExternalLink size={16} />
+                </button>
+              </div>
             </div>
             
             <div className="decision-card">
@@ -836,10 +847,21 @@ const ComparisonDetailPage = () => {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-              <button className="cta-button">
-                Learn More About {platform2Data.name}
-                <ExternalLink size={16} />
-              </button>
+              <div className="decision-buttons">
+                <button 
+                  className="cta-button secondary"
+                  onClick={() => navigate(`/platform/${platform2}`)}
+                >
+                  Learn More About {platform2Data.name}
+                </button>
+                <button 
+                  className="cta-button primary"
+                  onClick={() => window.open(platform2Data.website || '#', '_blank')}
+                >
+                  Visit {platform2Data.name}
+                  <ExternalLink size={16} />
+                </button>
+              </div>
             </div>
           </div>
         </section>
