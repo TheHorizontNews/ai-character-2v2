@@ -46,7 +46,8 @@ const HomePage = () => {
         ]}
         ogImage={`${SITE_DOMAIN}/og-image.png`}
         canonical={`${SITE_DOMAIN}/`}
-        schemaData={{
+      />
+      <Sidebar />
           "@context": "https://schema.org",
           "@graph": [
             {
