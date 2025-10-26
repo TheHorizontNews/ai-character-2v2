@@ -52,6 +52,7 @@ const ExplorePage = () => {
       <SEOHead 
         title={explorePageMeta.title}
         description={explorePageMeta.description}
+        schemaJsonLd={schemaJsonLd}
         keywords={[
           'AI character guides',
           'AI companion topics',
