@@ -195,6 +195,25 @@ const ComparePage = () => {
 
   return (
     <div className="page-container">
+      {/* Static Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "AI Platform Comparisons",
+            "description": "Compare AI character platforms side-by-side with detailed reviews",
+            "url": "https://ai-characters.org/compare",
+            "hasPart": popularComparisons.map(comp => ({
+              "@type": "Article",
+              "headline": comp.title,
+              "url": `https://ai-characters.org${comp.url}`
+            }))
+          })
+        }}
+      />
+      
       <SEOHead 
         title={compareHubMeta.title}
         description={compareHubMeta.description}
