@@ -8,7 +8,10 @@ from pathlib import Path
 from meta_data import (
     PLATFORMS, SEO_PAGES, HOMEPAGE, CATEGORIES, COMPARE_HUB,
     EXPLORE_PAGE, ALL_COMPARISONS, get_comparison_meta,
-    SITE_DOMAIN, SITE_NAME, DEFAULT_OG_IMAGE
+    SITE_DOMAIN, SITE_NAME, DEFAULT_OG_IMAGE,
+    generate_homepage_schema, generate_platform_schema,
+    generate_seo_page_schema, generate_comparison_schema,
+    generate_collection_schema
 )
 
 # Bot User-Agent patterns
