@@ -130,6 +130,13 @@ const ComparePage = () => {
     }
   ];
 
+  // Generate schema.org JSON-LD
+  const schemaJsonLd = schemaToJsonLd(
+    generatePageSchema('compare', {
+      comparisons: popularComparisons
+    })
+  );
+
   const categoryGroups = [
     {
       title: '🏆 Premium Platforms',
