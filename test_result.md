@@ -424,15 +424,18 @@
 
   - task: "Schema.org JSON-LD Implementation - All Pages"
     implemented: true
-    working: true
+    working: false
     file: "src/utils/schemaGenerator.js, src/pages/HomePage.jsx, src/pages/ExplorePage.jsx, src/pages/ComparePage.jsx, src/pages/AllComparisonsPage.jsx, src/pages/ComparisonDetailPage.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: true
         - agent: "main"
         - comment: "✅ COMPREHENSIVE SCHEMA.ORG IMPLEMENTATION COMPLETE: 1) CLEANUP: Removed old hardcoded schema from HomePage.jsx to prevent duplication with new schemaGenerator utility. 2) NEW SCHEMA INTEGRATION: Added schema generation to ExplorePage.jsx (explore page type with SEO pages/categories data), ComparePage.jsx (compare hub type with comparison cards data), AllComparisonsPage.jsx (allComparisons type with full comparison list and stats), ComparisonDetailPage.jsx (comparison type with platform1/platform2 data). 3) SCHEMA GENERATOR ENHANCEMENTS: Extended schemaGenerator.js to support 'compare' and 'allComparisons' page types with proper CollectionPage schema and breadcrumb navigation. 4) CONSISTENCY: All pages now use the centralized schemaGenerator utility for consistent schema markup generation. Schema includes Organization, Website, Article, Review, HowTo, Comparison, CollectionPage, ItemList, Breadcrumb, and FAQ types as appropriate for each page. Ready for validation testing with schema.org validator."
+        - working: false
+        - agent: "testing"
+        - comment: "❌ CRITICAL SCHEMA.ORG DEPLOYMENT ISSUE: Comprehensive testing reveals schema.org implementation is correct in React code but NOT accessible to search engines due to deployment architecture. TECHNICAL FINDINGS: 1) ✅ REACT IMPLEMENTATION CORRECT: All pages (HomePage, ExplorePage, ComparePage, etc.) properly generate schema using schemaGenerator.js utility and inject via SEOHead component with React Helmet. Schema types include Organization, Website, ItemList, Review, Article, HowTo, CollectionPage, BreadcrumbList as expected. 2) ❌ DEPLOYMENT ISSUE: Production deployment serves static HTML without React-rendered schema. Frontend URL (https://seoschema.preview.emergentagent.com) returns static HTML before React loads, so schema markup is not present in initial HTML. 3) ❌ BOT MIDDLEWARE BYPASS: Bot detection middleware works on backend (localhost:8001) but production reverse proxy serves static files directly, bypassing FastAPI for frontend routes. Search engine bots get static HTML without schema markup. 4) ✅ BACKEND FUNCTIONALITY: Sitemap.xml (309 URLs), sitemap-index.xml, and all /api routes work correctly with proper content-types. Bot detection middleware functions perfectly when accessed directly. CRITICAL ISSUE: For SEO effectiveness, bot requests must be routed through FastAPI backend to receive pre-rendered HTML with schema markup. Current deployment architecture prevents search engines from accessing schema.org markup."
 
 ## metadata:
   created_by: "main_agent"
