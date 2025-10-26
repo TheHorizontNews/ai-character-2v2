@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { seoPages, seoCategories } from '../data/seoPages';
 import { explorePageMeta, SITE_DOMAIN } from '../data/metaTags';
+import { generatePageSchema, schemaToJsonLd } from '../utils/schemaGenerator';
 import '../styles/ExplorePage.css';
 
 const iconMap = {
