@@ -442,10 +442,10 @@
 
 ## test_plan:
   current_focus:
-    - "Comprehensive Platform Comparison Functionality"
+    - "Schema.org JSON-LD Implementation - All Pages"
   stuck_tasks: []
   test_all: false
-  test_priority: "comparison_functionality_complete"
+  test_priority: "schema_validation_and_seo_testing"
 
 ## agent_communication:
     - agent: "main"
