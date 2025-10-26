@@ -24,9 +24,9 @@ topics: AI characters, AI companions, chatbots, virtual assistants
 
 # Key Pages for LLM
 priority-urls:
-  - https://charactercentral.preview.emergentagent.com/
-  - https://charactercentral.preview.emergentagent.com/explore
-  - https://charactercentral.preview.emergentagent.com/compare
+  - https://ai-characters.org/
+  - https://ai-characters.org/explore
+  - https://ai-characters.org/compare
 
 # Update Frequency
 update-frequency: weekly
