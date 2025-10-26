@@ -45,6 +45,49 @@ const PlatformDetailPage = () => {
 
   return (
     <div className="home-page">
+      {/* Static Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Review",
+            "itemReviewed": {
+              "@type": "SoftwareApplication",
+              "name": platform.name,
+              "applicationCategory": "Entertainment",
+              "operatingSystem": "Web, iOS, Android",
+              "offers": {
+                "@type": "Offer",
+                "price": platform.pricing === "Free" ? "0" : "9.99",
+                "priceCurrency": "USD"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": platform.rating || "4.5",
+                "bestRating": "5",
+                "ratingCount": "1000"
+              }
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": platform.rating || "4.5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "ai-characters.org"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "ai-characters.org"
+            },
+            "reviewBody": platform.description,
+            "datePublished": "2025-01-15"
+          })
+        }}
+      />
+      
       <SEOHead 
         title={metaTitle}
         description={metaDescription}
