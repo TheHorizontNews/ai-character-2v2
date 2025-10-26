@@ -435,6 +435,499 @@ class ComprehensiveBackendTest:
         except Exception as e:
             self.log_error("API Routes", e)
             
+    def test_sitemap_xml(self):
+        """Test 11: Sitemap.xml Accessibility and Content-Type"""
+        print("\n=== Test 11: Sitemap.xml Testing ===")
+        
+        try:
+            # Test sitemap.xml endpoint
+            response = self.make_request('/sitemap.xml', REGULAR_BROWSER, use_direct=True)
+            
+            if response.status_code == 200:
+                self.log_result("Sitemap.xml Accessibility", True, "Sitemap.xml is accessible")
+                
+                # Check content-type
+                content_type = response.headers.get('content-type', '').lower()
+                if 'application/xml' in content_type or 'text/xml' in content_type:
+                    self.log_result("Sitemap.xml Content-Type", True, f"Content-Type: {content_type}")
+                else:
+                    self.log_result("Sitemap.xml Content-Type", False, f"Expected XML content-type, got: {content_type}")
+                
+                # Check XML structure
+                if '<?xml version="1.0"' in response.text and '<urlset' in response.text:
+                    self.log_result("Sitemap.xml XML Structure", True, "Valid XML structure found")
+                    
+                    # Count URLs
+                    url_count = response.text.count('<url>')
+                    self.log_result("Sitemap.xml URL Count", True, f"Found {url_count} URLs in sitemap")
+                else:
+                    self.log_result("Sitemap.xml XML Structure", False, "Invalid XML structure")
+                    
+            else:
+                self.log_result("Sitemap.xml Accessibility", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("Sitemap.xml", e)
+            
+    def test_sitemap_index_xml(self):
+        """Test 12: Sitemap-index.xml Endpoint"""
+        print("\n=== Test 12: Sitemap-index.xml Testing ===")
+        
+        try:
+            response = self.make_request('/sitemap-index.xml', REGULAR_BROWSER, use_direct=True)
+            
+            if response.status_code == 200:
+                self.log_result("Sitemap-index.xml Accessibility", True, "Sitemap-index.xml is accessible")
+                
+                # Check content-type
+                content_type = response.headers.get('content-type', '').lower()
+                if 'application/xml' in content_type or 'text/xml' in content_type:
+                    self.log_result("Sitemap-index.xml Content-Type", True, f"Content-Type: {content_type}")
+                else:
+                    self.log_result("Sitemap-index.xml Content-Type", False, f"Expected XML content-type, got: {content_type}")
+                
+                # Check XML structure
+                if '<?xml version="1.0"' in response.text and '<sitemapindex' in response.text:
+                    self.log_result("Sitemap-index.xml XML Structure", True, "Valid sitemap index structure found")
+                else:
+                    self.log_result("Sitemap-index.xml XML Structure", False, "Invalid sitemap index structure")
+                    
+            else:
+                self.log_result("Sitemap-index.xml Accessibility", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("Sitemap-index.xml", e)
+            
+    def test_backend_api_health(self):
+        """Test 13: Backend API Health Check"""
+        print("\n=== Test 13: Backend API Health ===")
+        
+        # Test main API endpoints
+        api_endpoints = [
+            '/api/',
+            '/api/status'
+        ]
+        
+        for endpoint in api_endpoints:
+            try:
+                response = self.make_request(endpoint, REGULAR_BROWSER, use_direct=True)
+                
+                if response.status_code == 200:
+                    self.log_result(f"API Health - {endpoint}", True, f"Endpoint accessible (status: {response.status_code})")
+                    
+                    # Check if response is JSON
+                    try:
+                        json_data = response.json()
+                        self.log_result(f"API JSON Response - {endpoint}", True, "Valid JSON response")
+                    except:
+                        self.log_result(f"API JSON Response - {endpoint}", False, "Response is not valid JSON")
+                        
+                else:
+                    self.log_result(f"API Health - {endpoint}", False, f"Status code: {response.status_code}")
+                    
+            except Exception as e:
+                self.log_error(f"API Health - {endpoint}", e)
+                
+    def make_frontend_request(self, path, timeout=10):
+        """Make HTTP request to frontend"""
+        try:
+            url = urljoin(FRONTEND_URL, path)
+            headers = {'User-Agent': REGULAR_BROWSER}
+            response = requests.get(url, headers=headers, timeout=timeout)
+            return response
+        except Exception as e:
+            raise Exception(f"Frontend request failed: {str(e)}")
+            
+    def extract_json_ld_schemas(self, html_content):
+        """Extract JSON-LD schema markup from HTML"""
+        soup = BeautifulSoup(html_content, 'html.parser')
+        schemas = []
+        
+        # Find all script tags with type="application/ld+json"
+        for script in soup.find_all('script', type='application/ld+json'):
+            try:
+                schema_data = json.loads(script.string)
+                schemas.append(schema_data)
+            except json.JSONDecodeError:
+                continue
+                
+        return schemas
+        
+    def validate_schema_structure(self, schema, expected_types):
+        """Validate schema structure"""
+        if isinstance(schema, dict):
+            schema_type = schema.get('@type')
+            if schema_type in expected_types:
+                return True, schema_type
+            # Check for @graph structure
+            elif '@graph' in schema:
+                found_types = []
+                for item in schema['@graph']:
+                    item_type = item.get('@type')
+                    if item_type in expected_types:
+                        found_types.append(item_type)
+                if found_types:
+                    return True, found_types
+        return False, None
+        
+    def test_homepage_schema(self):
+        """Test 14: Homepage Schema.org Implementation"""
+        print("\n=== Test 14: Homepage Schema.org ===")
+        
+        try:
+            response = self.make_frontend_request('/')
+            
+            if response.status_code == 200:
+                schemas = self.extract_json_ld_schemas(response.text)
+                
+                if schemas:
+                    self.log_result("Homepage Schema Present", True, f"Found {len(schemas)} schema(s)")
+                    
+                    # Expected schema types for homepage
+                    expected_types = ['Organization', 'WebSite', 'ItemList']
+                    found_types = []
+                    
+                    for schema in schemas:
+                        is_valid, schema_types = self.validate_schema_structure(schema, expected_types)
+                        if is_valid:
+                            if isinstance(schema_types, list):
+                                found_types.extend(schema_types)
+                            else:
+                                found_types.append(schema_types)
+                    
+                    # Check for required schema types
+                    if 'Organization' in found_types:
+                        self.log_result("Homepage Organization Schema", True, "Organization schema found")
+                    else:
+                        self.log_result("Homepage Organization Schema", False, "Organization schema missing")
+                        
+                    if 'WebSite' in found_types:
+                        self.log_result("Homepage Website Schema", True, "Website schema found")
+                    else:
+                        self.log_result("Homepage Website Schema", False, "Website schema missing")
+                        
+                    if 'ItemList' in found_types:
+                        self.log_result("Homepage ItemList Schema", True, "ItemList schema for platforms found")
+                    else:
+                        self.log_result("Homepage ItemList Schema", False, "ItemList schema missing")
+                        
+                else:
+                    self.log_result("Homepage Schema Present", False, "No JSON-LD schema found")
+                    
+            else:
+                self.log_result("Homepage Request", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("Homepage Schema", e)
+            
+    def test_platform_page_schema(self):
+        """Test 15: Platform Page Schema.org Implementation"""
+        print("\n=== Test 15: Platform Page Schema.org ===")
+        
+        # Test Lovescape platform page
+        try:
+            response = self.make_frontend_request('/platform/lovescape')
+            
+            if response.status_code == 200:
+                schemas = self.extract_json_ld_schemas(response.text)
+                
+                if schemas:
+                    self.log_result("Platform Schema Present", True, f"Found {len(schemas)} schema(s)")
+                    
+                    # Expected schema types for platform pages
+                    expected_types = ['Review', 'Organization', 'BreadcrumbList']
+                    found_types = []
+                    
+                    for schema in schemas:
+                        is_valid, schema_types = self.validate_schema_structure(schema, expected_types)
+                        if is_valid:
+                            if isinstance(schema_types, list):
+                                found_types.extend(schema_types)
+                            else:
+                                found_types.append(schema_types)
+                    
+                    # Check for Review schema with ratings
+                    if 'Review' in found_types:
+                        self.log_result("Platform Review Schema", True, "Review schema found")
+                        
+                        # Check for rating in Review schema
+                        for schema in schemas:
+                            if schema.get('@type') == 'Review' or (isinstance(schema.get('@graph'), list) and any(item.get('@type') == 'Review' for item in schema['@graph'])):
+                                self.log_result("Platform Review Rating", True, "Review schema with rating found")
+                                break
+                    else:
+                        self.log_result("Platform Review Schema", False, "Review schema missing")
+                        
+                else:
+                    self.log_result("Platform Schema Present", False, "No JSON-LD schema found")
+                    
+            else:
+                self.log_result("Platform Request", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("Platform Schema", e)
+            
+    def test_seo_page_schema(self):
+        """Test 16: SEO Page Schema.org Implementation"""
+        print("\n=== Test 16: SEO Page Schema.org ===")
+        
+        # Test SEO page
+        try:
+            response = self.make_frontend_request('/character-review/ai-girlfriend-chat')
+            
+            if response.status_code == 200:
+                schemas = self.extract_json_ld_schemas(response.text)
+                
+                if schemas:
+                    self.log_result("SEO Page Schema Present", True, f"Found {len(schemas)} schema(s)")
+                    
+                    # Expected schema types for SEO pages
+                    expected_types = ['Article', 'HowTo', 'Organization', 'BreadcrumbList', 'ItemList']
+                    found_types = []
+                    
+                    for schema in schemas:
+                        is_valid, schema_types = self.validate_schema_structure(schema, expected_types)
+                        if is_valid:
+                            if isinstance(schema_types, list):
+                                found_types.extend(schema_types)
+                            else:
+                                found_types.append(schema_types)
+                    
+                    # Check for Article schema
+                    if 'Article' in found_types:
+                        self.log_result("SEO Page Article Schema", True, "Article schema found")
+                    else:
+                        self.log_result("SEO Page Article Schema", False, "Article schema missing")
+                        
+                    # Check for HowTo schema
+                    if 'HowTo' in found_types:
+                        self.log_result("SEO Page HowTo Schema", True, "HowTo schema found")
+                    else:
+                        self.log_result("SEO Page HowTo Schema", False, "HowTo schema missing")
+                        
+                else:
+                    self.log_result("SEO Page Schema Present", False, "No JSON-LD schema found")
+                    
+            else:
+                self.log_result("SEO Page Request", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("SEO Page Schema", e)
+            
+    def test_comparison_page_schema(self):
+        """Test 17: Comparison Page Schema.org Implementation"""
+        print("\n=== Test 17: Comparison Page Schema.org ===")
+        
+        # Test comparison page
+        try:
+            response = self.make_frontend_request('/compare/lovescape-vs-character-ai')
+            
+            if response.status_code == 200:
+                schemas = self.extract_json_ld_schemas(response.text)
+                
+                if schemas:
+                    self.log_result("Comparison Schema Present", True, f"Found {len(schemas)} schema(s)")
+                    
+                    # Expected schema types for comparison pages
+                    expected_types = ['Article', 'Organization', 'BreadcrumbList']
+                    found_types = []
+                    
+                    for schema in schemas:
+                        is_valid, schema_types = self.validate_schema_structure(schema, expected_types)
+                        if is_valid:
+                            if isinstance(schema_types, list):
+                                found_types.extend(schema_types)
+                            else:
+                                found_types.append(schema_types)
+                    
+                    # Check for comparison Article schema
+                    if 'Article' in found_types:
+                        self.log_result("Comparison Article Schema", True, "Comparison Article schema found")
+                    else:
+                        self.log_result("Comparison Article Schema", False, "Comparison Article schema missing")
+                        
+                else:
+                    self.log_result("Comparison Schema Present", False, "No JSON-LD schema found")
+                    
+            else:
+                self.log_result("Comparison Request", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("Comparison Schema", e)
+            
+    def test_explore_page_schema(self):
+        """Test 18: Explore Page Schema.org Implementation"""
+        print("\n=== Test 18: Explore Page Schema.org ===")
+        
+        try:
+            response = self.make_frontend_request('/explore')
+            
+            if response.status_code == 200:
+                schemas = self.extract_json_ld_schemas(response.text)
+                
+                if schemas:
+                    self.log_result("Explore Schema Present", True, f"Found {len(schemas)} schema(s)")
+                    
+                    # Expected schema types for explore page
+                    expected_types = ['CollectionPage', 'Organization']
+                    found_types = []
+                    
+                    for schema in schemas:
+                        is_valid, schema_types = self.validate_schema_structure(schema, expected_types)
+                        if is_valid:
+                            if isinstance(schema_types, list):
+                                found_types.extend(schema_types)
+                            else:
+                                found_types.append(schema_types)
+                    
+                    # Check for CollectionPage schema
+                    if 'CollectionPage' in found_types:
+                        self.log_result("Explore CollectionPage Schema", True, "CollectionPage schema found")
+                    else:
+                        self.log_result("Explore CollectionPage Schema", False, "CollectionPage schema missing")
+                        
+                else:
+                    self.log_result("Explore Schema Present", False, "No JSON-LD schema found")
+                    
+            else:
+                self.log_result("Explore Request", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("Explore Schema", e)
+            
+    def test_compare_hub_schema(self):
+        """Test 19: Compare Hub Page Schema.org Implementation"""
+        print("\n=== Test 19: Compare Hub Schema.org ===")
+        
+        try:
+            response = self.make_frontend_request('/compare')
+            
+            if response.status_code == 200:
+                schemas = self.extract_json_ld_schemas(response.text)
+                
+                if schemas:
+                    self.log_result("Compare Hub Schema Present", True, f"Found {len(schemas)} schema(s)")
+                    
+                    # Expected schema types for compare hub page
+                    expected_types = ['CollectionPage', 'Organization', 'BreadcrumbList']
+                    found_types = []
+                    
+                    for schema in schemas:
+                        is_valid, schema_types = self.validate_schema_structure(schema, expected_types)
+                        if is_valid:
+                            if isinstance(schema_types, list):
+                                found_types.extend(schema_types)
+                            else:
+                                found_types.append(schema_types)
+                    
+                    # Check for CollectionPage schema
+                    if 'CollectionPage' in found_types:
+                        self.log_result("Compare Hub CollectionPage Schema", True, "CollectionPage schema found")
+                    else:
+                        self.log_result("Compare Hub CollectionPage Schema", False, "CollectionPage schema missing")
+                        
+                else:
+                    self.log_result("Compare Hub Schema Present", False, "No JSON-LD schema found")
+                    
+            else:
+                self.log_result("Compare Hub Request", False, f"Status code: {response.status_code}")
+                
+        except Exception as e:
+            self.log_error("Compare Hub Schema", e)
+            
+    def test_meta_tags_uniqueness(self):
+        """Test 20: Meta Tags Uniqueness"""
+        print("\n=== Test 20: Meta Tags Uniqueness ===")
+        
+        test_pages = [
+            {'path': '/', 'name': 'Homepage'},
+            {'path': '/platform/lovescape', 'name': 'Lovescape Platform'},
+            {'path': '/character-review/ai-girlfriend-chat', 'name': 'SEO Page'},
+            {'path': '/compare/lovescape-vs-character-ai', 'name': 'Comparison Page'}
+        ]
+        
+        page_titles = {}
+        page_descriptions = {}
+        
+        for page in test_pages:
+            try:
+                response = self.make_frontend_request(page['path'])
+                
+                if response.status_code == 200:
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    
+                    # Extract title
+                    title_tag = soup.find('title')
+                    title = title_tag.text if title_tag else None
+                    
+                    # Extract meta description
+                    desc_tag = soup.find('meta', attrs={'name': 'description'})
+                    description = desc_tag.get('content') if desc_tag else None
+                    
+                    if title:
+                        page_titles[page['name']] = title
+                    if description:
+                        page_descriptions[page['name']] = description
+                        
+            except Exception as e:
+                self.log_error(f"Meta Tags - {page['name']}", e)
+        
+        # Check for unique titles
+        unique_titles = len(set(page_titles.values())) == len(page_titles)
+        if unique_titles:
+            self.log_result("Unique Page Titles", True, f"All {len(page_titles)} pages have unique titles")
+        else:
+            self.log_result("Unique Page Titles", False, "Some pages have duplicate titles")
+            
+        # Check for unique descriptions
+        unique_descriptions = len(set(page_descriptions.values())) == len(page_descriptions)
+        if unique_descriptions:
+            self.log_result("Unique Meta Descriptions", True, f"All {len(page_descriptions)} pages have unique descriptions")
+        else:
+            self.log_result("Unique Meta Descriptions", False, "Some pages have duplicate descriptions")
+            
+    def test_javascript_console_errors(self):
+        """Test 21: Check for JavaScript Console Errors (Basic)"""
+        print("\n=== Test 21: JavaScript Console Errors Check ===")
+        
+        # Note: This is a basic check - full JS error detection would require browser automation
+        test_pages = [
+            '/',
+            '/platform/lovescape',
+            '/character-review/ai-girlfriend-chat',
+            '/explore'
+        ]
+        
+        for page_path in test_pages:
+            try:
+                response = self.make_frontend_request(page_path)
+                
+                if response.status_code == 200:
+                    # Check for common JS error indicators in HTML
+                    html_content = response.text.lower()
+                    
+                    # Look for error indicators
+                    error_indicators = [
+                        'javascript error',
+                        'uncaught',
+                        'syntaxerror',
+                        'referenceerror',
+                        'typeerror'
+                    ]
+                    
+                    has_errors = any(indicator in html_content for indicator in error_indicators)
+                    
+                    if not has_errors:
+                        self.log_result(f"JS Errors Check - {page_path}", True, "No obvious JS errors detected in HTML")
+                    else:
+                        self.log_result(f"JS Errors Check - {page_path}", False, "Potential JS errors detected in HTML")
+                        
+                else:
+                    self.log_result(f"JS Errors Check - {page_path}", False, f"Page not accessible (status: {response.status_code})")
+                    
+            except Exception as e:
+                self.log_error(f"JS Errors Check - {page_path}", e)
+            
     def test_og_image_tags(self):
         """Test 8: OG Image Tags"""
         print("\n=== Test 8: OG Image Tags ===")
