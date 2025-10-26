@@ -1,25 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { hydrate, render } from "react-dom";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import "@/index.css";
 import App from "@/App";
 
 const rootElement = document.getElementById("root");
 
-// Use hydrate for pre-rendered content from react-snap
-// Use render for normal development
+// Use hydrateRoot for pre-rendered content from react-snap
+// Use createRoot for normal development
 if (rootElement.hasChildNodes()) {
-  hydrate(
+  hydrateRoot(
+    rootElement,
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
-    rootElement
+    </React.StrictMode>
   );
 } else {
-  const root = ReactDOM.createRoot(rootElement);
+  const root = createRoot(rootElement);
   root.render(
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
+    </React.StrictMode>
   );
 }
