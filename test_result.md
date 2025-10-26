@@ -437,6 +437,18 @@
         - agent: "testing"
         - comment: "❌ CRITICAL SCHEMA.ORG DEPLOYMENT ISSUE: Comprehensive testing reveals schema.org implementation is correct in React code but NOT accessible to search engines due to deployment architecture. TECHNICAL FINDINGS: 1) ✅ REACT IMPLEMENTATION CORRECT: All pages (HomePage, ExplorePage, ComparePage, etc.) properly generate schema using schemaGenerator.js utility and inject via SEOHead component with React Helmet. Schema types include Organization, Website, ItemList, Review, Article, HowTo, CollectionPage, BreadcrumbList as expected. 2) ❌ DEPLOYMENT ISSUE: Production deployment serves static HTML without React-rendered schema. Frontend URL (https://seoschema.preview.emergentagent.com) returns static HTML before React loads, so schema markup is not present in initial HTML. 3) ❌ BOT MIDDLEWARE BYPASS: Bot detection middleware works on backend (localhost:8001) but production reverse proxy serves static files directly, bypassing FastAPI for frontend routes. Search engine bots get static HTML without schema markup. 4) ✅ BACKEND FUNCTIONALITY: Sitemap.xml (309 URLs), sitemap-index.xml, and all /api routes work correctly with proper content-types. Bot detection middleware functions perfectly when accessed directly. CRITICAL ISSUE: For SEO effectiveness, bot requests must be routed through FastAPI backend to receive pre-rendered HTML with schema markup. Current deployment architecture prevents search engines from accessing schema.org markup."
 
+  - task: "Canonical URL Configuration"
+    implemented: true
+    working: false
+    file: "backend/meta_data.py, backend/sitemap_generator.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: false
+        - agent: "testing"
+        - comment: "❌ CANONICAL URL MISMATCH: Backend meta_data.py and sitemap_generator.py are configured for production domain 'https://ai-characters.org' but testing environment expects 'https://seoschema.preview.emergentagent.com'. This causes canonical URL mismatches in bot-served meta tags. FINDINGS: 1) Backend SITE_DOMAIN = 'https://ai-characters.org' in meta_data.py, 2) All canonical URLs generated use production domain instead of preview domain, 3) Bot detection middleware correctly injects meta tags but with wrong canonical URLs for preview environment. This is actually CORRECT for production deployment but causes test failures in preview environment. RECOMMENDATION: This is expected behavior - production code should use production URLs."
+
 ## metadata:
   created_by: "main_agent"
   version: "1.0"
