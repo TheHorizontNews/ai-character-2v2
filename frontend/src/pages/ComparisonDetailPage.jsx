@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar';
 import SEOHead from '../components/SEOHead';
 import { ArrowLeft, Star, Users, ExternalLink, Check, X, HelpCircle } from 'lucide-react';
 import { getComparisonMeta, SITE_DOMAIN } from '../data/metaTags';
+import { generatePageSchema, schemaToJsonLd } from '../utils/schemaGenerator';
 import '../styles/ComparisonDetailPage.css';
 
 const ComparisonDetailPage = () => {
