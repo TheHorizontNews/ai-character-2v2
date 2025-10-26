@@ -138,7 +138,7 @@ We provide comprehensive, unbiased reviews of AI character and companion platfor
 - Updated weekly with latest information
 
 # Contact & Updates
-Website: https://charactercentral.preview.emergentagent.com/
+Website: https://ai-characters.org/
 Updates: Weekly
 Content: Expert reviews, comparisons, guides
 Language: English
