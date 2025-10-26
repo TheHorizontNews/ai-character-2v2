@@ -9,6 +9,7 @@ import { seoPages } from '../data/seoPages';
 import { getClusterPages, getRandomAnchor } from '../data/seoPageClusters';
 import { aiPlatforms } from '../data/mockData';
 import { SITE_DOMAIN } from '../data/metaTags';
+import { generatePageSchema, schemaToJsonLd } from '../utils/schemaGenerator';
 import '../styles/SEOPage.css';
 
 const SEOPage = () => {
