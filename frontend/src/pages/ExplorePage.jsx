@@ -40,6 +40,23 @@ const ExplorePage = () => {
 
   return (
     <div className="home-page">
+      <SEOHead 
+        title={explorePageMeta.title}
+        description={explorePageMeta.description}
+        keywords={[
+          'AI character guides',
+          'AI companion topics',
+          'virtual girlfriend guides',
+          'AI boyfriend resources',
+          'character creation guides',
+          'anime AI guides',
+          'roleplay AI topics',
+          'AI companion reviews'
+        ]}
+        ogImage={`${SITE_DOMAIN}/og-image.png`}
+        canonical={`${SITE_DOMAIN}/explore`}
+        ogType="website"
+      />
       <Sidebar />
       
       <main className="main-content">
