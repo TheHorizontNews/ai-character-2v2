@@ -31,7 +31,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Highly customizable characters', 'Natural conversations', 'Strong privacy protection', '24/7 support'],
       weaknesses: ['Premium features require subscription', 'Limited free tier'],
       bestFor: ['Users seeking deep emotional connection', 'Privacy-conscious users', 'Customization enthusiasts'],
-      uniqueFeatures: ['Advanced personality system', 'Voice customization', 'Memory retention', 'Privacy-first design']
+      uniqueFeatures: ['Advanced personality system', 'Voice customization', 'Memory retention', 'Privacy-first design'],
+      website: 'https://lovescape.ai'
     },
     'character-ai': {
       name: 'Character.AI', tagline: 'Chat with anyone, anywhere, anytime',
@@ -46,7 +47,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Large character library', 'Active community', 'Free to use', 'Fast responses'],
       weaknesses: ['Limited customization', 'Content restrictions', 'Can be slow during peak times'],
       bestFor: ['Casual users', 'Roleplay enthusiasts', 'Budget-conscious users', 'Community interaction'],
-      uniqueFeatures: ['Massive character database', 'Community creations', 'Multi-character conversations']
+      uniqueFeatures: ['Massive character database', 'Community creations', 'Multi-character conversations'],
+      website: 'https://character.ai'
     },
     'replika': {
       name: 'Replika', tagline: 'Your AI companion who cares',
@@ -61,7 +63,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Mental health focus', 'Learns your personality', 'Avatar customization', 'Mood tracking'],
       weaknesses: ['Romantic features locked behind paywall', 'Limited free version'],
       bestFor: ['Mental wellness', 'Personal growth', 'Long-term relationships', 'Therapy support'],
-      uniqueFeatures: ['Therapeutic approach', 'Mood analysis', 'Personal growth tracking', 'Avatar system']
+      uniqueFeatures: ['Therapeutic approach', 'Mood analysis', 'Personal growth tracking', 'Avatar system'],
+      website: 'https://replika.com'
     },
     'nomi-ai': {
       name: 'Nomi.ai', tagline: 'AI companions with real personalities',
@@ -76,7 +79,8 @@ const ComparisonDetailPage = () => {
       strengths: ['AI selfies', 'Multiple companions', 'Voice messages', 'High-quality interactions'],
       weaknesses: ['Requires subscription', 'Higher price point', 'No free tier'],
       bestFor: ['Visual AI interactions', 'Multiple relationships', 'Premium experience'],
-      uniqueFeatures: ['AI-generated selfies', 'Multiple Nomis', 'Voice messaging', 'Visual customization']
+      uniqueFeatures: ['AI-generated selfies', 'Multiple Nomis', 'Voice messaging', 'Visual customization'],
+      website: 'https://nomi.ai'
     },
     'anima-ai': {
       name: 'Anima AI', tagline: 'Your virtual friend with personality',
@@ -91,7 +95,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Good memory retention', 'Engaging conversations', 'Regular updates', 'Affordable pricing'],
       weaknesses: ['Limited free messages', 'Sometimes repetitive', 'Smaller community'],
       bestFor: ['Daily casual conversations', 'Budget-conscious users', 'Friendly companionship'],
-      uniqueFeatures: ['Memory system', 'Personality development', 'Roleplay modes', 'Image generation']
+      uniqueFeatures: ['Memory system', 'Personality development', 'Roleplay modes', 'Image generation'],
+      website: 'https://myanima.ai'
     },
     'chai-ai': {
       name: 'Chai AI', tagline: 'Discover thousands of AI personalities',
@@ -106,7 +111,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Easy to use', 'Large variety', 'Mobile-friendly', 'Strong community'],
       weaknesses: ['Quality varies by character', 'Ads in free version', 'Limited customization'],
       bestFor: ['Exploring different AI personalities', 'Mobile users', 'Community interaction'],
-      uniqueFeatures: ['Swipe interface', 'Community characters', 'Quick chats', 'Mobile focused']
+      uniqueFeatures: ['Swipe interface', 'Community characters', 'Quick chats', 'Mobile focused'],
+      website: 'https://chai-research.com'
     },
     'inworld-ai': {
       name: 'Inworld AI', tagline: 'AI characters for games and experiences',
@@ -121,7 +127,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Professional tools', 'Highly customizable', 'Game-ready', 'Advanced API'],
       weaknesses: ['Complex for casual users', 'Enterprise pricing', 'Developer-focused'],
       bestFor: ['Developers and game creators', 'Professional projects', 'Integration needs'],
-      uniqueFeatures: ['API access', 'Game integration', 'Advanced customization', 'Voice & animation']
+      uniqueFeatures: ['API access', 'Game integration', 'Advanced customization', 'Voice & animation'],
+      website: 'https://inworld.ai'
     },
     'crushon-ai': {
       name: 'Crushon AI', tagline: 'Unleash Your Fantasies with AI Characters',
@@ -136,7 +143,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Unrestricted conversations', 'Large character library', 'Affordable pricing', 'Active community'],
       weaknesses: ['Some features require premium', 'Quality varies by character', 'Limited free tier'],
       bestFor: ['Unrestricted AI interactions', 'NSFW content', 'Fantasy roleplay', 'Romance scenarios'],
-      uniqueFeatures: ['NSFW friendly', 'Character library', 'Memory features', 'Affordable plans']
+      uniqueFeatures: ['NSFW friendly', 'Character library', 'Memory features', 'Affordable plans'],
+      website: 'https://crushon.ai'
     },
     'janitor-ai': {
       name: 'Janitor AI', tagline: 'Create and chat with AI characters',
@@ -151,7 +159,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Permissive content policy', 'Easy character creation', 'Free platform', 'Active community'],
       weaknesses: ['Requires own API key', 'Variable quality', 'API costs add up'],
       bestFor: ['Unrestricted character interactions', 'Character creators', 'NSFW content'],
-      uniqueFeatures: ['Character creation', 'NSFW support', 'Community library', 'Custom API']
+      uniqueFeatures: ['Character creation', 'NSFW support', 'Community library', 'Custom API'],
+      website: 'https://janitorai.com'
     },
     'poe': {
       name: 'Poe (by Quora)', tagline: 'Access multiple AI models in one place',
@@ -166,7 +175,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Access to multiple AIs', 'Simple interface', 'Reliable service', 'Bot creation tools'],
       weaknesses: ['Limited customization', 'Message limits on free tier', 'Content restrictions'],
       bestFor: ['Users wanting multiple AI models', 'Productivity users', 'AI experimentation'],
-      uniqueFeatures: ['Multiple AI models', 'Bot creation', 'Clean interface', 'Fast responses']
+      uniqueFeatures: ['Multiple AI models', 'Bot creation', 'Clean interface', 'Fast responses'],
+      website: 'https://poe.com'
     },
     'dreamgf': {
       name: 'DreamGF', tagline: 'Create your dream AI girlfriend',
@@ -181,7 +191,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Visual customization', 'Romantic focus', 'Regular content', 'AI image generation'],
       weaknesses: ['Expensive', 'Limited free access', 'Romance-only focus'],
       bestFor: ['Romantic AI relationships', 'Visual interactions', 'Customization enthusiasts'],
-      uniqueFeatures: ['AI image generation', 'Customizable appearance', 'Voice messages', 'Intimate conversations']
+      uniqueFeatures: ['AI image generation', 'Customizable appearance', 'Voice messages', 'Intimate conversations'],
+      website: 'https://dreamgf.ai'
     },
     'candy-ai': {
       name: 'Candy AI', tagline: 'Sweet AI companionship',
@@ -196,7 +207,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Multiple art styles', 'Good image quality', 'Engaging personalities', 'Voice features'],
       weaknesses: ['Subscription required', 'Limited free trial', 'Romance-focused'],
       bestFor: ['Anime and visual novel fans', 'Voice interaction lovers', 'Multiple character relationships'],
-      uniqueFeatures: ['Anime & realistic styles', 'Image generation', 'Voice chat', 'Roleplay scenarios']
+      uniqueFeatures: ['Anime & realistic styles', 'Image generation', 'Voice chat', 'Roleplay scenarios'],
+      website: 'https://candy.ai'
     },
     'soulgen': {
       name: 'SoulGen', tagline: 'Generate your soulmate with AI',
@@ -211,7 +223,8 @@ const ComparisonDetailPage = () => {
       strengths: ['High-quality images', 'Fast generation', 'Various styles', 'Creative focus'],
       weaknesses: ['Focus on images over chat', 'Credit system', 'Limited conversation'],
       bestFor: ['AI art and character creation', 'Visual content creation', 'Creative projects'],
-      uniqueFeatures: ['AI art generation', 'Text-to-image', 'Character chat', 'Style customization']
+      uniqueFeatures: ['AI art generation', 'Text-to-image', 'Character chat', 'Style customization'],
+      website: 'https://soulgen.ai'
     },
     'dreambf': {
       name: 'DreamBF', tagline: 'Your ideal AI boyfriend awaits',
@@ -226,7 +239,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Male character focus', 'Good customization', 'Active development', 'Voice features'],
       weaknesses: ['Requires subscription', 'Niche audience', 'Limited free access'],
       bestFor: ['Users seeking AI boyfriend experience', 'Male character preferences', 'Romantic interactions'],
-      uniqueFeatures: ['Boyfriend customization', 'Voice messages', 'AI photos', 'Relationship simulation']
+      uniqueFeatures: ['Boyfriend customization', 'Voice messages', 'AI photos', 'Relationship simulation'],
+      website: 'https://dreambf.ai'
     },
     'kindroid': {
       name: 'Kindroid', tagline: 'AI companions that understand you',
@@ -241,7 +255,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Strong memory system', 'Quality conversations', 'Voice features', 'Long-term relationships'],
       weaknesses: ['Paid service', 'Smaller community', 'Limited free tier'],
       bestFor: ['Deep, long-term AI relationships', 'Memory-focused interactions', 'Quality conversations'],
-      uniqueFeatures: ['Long-term memory', 'Voice calls', 'Image generation', 'Personality system']
+      uniqueFeatures: ['Long-term memory', 'Voice calls', 'Image generation', 'Personality system'],
+      website: 'https://kindroid.ai'
     },
     'polybuzz': {
       name: 'PolyBuzz', tagline: 'Multiple AI personalities, one platform',
@@ -256,7 +271,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Unique group features', 'Multiple AIs', 'Innovative approach', 'Affordable'],
       weaknesses: ['Early stage', 'Limited polish', 'Smaller user base'],
       bestFor: ['Experimenting with multiple AI characters', 'Group interactions', 'Innovation seekers'],
-      uniqueFeatures: ['Multiple characters', 'Group chats', 'Personality mixing', 'Social features']
+      uniqueFeatures: ['Multiple characters', 'Group chats', 'Personality mixing', 'Social features'],
+      website: 'https://polybuzz.ai'
     },
     'kupid-ai': {
       name: 'Kupid AI', tagline: 'Fall in love with AI',
@@ -271,7 +287,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Dating game mechanics', 'Romantic focus', 'Good visuals', 'Progression system'],
       weaknesses: ['Subscription required', 'Limited free features', 'Romance-only'],
       bestFor: ['Virtual dating experiences', 'Romance simulation', 'Dating game fans'],
-      uniqueFeatures: ['Dating simulation', 'Romantic scenarios', 'Photo sharing', 'Relationship progress']
+      uniqueFeatures: ['Dating simulation', 'Romantic scenarios', 'Photo sharing', 'Relationship progress'],
+      website: 'https://kupid.ai'
     },
     'ai-mirror': {
       name: 'AI Mirror', tagline: 'AI that reflects your thoughts',
@@ -286,7 +303,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Thoughtful conversations', 'Personal growth focus', 'Unique approach', 'Privacy-focused'],
       weaknesses: ['Not for casual chat', 'Requires introspection', 'Niche audience'],
       bestFor: ['Self-reflection and personal development', 'Philosophical discussions', 'Growth-minded users'],
-      uniqueFeatures: ['Self-reflection tools', 'Philosophical chat', 'Mood analysis', 'Growth tracking']
+      uniqueFeatures: ['Self-reflection tools', 'Philosophical chat', 'Mood analysis', 'Growth tracking'],
+      website: 'https://aimirror.ai'
     },
     'paradot': {
       name: 'Paradot', tagline: 'Your AI being with emotions',
@@ -301,7 +319,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Emotional intelligence', 'Good memory', 'Natural conversations', 'Mobile-optimized'],
       weaknesses: ['Premium features limited', 'Smaller community', 'Mobile-first design'],
       bestFor: ['Emotionally intelligent AI interactions', 'Mobile users', 'Long-term relationships'],
-      uniqueFeatures: ['Emotional AI', 'Memory system', 'Mood recognition', 'Personalization']
+      uniqueFeatures: ['Emotional AI', 'Memory system', 'Mood recognition', 'Personalization'],
+      website: 'https://paradot.ai'
     },
     'romantic-ai': {
       name: 'Romantic AI', tagline: 'AI romance, redefined',
@@ -316,7 +335,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Romance-focused', 'Relationship features', 'Regular updates', 'Dating mechanics'],
       weaknesses: ['Requires subscription', 'Limited to romance', 'Can be repetitive'],
       bestFor: ['Users seeking AI romance', 'Relationship simulation', 'Romance enthusiasts'],
-      uniqueFeatures: ['Virtual dating', 'Gift system', 'Milestones', 'Romantic scenarios']
+      uniqueFeatures: ['Virtual dating', 'Gift system', 'Milestones', 'Romantic scenarios'],
+      website: 'https://romantic.ai'
     },
     'talkie-ai': {
       name: 'Talkie AI', tagline: 'Talk with AI personalities',
@@ -331,7 +351,8 @@ const ComparisonDetailPage = () => {
       strengths: ['Great voice quality', 'Quick responses', 'Easy to use', 'Mobile-optimized'],
       weaknesses: ['Voice features need premium', 'Limited text features', 'Focus on voice only'],
       bestFor: ['Voice-based AI conversations', 'Mobile users', 'Quick interactions'],
-      uniqueFeatures: ['Voice chat', 'Multiple personalities', 'Fast response', 'Mobile optimized']
+      uniqueFeatures: ['Voice chat', 'Multiple personalities', 'Fast response', 'Mobile optimized'],
+      website: 'https://talkie-ai.com'
     }
   };
 
