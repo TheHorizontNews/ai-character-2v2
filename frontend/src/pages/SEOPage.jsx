@@ -131,6 +131,14 @@ const SEOPage = () => {
     pageData.relatedPages && pageData.relatedPages.includes(p.slug)
   );
 
+  // Generate schema.org JSON-LD
+  const schemaJsonLd = schemaToJsonLd(
+    generatePageSchema('seo-page', {
+      pageData,
+      platforms: recommendedPlatforms
+    })
+  );
+
   return (
     <div className="home-page">
       <Sidebar />
@@ -141,6 +149,7 @@ const SEOPage = () => {
             title={`${pageData.title} - Complete Guide & Best Platforms 2025`}
             description={`${pageData.description} Discover the best ${pageData.title.toLowerCase()} platforms with expert reviews, comparisons, and user guides.`}
             keywords={[...pageData.keywords, pageData.category.toLowerCase(), 'review', 'comparison', 'guide', '2025']}
+            schemaJsonLd={schemaJsonLd}
             ogImage={(() => {
               const title = pageData.title.toLowerCase();
               if (title.includes('girlfriend')) {
