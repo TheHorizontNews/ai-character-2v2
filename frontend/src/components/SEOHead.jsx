@@ -17,7 +17,7 @@ const SEOHead = ({
   const fullTitle = title ? `${title} | Character Central` : 'Character Central - Best AI Character Platform Reviews';
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : siteUrl);
 
-  // Default schema.org data
+  // Default schema.org data (fallback)
   const defaultSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
