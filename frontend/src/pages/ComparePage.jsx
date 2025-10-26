@@ -187,6 +187,22 @@ const ComparePage = () => {
 
   return (
     <div className="page-container">
+      <SEOHead 
+        title={compareHubMeta.title}
+        description={compareHubMeta.description}
+        keywords={[
+          'compare AI platforms',
+          'AI character comparison',
+          'platform comparison tool',
+          'side-by-side reviews',
+          'AI companion comparison',
+          'best AI platform',
+          'platform features comparison'
+        ]}
+        ogImage={`${SITE_DOMAIN}/og-image.png`}
+        canonical={`${SITE_DOMAIN}/compare`}
+        ogType="website"
+      />
       <Sidebar />
       
       <main className="main-content">
