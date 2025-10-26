@@ -17,57 +17,49 @@ const SEOPage = () => {
   const fullSlug = params['*'] || params.slug;
   const pageData = seoPages.find(p => p.slug === fullSlug);
   
-  // Function to add internal links to text
+  // Enhanced internal linking with cluster-based anchors
   const addInternalLinks = (text, currentSlug) => {
-    // Get pages from the same category (for clustering)
-    const sameCategoryPages = seoPages.filter(page => 
-      page.category === pageData.category && 
-      page.slug !== currentSlug
-    );
+    // Get cluster pages for smart interlinking
+    const clusterData = getClusterPages(currentSlug);
     
-    // Get related pages from different categories
-    const relatedPages = seoPages.filter(page => 
-      pageData.relatedPages && 
-      pageData.relatedPages.includes(page.slug)
-    );
+    if (!clusterData) return text;
     
-    // Combine and limit to 3 most relevant pages
-    const relevantPages = [...sameCategoryPages, ...relatedPages]
-      .filter((page, index, self) => 
-        index === self.findIndex(p => p.slug === page.slug)
-      )
-      .slice(0, 3);
-    
+    const { pages: clusterPages, anchorVariations } = clusterData;
+    const usedAnchors = [];
     let linkedText = text;
     let linksAdded = 0;
-    const maxLinks = 3;
+    const maxLinksPerParagraph = 4; // Increased from 3 to 4 for better coverage
     
-    // Add links based on keywords and titles
-    relevantPages.forEach(page => {
-      if (linksAdded >= maxLinks) return;
+    // Shuffle cluster pages for variety
+    const shuffledPages = [...clusterPages].sort(() => Math.random() - 0.5);
+    
+    // Add links with diverse anchors
+    shuffledPages.slice(0, maxLinksPerParagraph).forEach(pageSlug => {
+      if (linksAdded >= maxLinksPerParagraph) return;
       
-      // Try to link page title
-      const titleRegex = new RegExp(`\\b${page.title}\\b`, 'gi');
-      if (titleRegex.test(linkedText) && !linkedText.includes(`/character-review/${page.slug}`)) {
-        linkedText = linkedText.replace(titleRegex, (match) => 
-          `<a href="/character-review/${page.slug}" class="internal-link">${match}</a>`
-        );
-        linksAdded++;
-        return;
-      }
+      // Get multiple anchor variations for this page
+      const anchors = anchorVariations[pageSlug] || [];
       
-      // Try to link main keywords
-      if (linksAdded < maxLinks) {
-        page.keywords.slice(0, 2).forEach(keyword => {
-          if (linksAdded >= maxLinks) return;
-          const keywordRegex = new RegExp(`\\b${keyword}\\b(?![^<]*>)`, 'i');
-          if (keywordRegex.test(linkedText) && !linkedText.includes(`/character-review/${page.slug}`)) {
-            linkedText = linkedText.replace(keywordRegex, (match) => 
-              `<a href="/character-review/${page.slug}" class="internal-link">${match}</a>`
-            );
+      // Try each anchor variation until one matches
+      for (let i = 0; i < anchors.length && linksAdded < maxLinksPerParagraph; i++) {
+        const anchor = anchors[i];
+        const anchorLower = anchor.toLowerCase();
+        
+        // Skip if already used
+        if (usedAnchors.includes(anchorLower)) continue;
+        
+        // Create regex that matches the anchor text (case insensitive)
+        const anchorRegex = new RegExp(`\\b${anchor.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+        
+        // Check if text contains this anchor and it's not already linked
+        if (anchorRegex.test(linkedText) && !linkedText.includes(`/character-review/${pageSlug}`)) {
+          linkedText = linkedText.replace(anchorRegex, (match) => {
+            usedAnchors.push(anchorLower);
             linksAdded++;
-          }
-        });
+            return `<a href="/character-review/${pageSlug}" class="internal-link" title="${match}">${match}</a>`;
+          });
+          break; // Move to next page after successful link
+        }
       }
     });
     
