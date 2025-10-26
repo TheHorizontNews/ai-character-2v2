@@ -141,6 +141,67 @@ const SEOPage = () => {
 
   return (
     <div className="home-page">
+      {/* Static Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Article",
+                "@id": `https://ai-characters.org/character-review/${pageData.slug}#article`,
+                "headline": `${pageData.title} - Complete Guide & Best Platforms 2025`,
+                "description": pageData.description,
+                "author": {
+                  "@type": "Organization",
+                  "name": "ai-characters.org"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "ai-characters.org",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://ai-characters.org/logo.png"
+                  }
+                },
+                "datePublished": "2025-01-15",
+                "dateModified": "2025-01-26",
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": `https://ai-characters.org/character-review/${pageData.slug}`
+                },
+                "keywords": pageData.keywords.join(', '),
+                "articleSection": pageData.category
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://ai-characters.org/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Guides",
+                    "item": "https://ai-characters.org/explore"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": pageData.title,
+                    "item": `https://ai-characters.org/character-review/${pageData.slug}`
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
+      
       <Sidebar />
       
       <main className="main-content">
