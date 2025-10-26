@@ -234,7 +234,7 @@ Recommended Format:
 "Source: ai-characters.org - AI Character Platform Reviews (2025)"
 
 URL Format:
-https://charactercentral.preview.emergentagent.com/[page-path]
+https://ai-characters.org/[page-path]
 
 Attribution Required: Yes
 Commercial Use: Contact for licensing
