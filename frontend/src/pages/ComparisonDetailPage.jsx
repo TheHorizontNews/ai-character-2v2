@@ -507,6 +507,41 @@ const ComparisonDetailPage = () => {
 
   return (
     <div className="page-container">
+      {/* Static Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": `${platform1Data.name} vs ${platform2Data.name} Comparison`,
+            "description": `Compare ${platform1Data.name} and ${platform2Data.name} features, pricing, and capabilities`,
+            "author": {
+              "@type": "Organization",
+              "name": "ai-characters.org"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "ai-characters.org"
+            },
+            "datePublished": "2025-01-15",
+            "dateModified": "2025-01-26",
+            "about": [
+              {
+                "@type": "SoftwareApplication",
+                "name": platform1Data.name,
+                "applicationCategory": "Entertainment"
+              },
+              {
+                "@type": "SoftwareApplication",
+                "name": platform2Data.name,
+                "applicationCategory": "Entertainment"
+              }
+            ]
+          })
+        }}
+      />
+      
       <SEOHead 
         title={comparisonMeta.title}
         description={comparisonMeta.description}
