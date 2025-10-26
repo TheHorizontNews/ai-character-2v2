@@ -456,11 +456,11 @@
   run_ui: true
 
 ## test_plan:
-  current_focus:
+  current_focus: []
+  stuck_tasks: 
     - "Schema.org JSON-LD Implementation - All Pages"
-  stuck_tasks: []
   test_all: false
-  test_priority: "schema_validation_and_seo_testing"
+  test_priority: "deployment_configuration_fix"
 
 ## agent_communication:
     - agent: "main"
