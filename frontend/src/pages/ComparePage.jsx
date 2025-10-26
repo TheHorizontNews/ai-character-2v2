@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar';
 import SEOHead from '../components/SEOHead';
 import { GitCompare, Star, Users, TrendingUp, Heart, Crown, Gamepad2 } from 'lucide-react';
 import { compareHubMeta, SITE_DOMAIN } from '../data/metaTags';
+import { generatePageSchema, schemaToJsonLd } from '../utils/schemaGenerator';
 import '../styles/ComparePage.css';
 
 const ComparePage = () => {
