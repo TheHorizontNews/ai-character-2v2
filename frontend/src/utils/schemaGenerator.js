@@ -296,6 +296,22 @@ export const generatePageSchema = (pageType, data) => {
     case 'explore':
       schemas.push(generateCollectionSchema('Explore AI Character Topics', data.pages));
       break;
+      
+    case 'compare':
+      schemas.push(generateCollectionSchema('AI Platform Comparisons', data.comparisons));
+      schemas.push(generateBreadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Compare Platforms', url: `${SITE_URL}/compare` }
+      ]));
+      break;
+      
+    case 'allComparisons':
+      schemas.push(generateCollectionSchema('All Platform Comparisons', data.comparisons));
+      schemas.push(generateBreadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'All Comparisons', url: `${SITE_URL}/all-comparisons` }
+      ]));
+      break;
   }
   
   return schemas;
