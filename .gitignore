@@ -133,3 +133,4 @@ android-sdk/ -e
 # Environment files
 *.env
 *.env.*
+frontend/node_modules/puppeteer/.local-chromium/linux-686378/chrome-linux/chrome
