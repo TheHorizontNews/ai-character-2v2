@@ -244,15 +244,15 @@ class BotMetaMiddleware(BaseHTTPMiddleware):
             with open(frontend_path, 'r', encoding='utf-8') as f:
                 html_content = f.read()
             
-            # Get meta data for this path
+            # Get meta data and schema for this path
             path = request.url.path
-            meta_data = get_meta_for_path(path)
+            meta_data, schema_json = get_meta_for_path(path)
             
             # Build canonical URL
             canonical_url = f"{SITE_DOMAIN}{path}"
             
-            # Inject meta tags
-            modified_html = inject_meta_tags(html_content, meta_data, canonical_url)
+            # Inject meta tags and schema
+            modified_html = inject_meta_tags(html_content, meta_data, canonical_url, schema_json)
             
             # Return modified HTML
             return Response(
