@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { aiPlatforms, faqs } from '../data/mockData';
 import { homepageMeta, SITE_DOMAIN } from '../data/metaTags';
+import { generatePageSchema, schemaToJsonLd } from '../utils/schemaGenerator';
 import '../styles/HomePage.css';
 
 const HomePage = () => {
