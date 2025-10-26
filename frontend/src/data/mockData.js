@@ -15,7 +15,9 @@ export const aiPlatforms = [
     image: "https://customer-assets.emergentagent.com/job_aipals-compare/artifacts/fezbpzru_fbc08f26-febe-420b-912c-0ce88cfce6da_rw_1200.jpg",
     pros: ["Highly customizable characters", "Natural conversations", "Strong privacy protection"],
     cons: ["Premium features require subscription"],
-    bestFor: "Users seeking deep emotional connection"
+    bestFor: "Users seeking deep emotional connection",
+    website: "https://lovescape.ai",
+    affiliateUrl: "https://lovescape.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 2,
@@ -31,7 +33,9 @@ export const aiPlatforms = [
     image: "/images/character-ai.webp",
     pros: ["Large character library", "Active community", "Free to use"],
     cons: ["Can be slow during peak times", "Limited customization"],
-    bestFor: "Casual users and roleplay enthusiasts"
+    bestFor: "Casual users and roleplay enthusiasts",
+    website: "https://character.ai",
+    affiliateUrl: "https://character.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 3,
@@ -47,7 +51,9 @@ export const aiPlatforms = [
     image: "/images/replika.png",
     pros: ["Therapeutic approach", "Learns your personality", "Supportive community"],
     cons: ["Romantic features locked behind paywall"],
-    bestFor: "Mental wellness and personal growth"
+    bestFor: "Mental wellness and personal growth",
+    website: "https://replika.com",
+    affiliateUrl: "https://replika.com" // TODO: Replace with actual affiliate link
   },
   {
     id: 4,
