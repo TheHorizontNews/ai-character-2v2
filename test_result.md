@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-## user_problem_statement: Convert React application to static HTML/CSS/JavaScript website. Generate all pages (67 SEO pages, 21+ platform pages, 5 category pages) with working search/filtering on explore page, maintain pixel-perfect design and mobile responsiveness.
+## user_problem_statement: Convert React application to static HTML/CSS/JavaScript website. Generate all pages (67 SEO pages, 21+ platform pages, 5 category pages) with working search/filtering on explore page, maintain pixel-perfect design and mobile responsiveness. Complete schema.org markup implementation across all pages for SEO optimization.
 
 ## backend:
   - task: "Backend API endpoints"
