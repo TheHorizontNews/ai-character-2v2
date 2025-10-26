@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Comprehensive Backend Testing for Bot Detection and Meta Tag Pre-rendering Middleware
-Tests the BotMetaMiddleware implementation for social media bot detection and meta tag injection.
+Comprehensive Backend and Schema.org Testing for ai-characters.org
+Tests backend API functionality, sitemap generation, bot detection middleware, and schema.org implementation.
 """
 
 import requests
@@ -10,15 +10,18 @@ import re
 from bs4 import BeautifulSoup
 import os
 from dotenv import load_dotenv
+from urllib.parse import urljoin
 
 # Load environment variables
 load_dotenv('/app/frontend/.env')
 
-# Get backend URL from frontend environment
-BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://seoschema.preview.emergentagent.com')
-# Test the backend directly on localhost to bypass any reverse proxy
+# Get URLs from environment - using production URLs as specified in review request
+FRONTEND_URL = 'https://seoschema.preview.emergentagent.com'
+BACKEND_URL = 'https://seoschema.preview.emergentagent.com/api'
+# Test the backend directly on localhost for internal testing
 DIRECT_BACKEND_URL = 'http://localhost:8001'
-print(f"Testing backend at: {BACKEND_URL}")
+print(f"Testing frontend at: {FRONTEND_URL}")
+print(f"Testing backend API at: {BACKEND_URL}")
 print(f"Testing backend directly at: {DIRECT_BACKEND_URL}")
 
 # Bot User-Agents for testing
