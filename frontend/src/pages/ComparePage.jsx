@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import SEOHead from '../components/SEOHead';
 import { GitCompare, Star, Users, TrendingUp, Heart, Crown, Gamepad2 } from 'lucide-react';
+import { compareHubMeta, SITE_DOMAIN } from '../data/metaTags';
 import '../styles/ComparePage.css';
 
 const ComparePage = () => {
