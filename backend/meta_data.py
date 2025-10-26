@@ -670,3 +670,174 @@ ALL_COMPARISONS = {
     "og_title": "All AI Platform Comparisons — Complete List",
     "og_description": "Browse complete list of AI character platform comparisons. Find detailed reviews and analysis."
 }
+
+
+# Schema.org JSON-LD generation functions
+import json
+
+def generate_homepage_schema():
+    """Generate schema.org markup for homepage"""
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "ai-characters.org",
+                "alternateName": "Character Central",
+                "url": SITE_DOMAIN,
+                "logo": f"{SITE_DOMAIN}/logo.png",
+                "description": "Expert reviews and comparisons of AI character and companion platforms"
+            },
+            {
+                "@type": "WebSite",
+                "name": "Character Central",
+                "url": SITE_DOMAIN,
+                "description": "Discover the best AI character and companion platforms. Expert reviews, comparisons, and guides.",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "ai-characters.org"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": f"{SITE_DOMAIN}/explore?search={{search_term_string}}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            }
+        ]
+    })
+
+def generate_platform_schema(platform_slug, platform_name, description, rating="4.5"):
+    """Generate schema.org markup for platform pages"""
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "SoftwareApplication",
+            "name": platform_name,
+            "applicationCategory": "Entertainment",
+            "operatingSystem": "Web, iOS, Android",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": rating,
+                "bestRating": "5",
+                "ratingCount": "1000"
+            }
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": rating,
+            "bestRating": "5"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "ai-characters.org"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ai-characters.org"
+        },
+        "reviewBody": description,
+        "datePublished": "2025-01-15"
+    })
+
+def generate_seo_page_schema(page_slug, page_title, description, category, keywords):
+    """Generate schema.org markup for SEO/guide pages"""
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": f"{SITE_DOMAIN}/character-review/{page_slug}#article",
+                "headline": f"{page_title} - Complete Guide & Best Platforms 2025",
+                "description": description,
+                "author": {
+                    "@type": "Organization",
+                    "name": "ai-characters.org"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "ai-characters.org",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": f"{SITE_DOMAIN}/logo.png"
+                    }
+                },
+                "datePublished": "2025-01-15",
+                "dateModified": "2025-01-26",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": f"{SITE_DOMAIN}/character-review/{page_slug}"
+                },
+                "keywords": keywords,
+                "articleSection": category
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": SITE_DOMAIN
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Guides",
+                        "item": f"{SITE_DOMAIN}/explore"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": page_title,
+                        "item": f"{SITE_DOMAIN}/character-review/{page_slug}"
+                    }
+                ]
+            }
+        ]
+    })
+
+def generate_comparison_schema(platform1_name, platform2_name):
+    """Generate schema.org markup for comparison pages"""
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": f"{platform1_name} vs {platform2_name} Comparison",
+        "description": f"Compare {platform1_name} and {platform2_name} features, pricing, and capabilities",
+        "author": {
+            "@type": "Organization",
+            "name": "ai-characters.org"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ai-characters.org"
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-26",
+        "about": [
+            {
+                "@type": "SoftwareApplication",
+                "name": platform1_name,
+                "applicationCategory": "Entertainment"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": platform2_name,
+                "applicationCategory": "Entertainment"
+            }
+        ]
+    })
+
+def generate_collection_schema(page_name, description, url, item_count=0):
+    """Generate schema.org markup for collection/explore pages"""
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": page_name,
+        "description": description,
+        "url": url,
+        "numberOfItems": item_count
+    })
