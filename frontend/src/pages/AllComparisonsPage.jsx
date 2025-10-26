@@ -62,6 +62,26 @@ const AllComparisonsPage = () => {
 
   return (
     <div className="page-container">
+      {/* Static Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "All Platform Comparisons",
+            "description": `Browse all ${allComparisons.length} AI character platform comparisons`,
+            "url": "https://ai-characters.org/all-comparisons",
+            "numberOfItems": allComparisons.length,
+            "hasPart": allComparisons.slice(0, 15).map(comp => ({
+              "@type": "Article",
+              "headline": `${comp.platform1} vs ${comp.platform2}`,
+              "url": `https://ai-characters.org${comp.url}`
+            }))
+          })
+        }}
+      />
+      
       <SEOHead 
         title="All AI Platform Comparisons — Complete Comparison List 2025"
         description="Browse all AI character platform comparisons. Find detailed side-by-side reviews of your favorite platforms."
