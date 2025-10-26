@@ -47,63 +47,6 @@ const HomePage = () => {
         ogImage={`${SITE_DOMAIN}/og-image.png`}
         canonical={`${SITE_DOMAIN}/`}
       />
-      <Sidebar />
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "WebSite",
-              "@id": "https://ai-characters.org/#website",
-              "url": "https://ai-characters.org/",
-              "name": "AI Characters",
-              "description": "Your comprehensive guide to AI character and companion platforms",
-              "publisher": {
-                "@id": "https://ai-characters.org/#organization"
-              },
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://ai-characters.org/explore?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            },
-            {
-              "@type": "Organization",
-              "@id": "https://ai-characters.org/#organization",
-              "name": "AI Characters",
-              "url": "https://ai-characters.org/",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ai-characters.org/favicon.svg",
-                "width": 64,
-                "height": 64
-              },
-              "sameAs": []
-            },
-            {
-              "@type": "WebPage",
-              "@id": "https://ai-characters.org/#webpage",
-              "url": "https://ai-characters.org/",
-              "name": "Best AI Character & Companion Platforms 2025 | AI Characters",
-              "isPartOf": {
-                "@id": "https://ai-characters.org/#website"
-              },
-              "about": {
-                "@id": "https://ai-characters.org/#organization"
-              },
-              "description": "Discover and compare the top 21 AI character and companion platforms. Expert reviews, detailed comparisons, and guides for AI girlfriends, chatbots, and virtual companions."
-            },
-            {
-              "@type": "CollectionPage",
-              "name": "AI Companion Platform Reviews",
-              "description": "Comprehensive reviews of 21+ AI character and companion platforms",
-              "numberOfItems": 21,
-              "about": {
-                "@type": "Thing",
-                "name": "AI Companions"
-              }
-            }
-          ]
-        }}
-      />
       <Sidebar activeSection={activeSection} onSectionChange={setActiveSection} />
       
       <main className="main-content">
