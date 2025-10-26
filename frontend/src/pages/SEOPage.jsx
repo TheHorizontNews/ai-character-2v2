@@ -66,6 +66,45 @@ const SEOPage = () => {
     
     return linkedText;
   };
+  
+  // Generate SEO-optimized text with natural cluster anchor mentions
+  const generateSEOText = (currentSlug) => {
+    const clusterData = getClusterPages(currentSlug);
+    if (!clusterData) return {
+      intro: `${pageData.title} represents the cutting edge of artificial intelligence technology in the ${pageData.category.toLowerCase()} space.`,
+      evolution: `The evolution of ${pageData.keywords[0]} technology has transformed how we interact with digital companions.`,
+      choosing: `When selecting a ${pageData.category.toLowerCase()} platform, consider factors such as conversation quality and customization options.`
+    };
+    
+    const { pages: clusterPages, anchorVariations } = clusterData;
+    
+    // Select 2-3 random pages from cluster for mentions
+    const mentionPages = [...clusterPages]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+    
+    // Get one anchor for each page
+    const mentions = mentionPages.map(pageSlug => {
+      const anchors = anchorVariations[pageSlug] || [];
+      return anchors[Math.floor(Math.random() * Math.min(3, anchors.length))];
+    }).filter(Boolean);
+    
+    return {
+      intro: `${pageData.title} represents the cutting edge of artificial intelligence technology in the ${pageData.category.toLowerCase()} space. 
+        Modern platforms offer everything from ${mentions[0] || 'basic interactions'} to ${mentions[1] || 'advanced features'}, 
+        creating meaningful connections through ${pageData.keywords.slice(0, 2).join(' and ')}.`,
+      
+      evolution: `The evolution of ${pageData.keywords[0]} technology has transformed digital companionship. 
+        Today's platforms integrate ${mentions[1] || 'voice features'}, ${mentions[2] || 'personality customization'}, 
+        and emotional intelligence to create authentic ${pageData.category.toLowerCase()} experiences that respond to user preferences.`,
+      
+      choosing: `When choosing a ${pageData.category.toLowerCase()} platform, explore options like ${mentions[0] || 'chat features'}, 
+        ${mentions[1] || 'voice interactions'}, and ${mentions[2] || 'roleplay capabilities'}. 
+        The best platforms combine advanced AI technology with intuitive interfaces for engaging ${pageData.keywords[0]} experiences.`
+    };
+  };
+  
+  const seoText = pageData ? generateSEOText(pageData.slug) : null;
 
   if (!pageData) {
     return (
