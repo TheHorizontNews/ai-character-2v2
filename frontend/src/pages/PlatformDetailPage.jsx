@@ -38,11 +38,17 @@ const PlatformDetailPage = () => {
   console.log('Meta title from platformMeta:', platformMeta[platform.slug]?.title);
   console.log('Using title:', metaTitle);
 
+  // Generate schema.org JSON-LD
+  const schemaJsonLd = schemaToJsonLd(
+    generatePageSchema('platform', { platform })
+  );
+
   return (
     <div className="home-page">
       <SEOHead 
         title={metaTitle}
         description={metaDescription}
+        schemaJsonLd={schemaJsonLd}
         keywords={[
           platform.name.toLowerCase(),
           ...platform.features.slice(0, 5),
