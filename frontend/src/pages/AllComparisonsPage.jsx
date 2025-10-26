@@ -5,6 +5,7 @@ import SEOHead from '../components/SEOHead';
 import { List, Search, Filter } from 'lucide-react';
 import { generateAllComparisons, getComparisonStats, filterComparisons, getBrandList } from '../utils/comparisonGenerator';
 import { SITE_DOMAIN } from '../data/metaTags';
+import { generatePageSchema, schemaToJsonLd } from '../utils/schemaGenerator';
 import '../styles/AllComparisonsPage.css';
 
 const AllComparisonsPage = () => {
