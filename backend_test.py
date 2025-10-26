@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 load_dotenv('/app/frontend/.env')
 
 # Get backend URL from frontend environment
-BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://aivertex.preview.emergentagent.com')
+BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://seoschema.preview.emergentagent.com')
 # Test the backend directly on localhost to bypass any reverse proxy
 DIRECT_BACKEND_URL = 'http://localhost:8001'
 print(f"Testing backend at: {BACKEND_URL}")
@@ -196,7 +196,7 @@ class BotMetaMiddlewareTest:
                     self.log_result("Homepage OG Description", False, "No OG description found")
                     
                 # Test canonical URL
-                expected_canonical = "https://charactercentral.preview.emergentagent.com/"
+                expected_canonical = "https://seoschema.preview.emergentagent.com/"
                 if meta_data['canonical'] == expected_canonical:
                     self.log_result("Homepage Canonical URL", True, f"Canonical: {meta_data['canonical']}")
                 else:
@@ -478,9 +478,9 @@ class BotMetaMiddlewareTest:
         print("\n=== Test 7: Canonical URLs ===")
         
         test_paths = [
-            {'path': '/', 'expected_base': 'https://charactercentral.preview.emergentagent.com/'},
-            {'path': '/platform/lovescape', 'expected_base': 'https://charactercentral.preview.emergentagent.com/platform/lovescape'},
-            {'path': '/character-review/ai-girlfriend-chat', 'expected_base': 'https://charactercentral.preview.emergentagent.com/character-review/ai-girlfriend-chat'}
+            {'path': '/', 'expected_base': 'https://seoschema.preview.emergentagent.com/'},
+            {'path': '/platform/lovescape', 'expected_base': 'https://seoschema.preview.emergentagent.com/platform/lovescape'},
+            {'path': '/character-review/ai-girlfriend-chat', 'expected_base': 'https://seoschema.preview.emergentagent.com/character-review/ai-girlfriend-chat'}
         ]
         
         for test_path in test_paths:
