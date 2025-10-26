@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
@@ -6,7 +6,9 @@ import PlatformCard from '../components/PlatformCard';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { seoPages } from '../data/seoPages';
+import { getClusterPages, getRandomAnchor } from '../data/seoPageClusters';
 import { aiPlatforms } from '../data/mockData';
+import { SITE_DOMAIN } from '../data/metaTags';
 import '../styles/SEOPage.css';
 
 const SEOPage = () => {
