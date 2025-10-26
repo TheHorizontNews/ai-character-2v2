@@ -1064,7 +1064,7 @@ class ComprehensiveBackendTest:
         return passed_tests, failed_tests, len(self.errors)
 
 if __name__ == "__main__":
-    tester = BotMetaMiddlewareTest()
+    tester = ComprehensiveBackendTest()
     passed, failed, errors = tester.run_all_tests()
     
     # Exit with appropriate code
