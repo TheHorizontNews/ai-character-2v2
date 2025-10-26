@@ -39,7 +39,7 @@ BOT_USER_AGENTS = {
 # Regular browser User-Agent
 REGULAR_BROWSER = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 
-class BotMetaMiddlewareTest:
+class ComprehensiveBackendTest:
     def __init__(self):
         self.results = []
         self.errors = []
