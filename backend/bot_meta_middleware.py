@@ -111,34 +111,60 @@ def inject_meta_tags(html_content: str, meta_data: dict, canonical_url: str, sch
     
     return new_html
 
-def get_meta_for_path(path: str) -> dict:
-    """Get meta tags data based on the request path"""
+def get_meta_for_path(path: str) -> tuple[dict, str]:
+    """Get meta tags data and schema JSON based on the request path"""
     
     # Homepage
     if path == '/' or path == '':
-        return HOMEPAGE
+        return HOMEPAGE, generate_homepage_schema()
     
     # Platform detail pages: /platform/:slug
     if path.startswith('/platform/'):
         slug = path.replace('/platform/', '').strip('/')
         if slug in PLATFORMS:
-            return PLATFORMS[slug]
+            platform = PLATFORMS[slug]
+            schema = generate_platform_schema(
+                slug, 
+                platform['name'], 
+                platform['description'],
+                platform.get('rating', '4.5')
+            )
+            return platform, schema
     
     # SEO pages: /character-review/:slug
     if path.startswith('/character-review/') or path.startswith('/seo/'):
         slug = path.replace('/character-review/', '').replace('/seo/', '').strip('/')
         if slug in SEO_PAGES:
-            return SEO_PAGES[slug]
+            page = SEO_PAGES[slug]
+            schema = generate_seo_page_schema(
+                slug,
+                page.get('title', ''),
+                page.get('description', ''),
+                page.get('category', 'General'),
+                ', '.join(page.get('keywords', []))
+            )
+            return page, schema
     
     # Category pages: /category/:name
     if path.startswith('/category/'):
         category = path.replace('/category/', '').strip('/').lower()
         if category in CATEGORIES:
-            return CATEGORIES[category]
+            cat_data = CATEGORIES[category]
+            schema = generate_collection_schema(
+                cat_data['title'],
+                cat_data['description'],
+                f"{SITE_DOMAIN}/category/{category}"
+            )
+            return cat_data, schema
     
     # Compare hub
     if path == '/compare' or path == '/compare/':
-        return COMPARE_HUB
+        schema = generate_collection_schema(
+            "AI Platform Comparisons",
+            "Compare AI character platforms side-by-side",
+            f"{SITE_DOMAIN}/compare"
+        )
+        return COMPARE_HUB, schema
     
     # Comparison detail pages: /compare/:platform1-vs-:platform2
     if path.startswith('/compare/') and '-vs-' in path:
@@ -153,23 +179,39 @@ def get_meta_for_path(path: str) -> dict:
             platform2_data = PLATFORMS.get(platform2_slug)
             
             if platform1_data and platform2_data:
-                return get_comparison_meta(
+                meta = get_comparison_meta(
                     platform1_data['name'],
                     platform2_data['name'],
                     platform1_slug,
                     platform2_slug
                 )
+                schema = generate_comparison_schema(
+                    platform1_data['name'],
+                    platform2_data['name']
+                )
+                return meta, schema
     
     # Explore page
     if path == '/explore' or path == '/explore/':
-        return EXPLORE_PAGE
+        schema = generate_collection_schema(
+            "Explore AI Character Topics",
+            "Browse 67 comprehensive guides on AI companions",
+            f"{SITE_DOMAIN}/explore",
+            67
+        )
+        return EXPLORE_PAGE, schema
     
     # All comparisons page
     if path == '/all-comparisons' or path == '/all-comparisons/':
-        return ALL_COMPARISONS
+        schema = generate_collection_schema(
+            "All Platform Comparisons",
+            "Browse all AI character platform comparisons",
+            f"{SITE_DOMAIN}/all-comparisons"
+        )
+        return ALL_COMPARISONS, schema
     
     # Default fallback to homepage
-    return HOMEPAGE
+    return HOMEPAGE, generate_homepage_schema()
 
 class BotMetaMiddleware(BaseHTTPMiddleware):
     """Middleware to detect bots and inject meta tags"""
