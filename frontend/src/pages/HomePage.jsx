@@ -27,12 +27,104 @@ const HomePage = () => {
     generatePageSchema('homepage', { platforms: aiPlatforms })
   );
 
+  // Static schema.org JSON-LD
+  const staticSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "ai-characters.org",
+        "alternateName": "Character Central",
+        "url": "https://ai-characters.org",
+        "logo": "https://ai-characters.org/logo.png",
+        "description": "Expert reviews and comparisons of AI character and companion platforms",
+        "sameAs": ["https://twitter.com/CharacterCentral"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Character Central",
+        "url": "https://ai-characters.org",
+        "description": "Discover the best AI character and companion platforms. Expert reviews, comparisons, and guides.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ai-characters.org"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://ai-characters.org/explore?search={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Best AI Character Platforms",
+        "description": "21 AI character platforms",
+        "numberOfItems": 21,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Lovescape",
+              "url": "https://ai-characters.org/platform/lovescape",
+              "applicationCategory": "Entertainment",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "bestRating": "5"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Character.AI",
+              "url": "https://ai-characters.org/platform/character-ai",
+              "applicationCategory": "Entertainment",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "bestRating": "5"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Replika",
+              "url": "https://ai-characters.org/platform/replika",
+              "applicationCategory": "Entertainment",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.6",
+                "bestRating": "5"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="home-page">
+      {/* Static Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(staticSchema) }}
+      />
+      
       <SEOHead 
         title={homepageMeta.title}
         description={homepageMeta.description}
-        schemaJsonLd={schemaJsonLd}
         keywords={[
           'ai characters',
           'ai companions',
