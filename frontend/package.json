@@ -58,7 +58,33 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "postbuild": "react-snap",
     "test": "craco test"
+  },
+  "reactSnap": {
+    "inlineCss": true,
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    },
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "include": [
+      "/",
+      "/explore",
+      "/compare",
+      "/all-comparisons",
+      "/platform/lovescape",
+      "/platform/character-ai",
+      "/platform/replika",
+      "/character-review/ai-girlfriend-chat",
+      "/character-review/ai-boyfriend-chat",
+      "/character-review/ai-chatbot-nsfw",
+      "/character-review/character-ai-alternatives",
+      "/compare/lovescape-vs-character-ai"
+    ]
   },
   "browserslist": {
     "production": [
