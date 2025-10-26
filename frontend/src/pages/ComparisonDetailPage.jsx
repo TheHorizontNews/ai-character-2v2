@@ -510,6 +510,7 @@ const ComparisonDetailPage = () => {
       <SEOHead 
         title={comparisonMeta.title}
         description={comparisonMeta.description}
+        schemaJsonLd={schemaJsonLd}
         keywords={[
           platform1Data.name.toLowerCase(),
           platform2Data.name.toLowerCase(),
