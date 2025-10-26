@@ -49,6 +49,25 @@ const ExplorePage = () => {
 
   return (
     <div className="home-page">
+      {/* Static Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Explore AI Character Topics",
+            "description": "Browse 67 comprehensive guides on AI companions, characters, and chat platforms",
+            "url": "https://ai-characters.org/explore",
+            "hasPart": seoPages.slice(0, 10).map(page => ({
+              "@type": "Article",
+              "headline": page.title,
+              "url": `https://ai-characters.org/character-review/${page.slug}`
+            }))
+          })
+        }}
+      />
+      
       <SEOHead 
         title={explorePageMeta.title}
         description={explorePageMeta.description}
