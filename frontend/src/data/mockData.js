@@ -69,7 +69,9 @@ export const aiPlatforms = [
     image: "/images/anima-ai.png",
     pros: ["Good memory retention", "Engaging conversations", "Regular updates"],
     cons: ["Limited free messages", "Sometimes repetitive"],
-    bestFor: "Daily casual conversations"
+    bestFor: "Daily casual conversations",
+    website: "https://myanima.ai",
+    affiliateUrl: "https://myanima.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 5,
@@ -85,7 +87,9 @@ export const aiPlatforms = [
     image: "/images/nomi.png",
     pros: ["Unique selfie feature", "Multiple AI companions", "Strong personality"],
     cons: ["Requires subscription", "Higher price point"],
-    bestFor: "Users wanting visual AI interactions"
+    bestFor: "Users wanting visual AI interactions",
+    website: "https://nomi.ai",
+    affiliateUrl: "https://nomi.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 6,
@@ -101,7 +105,9 @@ export const aiPlatforms = [
     image: "/images/chai-ai.jpg",
     pros: ["Easy to use", "Large variety", "Mobile-friendly"],
     cons: ["Quality varies by character", "Ads in free version"],
-    bestFor: "Exploring different AI personalities"
+    bestFor: "Exploring different AI personalities",
+    website: "https://chai-research.com",
+    affiliateUrl: "https://chai-research.com" // TODO: Replace with actual affiliate link
   },
   {
     id: 7,
@@ -117,7 +123,9 @@ export const aiPlatforms = [
     image: "/images/inworld-ai.jpg",
     pros: ["Professional tools", "Highly customizable", "Game-ready"],
     cons: ["Complex for casual users", "Enterprise pricing"],
-    bestFor: "Developers and game creators"
+    bestFor: "Developers and game creators",
+    website: "https://inworld.ai",
+    affiliateUrl: "https://inworld.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 8,
@@ -133,7 +141,9 @@ export const aiPlatforms = [
     image: "/images/crushon-ai.jpg",
     pros: ["Unrestricted conversations", "Large character library", "Affordable premium plans"],
     cons: ["Some features require premium", "Quality varies by character"],
-    bestFor: "Users seeking unrestricted AI interactions"
+    bestFor: "Users seeking unrestricted AI interactions",
+    website: "https://crushon.ai",
+    affiliateUrl: "https://crushon.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 9,
@@ -149,7 +159,9 @@ export const aiPlatforms = [
     image: "/images/janitor-ai.png",
     pros: ["Permissive content policy", "Easy character creation", "Free platform"],
     cons: ["Requires own API key", "Variable quality"],
-    bestFor: "Unrestricted character interactions"
+    bestFor: "Unrestricted character interactions",
+    website: "https://janitorai.com",
+    affiliateUrl: "https://janitorai.com" // TODO: Replace with actual affiliate link
   },
   {
     id: 10,
@@ -165,7 +177,9 @@ export const aiPlatforms = [
     image: "/images/poe.jpg",
     pros: ["Access to multiple AIs", "Simple interface", "Reliable service"],
     cons: ["Limited customization", "Message limits on free tier"],
-    bestFor: "Users wanting multiple AI models"
+    bestFor: "Users wanting multiple AI models",
+    website: "https://poe.com",
+    affiliateUrl: "https://poe.com" // TODO: Replace with actual affiliate link
   },
   {
     id: 11,
@@ -181,7 +195,9 @@ export const aiPlatforms = [
     image: "/images/dreamgf.jpg",
     pros: ["Visual customization", "Romantic focus", "Regular content"],
     cons: ["Expensive", "Limited free access"],
-    bestFor: "Romantic AI relationships"
+    bestFor: "Romantic AI relationships",
+    website: "https://dreamgf.ai",
+    affiliateUrl: "https://dreamgf.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 12,
@@ -197,7 +213,9 @@ export const aiPlatforms = [
     image: "/images/candy-ai.png",
     pros: ["Multiple art styles", "Good image quality", "Engaging personalities"],
     cons: ["Subscription required", "Limited free trial"],
-    bestFor: "Anime and visual novel fans"
+    bestFor: "Anime and visual novel fans",
+    website: "https://candy.ai",
+    affiliateUrl: "https://candy.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 13,
@@ -213,7 +231,9 @@ export const aiPlatforms = [
     image: "/images/soulgen.jpg",
     pros: ["High-quality images", "Fast generation", "Various styles"],
     cons: ["Focus on images over chat", "Credit system"],
-    bestFor: "AI art and character creation"
+    bestFor: "AI art and character creation",
+    website: "https://soulgen.ai",
+    affiliateUrl: "https://soulgen.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 14,
@@ -229,7 +249,9 @@ export const aiPlatforms = [
     image: "/images/dreambf.png",
     pros: ["Male character focus", "Good customization", "Active development"],
     cons: ["Requires subscription", "Niche audience"],
-    bestFor: "Users seeking AI boyfriend experience"
+    bestFor: "Users seeking AI boyfriend experience",
+    website: "https://dreambf.ai",
+    affiliateUrl: "https://dreambf.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 15,
@@ -245,7 +267,9 @@ export const aiPlatforms = [
     image: "/images/kindroid.png",
     pros: ["Strong memory system", "Quality conversations", "Voice features"],
     cons: ["Paid service", "Smaller community"],
-    bestFor: "Deep, long-term AI relationships"
+    bestFor: "Deep, long-term AI relationships",
+    website: "https://kindroid.ai",
+    affiliateUrl: "https://kindroid.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 16,
@@ -261,7 +285,9 @@ export const aiPlatforms = [
     image: "/images/polybuzz.png",
     pros: ["Unique group features", "Multiple AIs", "Innovative approach"],
     cons: ["Early stage", "Limited polish"],
-    bestFor: "Experimenting with multiple AI characters"
+    bestFor: "Experimenting with multiple AI characters",
+    website: "https://polybuzz.ai",
+    affiliateUrl: "https://polybuzz.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 17,
@@ -277,7 +303,9 @@ export const aiPlatforms = [
     image: "/images/kupid-ai.webp",
     pros: ["Dating game mechanics", "Romantic focus", "Good visuals"],
     cons: ["Subscription required", "Limited free features"],
-    bestFor: "Virtual dating experiences"
+    bestFor: "Virtual dating experiences",
+    website: "https://kupid.ai",
+    affiliateUrl: "https://kupid.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 18,
@@ -293,7 +321,9 @@ export const aiPlatforms = [
     image: "/images/ai-mirror.png",
     pros: ["Thoughtful conversations", "Personal growth focus", "Unique approach"],
     cons: ["Not for casual chat", "Requires introspection"],
-    bestFor: "Self-reflection and personal development"
+    bestFor: "Self-reflection and personal development",
+    website: "https://aimirror.ai",
+    affiliateUrl: "https://aimirror.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 19,
@@ -309,7 +339,9 @@ export const aiPlatforms = [
     image: "/images/paradot.png",
     pros: ["Emotional intelligence", "Good memory", "Natural conversations"],
     cons: ["Premium features limited", "Mobile-only initially"],
-    bestFor: "Emotionally intelligent AI interactions"
+    bestFor: "Emotionally intelligent AI interactions",
+    website: "https://paradot.ai",
+    affiliateUrl: "https://paradot.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 20,
@@ -325,7 +357,9 @@ export const aiPlatforms = [
     image: "/images/romantic-ai.png",
     pros: ["Romance-focused", "Relationship features", "Regular updates"],
     cons: ["Requires subscription", "Limited to romance"],
-    bestFor: "Users seeking AI romance"
+    bestFor: "Users seeking AI romance",
+    website: "https://romantic.ai",
+    affiliateUrl: "https://romantic.ai" // TODO: Replace with actual affiliate link
   },
   {
     id: 21,
@@ -341,7 +375,9 @@ export const aiPlatforms = [
     image: "/images/talkie-ai.webp",
     pros: ["Great voice quality", "Quick responses", "Easy to use"],
     cons: ["Voice features need premium", "Limited text features"],
-    bestFor: "Voice-based AI conversations"
+    bestFor: "Voice-based AI conversations",
+    website: "https://talkie-ai.com",
+    affiliateUrl: "https://talkie-ai.com" // TODO: Replace with actual affiliate link
   }
 ];
 
