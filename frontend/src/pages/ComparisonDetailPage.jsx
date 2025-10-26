@@ -496,6 +496,15 @@ const ComparisonDetailPage = () => {
 
   const comparisonMeta = getComparisonMeta(platform1Data.name, platform2Data.name);
 
+  // Generate schema.org JSON-LD
+  const schemaJsonLd = schemaToJsonLd(
+    generatePageSchema('comparison', {
+      platform1: platform1Data,
+      platform2: platform2Data,
+      comparisonId
+    })
+  );
+
   return (
     <div className="page-container">
       <SEOHead 
