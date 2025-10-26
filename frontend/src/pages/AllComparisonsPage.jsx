@@ -1,8 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import SEOHead from '../components/SEOHead';
 import { List, Search, Filter } from 'lucide-react';
 import { generateAllComparisons, getComparisonStats, filterComparisons, getBrandList } from '../utils/comparisonGenerator';
+import { SITE_DOMAIN } from '../data/metaTags';
 import '../styles/AllComparisonsPage.css';
 
 const AllComparisonsPage = () => {
