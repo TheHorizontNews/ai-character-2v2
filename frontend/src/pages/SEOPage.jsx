@@ -16,6 +16,7 @@ const SEOPage = () => {
   const navigate = useNavigate();
   const fullSlug = params['*'] || params.slug;
   const pageData = seoPages.find(p => p.slug === fullSlug);
+  const [openAccordion, setOpenAccordion] = useState(null);
   
   // Enhanced internal linking with cluster-based anchors
   const addInternalLinks = (text, currentSlug) => {
