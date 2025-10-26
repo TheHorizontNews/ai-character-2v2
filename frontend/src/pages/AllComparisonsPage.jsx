@@ -53,6 +53,22 @@ const AllComparisonsPage = () => {
 
   return (
     <div className="page-container">
+      <SEOHead 
+        title="All AI Platform Comparisons — Complete Comparison List 2025"
+        description="Browse all AI character platform comparisons. Find detailed side-by-side reviews of your favorite platforms."
+        keywords={[
+          'AI platform comparisons',
+          'compare AI platforms',
+          'AI character comparison',
+          'platform vs platform',
+          'AI companion comparison',
+          'side-by-side reviews',
+          'platform reviews'
+        ]}
+        ogImage={`${SITE_DOMAIN}/og-image.png`}
+        canonical={`${SITE_DOMAIN}/all-comparisons`}
+        ogType="website"
+      />
       <Sidebar />
       
       <main className="main-content">
