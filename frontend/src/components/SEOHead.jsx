@@ -78,7 +78,12 @@ const SEOHead = ({
       <meta name="author" content="Character Central" />
 
       {/* Schema.org JSON-LD */}
-      {schemaData && (
+      {schemaJsonLd && (
+        <script type="application/ld+json">
+          {schemaJsonLd}
+        </script>
+      )}
+      {!schemaJsonLd && schemaData && (
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
