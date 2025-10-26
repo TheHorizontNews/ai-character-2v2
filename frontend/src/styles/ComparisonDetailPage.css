@@ -1020,9 +1020,41 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.cta-button.primary {
+  background: linear-gradient(135deg, #1dd1a1 0%, #10ac84 100%);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.cta-button.primary:hover {
+  box-shadow: 0 8px 25px rgba(29, 209, 161, 0.3);
+}
+
+.decision-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .decision-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /* FAQ Grid - Compact Design */
