@@ -198,6 +198,7 @@ const ComparePage = () => {
       <SEOHead 
         title={compareHubMeta.title}
         description={compareHubMeta.description}
+        schemaJsonLd={schemaJsonLd}
         keywords={[
           'compare AI platforms',
           'AI character comparison',
