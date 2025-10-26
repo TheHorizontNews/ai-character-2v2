@@ -9,7 +9,8 @@ const SEOHead = ({
   ogType = 'website',
   canonical,
   noindex = false,
-  schemaData = null
+  schemaData = null,
+  schemaJsonLd = null // New: direct JSON-LD string
 }) => {
   const siteUrl = 'https://ai-characters.org';
   const siteName = 'Character Central';
