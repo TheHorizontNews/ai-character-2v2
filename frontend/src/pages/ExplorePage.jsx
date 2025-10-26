@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { Heart, User, Sparkles, UserCheck, Users, Drama, Wand2, Trophy, Flame, HeartHandshake, Search } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
 import { seoPages, seoCategories } from '../data/seoPages';
+import { explorePageMeta, SITE_DOMAIN } from '../data/metaTags';
 import '../styles/ExplorePage.css';
 
 const iconMap = {
