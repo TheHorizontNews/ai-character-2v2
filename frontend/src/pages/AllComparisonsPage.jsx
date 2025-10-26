@@ -52,6 +52,14 @@ const AllComparisonsPage = () => {
     alert('Comparison request feature will be implemented! Users can request specific platform comparisons.');
   };
 
+  // Generate schema.org JSON-LD
+  const schemaJsonLd = schemaToJsonLd(
+    generatePageSchema('allComparisons', {
+      comparisons: allComparisons,
+      stats: comparisonStats
+    })
+  );
+
   return (
     <div className="page-container">
       <SEOHead 
